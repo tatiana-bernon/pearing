@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
+import { Route } from 'react-router-dom'
+import { isAuthenticated } from 'authenticare/client'
 
-const App = () => {
+import { UserContext, updateUserContext } from './UserContext'
+// import Nav from './Nav'
+import Register from './Register'
+import SignIn from './SignIn'
+import LandingPage from './LandingPage'
+// import AddEvent from './AddEvent'
+// import EditEvent from './EditEvent'
+
+function App () {
+  const [, setUser] = useContext(UserContext)
+
+  useEffect(() => {
+    if (isAuthenticated()) {
+      updateUserContext(setUser)
+    }
+  }, [])
+
   return (
-    <h1>Welcome to pearing!!</h1>
+    <>
+      <div className="container">
+        <h1 className="title">pearing</h1>
+        <div className='columns'>
+          <Route exact path='/' component={ LandingPage } />
+          {/* <Route path="/" component={Nav} /> */}
+          <Route path="/register" component={Register} />
+          <Route path="/signin" component={SignIn} />
+        </div>
+      </div>
+    </>
   )
 }
 
