@@ -18,7 +18,7 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 
 ## User interface (proposal) - wireframes
 
-Image or Daryl whimsical
+![alt text](https://files.slack.com/files-pri/T02SQPVAC-F01B7HJR09Z/20200923_174223.jpg)
 
 ## Dependencies 
 verify we have installed everything needed:
