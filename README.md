@@ -1,13 +1,13 @@
-# Gardenz
+# skillShare
 
-> Empowering community gardens in New Zealand
+> A platform bringing developers together to help each other.
 
 ## Setup
 
 To get started, clone this repo and then:
 
 ```
-cd gardenz
+cd skillshare
 npm install
 npm run db:migrate
 npm run db:seed
@@ -16,62 +16,67 @@ npm run dev
 
 You can find the server running on [http://localhost:3000](http://localhost:3000).
 
-### CSS
-SASS and Bulma have been added to the project. To use Bulmas variables and classes please refer to the documentation https://bulma.io/documentation/
+## User interface (proposal) - wireframes
 
-## User stories (from highest priority)
+## Steps aiming at MVP 
 
-1. As a community member, I want to see the gardens in my area.
-1. As a garden administrator, I want to post a new garden event.
-1. As a community member, I want to be notified of new garden events.
-1. As a community member, I want to volunteer at my garden's events.
-1. As a garden administrator, I want to see event volunteers.
-1. As a garden administrator, I want to track event volunteers.
+## (i) Front- End
 
+A. Auth using authenticare - for Register and Login component
+B. Create components:
 
-## User interface (proposal)
+1. Landing page component with:
+    - Nav component, 
+    - Register component, and 
+    - Login component.
+    
+2. Home page component with:
+    - Nav component (option to move between Home,Signout and Profile)
+    - List component with:
+          - List Item component
+    -Add component (outside of List component)*
 
-[Wireframe source on Whimsical](https://whimsical.com/Rf7Fo4MEMGxm5eLQ4uLYTA)
+3. Profile page component with:
+   - Personal info component (has an update profile button)
+   - My list component with:
+      - Add component (when clicked, it generates a form to fill and submit)*
 
-![Homepage](docs/home.png)
-![Register](docs/register.png)
-![Sign in](docs/sign-in.png)
-![Profile](docs/profile.png)
-![Garden (admin view)](docs/garden-admin.png)
-![Garden (member view)](docs/garden-member.png)
-![Add/edit event](docs/add-edit-event.png)
+4. List Item component page
 
+C. Create hash router and routes to link components/pages
 
-## API routes (proposal)
+## (ii) Back-End
+
+A. Database schema 
+
+(link to be attached)
+
+B .API routes 
 
 Failure response (HTTP status: 500):
 
 ```
 {
   "error": {
-    "title": "Unable to retrieve list of gardens"
+    "title": "Unable to retrieve data"
   }
 }
 ```
 
-### `GET /api/v1/gardens`
+(i) For the List component - getAllListings `GET /api/v1/home` (not sure)
 
 Response (200):
 
 ```
 {
-  "gardens": [
+  "Listings": [
     {
       "id": 1,
-      "name": "Kelmarna Gardens",
-      "address": "12 Hukanui Crescent",
-      "lat": -36.86011508905973,
-      "lon": 174.7330772002716,
-      "url": "http://www.kelmarnagardens.nz",
-      "events": [{
-        "id": 1,
-        "title": "Weeding Worker Bee",
-        "datetime": "Wed, 27 Sep 2020 20:00:00 GMT"
+      "Title": "",
+      "Skill_id": "",
+      "Description":"",
+      "Interest": "",
+      "Status": ""
       }]
     }
   ]
@@ -79,40 +84,24 @@ Response (200):
 ```
 
 
-### `GET /api/v1/gardens/:id`
+(ii) For the List item component - getListing `GET /api/v1/gardens/:id`
 
 Response (200):
 
 ```
 {
-  "id": 1,
-  "name": "Kelmarna Gardens",
-  "address": "12 Hukanui Crescent",
-  "description": "Kelmarna Gardens is a city farm and ...",
-  "lat": -36.86011508905973,
-  "lon": 174.7330772002716,
-  "url": "http://www.kelmarnagardens.nz",
-  "events": [{
-    "id": 1,
-    "volunteersNeeded": 8,
-    "title": "Weeding Worker Bee",
-    "datetime": "Wed, 27 Sep 2020 20:00:00 GMT",
-    "description": "It's time to get these weeds under control."
+  "id_listings": 1,
   }]
 }
 ```
 
-### `POST /api/v1/events`
+(iii) For the add item component - postListing `POST /api/v1/..to confirm...` (insert in table)
 
 Request:
 
 ```
 {
-  "gardenId": 1,
-  "volunteersNeeded": 8,
-  "title": "Weeding Worker Bee",
-  "datetime": "Wed, 27 Sep 2020 20:00:00 GMT",
-  "description": "It's time to get these weeds under control."
+ To specify
 }
 ```
 
@@ -120,38 +109,27 @@ Response (201):
 
 ```
 {
-  "id": 167,
-  "gardenId": 1,
-  "volunteersNeeded": 8,
-  "title": "Weeding Worker Bee",
-  "datetime": "Wed, 27 Sep 2020 20:00:00 GMT",
-  "description": "It's time to get these weeds under control."
+  To specify
 }
 ```
 
-### `GET /api/v1/events/:id`
+(iv) For the info component - getUserInfo `GET /api/v1/events/:id/users` (user_id)
 
 Response (200):
 
 ```
 {
-  "id": 167,
-  "gardenId": 1,
-  "volunteersNeeded": 8,
-  "title": "Weeding Worker Bee",
-  "datetime": "Wed, 27 Sep 2020 20:00:00 GMT",
-  "description": "It's time to get these weeds under control."
+ To specify
 }
 ```
 
-### `POST /api/v1/events/:id/volunteers`
+(v) For the myList component - getMyList `POST /api/v1/events/:id/users` (user_id)
 
 Request:
 
 ```
 {
-  "eventId": 167,
-  "volunteerId": 48,
+  to specify
 }
 ```
 
@@ -159,35 +137,29 @@ Response (201):
 
 ```
 {
-  "eventId": 167,
-  "volunteerId": 48,
-  "status": "added"
+  to specify
 }
 ```
+### CSS 
+Bulma will be used in this project. Please refer to the documentation https://bulma.io/documentation/
 
-### `PATCH /api/v1/events/:id/volunteers`
+## Testing
+The team will split and dedicate time on testing and styling.
 
-Request:
+## DEPLOYMENT TO HEROKU!!!!!!!!!!!
 
-```
-{
-  "eventId": 167,
-  "volunteerId": 48,
-  "action": "remove"
-}
-```
+## Stretches
 
-Response (200):
+1. Add skill levels
+2. Filtering in the skill level
+3. Recommendations
+4. Edit/update profile info
+5. Categories: languages, cooking.
 
-```
-{
-  "eventId": 167,
-  "volunteerId": 48,
-  "status": "removed"
-}
-```
+## Wellbeing and Conflict Resolution Plan
 
-## Database schema (proposal)
+## Roles
 
-![Gardenz Entity Relationship Diagram](docs/erd.png)
-[Gardenz ERD on dbdiagram.io](https://dbdiagram.io/d/5f61c9407da1ea736e2e0bda)
+## Team Members Availability
+
+## Team Members Expectations
