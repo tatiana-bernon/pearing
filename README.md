@@ -18,7 +18,7 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 
 ## User interface (proposal) - wireframes
 
-![alt text](PRIMARY_HD/Users/tatiana/desktop/20200923_174223.jpg)
+![alt text](https://enspiral-dev-academy.slack.com/files/U0131TUTTMH/F01B7HJR09Z/20200923_174223.jpg)
 
 ## Dependencies 
 verify we have installed everything needed:
