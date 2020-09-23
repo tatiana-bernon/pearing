@@ -205,7 +205,7 @@ We will be using a stress pig to alert that we are actually feeling a bit overwh
 
 We genuine care for each other, and will ensure we are encouraging one another to have enough sleep, eat well and hydrate well. We basically have one another´s back.
 
-Last but not least, keep moral up with spontaneous and amazingly funny DAD JOKES!
+Last but not least, keep moral up with spontaneous and amazingly funny DAD JOKES! https://dadjokegenerator.com/
 
 In terms of conflicts:
 
