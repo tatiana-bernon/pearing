@@ -1,4 +1,4 @@
-# SkillShare
+# pearing
 
 > A platform bringing developers together to help each other or just jam!
 
