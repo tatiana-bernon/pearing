@@ -68,7 +68,9 @@ B. Create components:
 
 4. [ ] List Item component page
 
-C. [ ] Create hash router and routes to link components/pages
+C. Routes 
+- [ ] Create hash router 
+- [ ] Create routes to link components/pages with App component.
 
 ## Early deployment to Heroku!
 ![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
