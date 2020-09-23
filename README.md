@@ -1,4 +1,4 @@
-# SkillShare
+### SkillShare
 
 > A platform bringing developers together to help each other or just jam!
 
@@ -38,7 +38,7 @@ verify we have installed everything needed:
 
 ## Steps aiming at MVP 
 
-## (i) Front- End
+# (i) Front- End
 
 A. Auth using authenticare - for Register and Login component
 
@@ -71,7 +71,7 @@ C. Create hash router and routes to link components/pages
 ## Early deployment to Heroku!
 ![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
 
-## (ii) Back-End
+# (ii) Back-End
 
 A. Database schema 
 
@@ -166,7 +166,7 @@ Response (201):
   to specify
 }
 ```
-### CSS 
+## CSS 
 Bulma will be used in this project. Please refer to the documentation https://bulma.io/documentation/
 
 ## Testing
@@ -197,7 +197,7 @@ https://www.canva.com/design/DAEIm0XK3Tg/MhtOyotyp6Fq5thGZhSx9Q/edit?category=tA
 
 ## TEAM Wellbeing and Conflict Resolution Plan
 
-In terms of well-being:
+*In terms of well-being:*
 
 once more, our expectations as a team being guided by inclusiveness, understanding and respect, we decided to voice out our needs as they arise. Whether it is taking some time away from the screen or needing help, among many other cases. 
 
@@ -207,7 +207,7 @@ We genuine care for each other, and will ensure we are encouraging one another t
 
 Last but not least, keep moral up with spontaneous and amazingly funny DAD JOKES! https://dadjokegenerator.com/
 
-In terms of conflicts:
+*In terms of conflicts:*
 
 We unanimosly agreed on:
 
@@ -218,6 +218,7 @@ We unanimosly agreed on:
 - In moments of incertainty, or doubt or both, we would be using looping as a technique to help clear doubts and ensure we are on the same page.
 
 ## Roles
+
 As a team, we noticed that during preparation we naturally took turns into stepping in and out of different roles as per the need and tempo of the project. We thus, decided not to assign particulart roles to each one of us. 
 This decision is based on our knowledge of agile practices - especially valueing flexibility as per the changing needs of the the team in regards to the product and time left to deliver.
 
@@ -229,25 +230,25 @@ However, we agreed that if we felt the need (due to productivity slowing down, t
 
 ## Team Members Availability
 
-Andras - Thur-Friday (available after 8.30 online)
+*Andras* - Thur-Friday (available after 8.30 online)
         - Weekend available
         - Mon to Wed next week available
         
-Daryl   - Very flexible and available as per need.
+*Daryl*   - Very flexible and available as per need.
 
-Bhiv    - Very flexible except Thur Lunch
+*Bhiv*    - Very flexible except Thur Lunch
 
-Tati    - Very flexible except I cannot stay later than 10.30 pm as I take the public transport and need to go before last bus/train
+*Tati*    - Very flexible except I cannot stay later than 10.30 pm as I take the public transport and need to go before last bus/train
 
 
 ## Team Members Expectations
 
--Andras shared that he really wants to have a complete product to share and mentioned that in aiming in doing so,  this journey will be one filled of learning.
+- *Andras* shared that he really wants to have a complete product to share and mentioned that in aiming in doing so,  this journey will be one filled of learning.
 
--Daryl shared about how he would estimate time as per task. (cutting it into 1/3 of initial time he thought of) and that of course he is focussed on enjoying the learning journey of this process but also would want a good end product to showcase.
+- *Daryl* shared about how he would estimate time as per task. (cutting it into 1/3 of initial time he thought of) and that of course he is focussed on enjoying the learning journey of this process but also would want a good end product to showcase.
 
-- Bhiv shared that the experience is mostly important and the learning out of it, if we have a neat end product amazing if its not exactly what we planned, the experience would have been a rich one anyways.
+- *Bhiv* shared that the experience is mostly important and the learning out of it, if we have a neat end product amazing if its not exactly what we planned, the experience would have been a rich one anyways.
 
-- Tatiana shared that she would really want to see a completed product to demo at Graduation, but also expects lots of fun and learning through this final group project.
+- *Tati* shared that she would really want to see a completed product to demo at Graduation, but also expects lots of fun and learning through this final group project.
 
 ![alt text](https://miro.medium.com/max/2644/1*-mCWVWM_8rgv9EbwhlcFUA.jpeg)
