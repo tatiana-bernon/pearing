@@ -30,6 +30,12 @@ verify we have installed everything needed:
 - Bulma and wired up Bulma correctly (For later) [ ]
 - Anything else? [ ]
 
+## Branching and Merging frequency (Team to discuss)
+- Master (Do we protect the master branch?)
+- Dev
+- Feature branches created and merged through pull request regularly.
+- Merge to Master daily after checking all merge to dev successful without any unresolved conflict?? Team to discuss
+
 ## Steps aiming at MVP 
 
 ## (i) Front- End
