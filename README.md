@@ -23,12 +23,12 @@ Image or Daryl whimsical
 ## Dependencies 
 verify we have installed everything needed:
 
--package.json (npm init??)
--jest/supertest/ anything else for tests?
--webpack
--SQLite3
--Bulma and wired up Bulma correctly (For later)
--Anything else?
+[] package.json (npm init??)
+[] jest/supertest/ anything else for tests?
+[] webpack
+[] SQLite3
+[] Bulma and wired up Bulma correctly (For later)
+[] Anything else?
 
 ## Steps aiming at MVP 
 
@@ -40,30 +40,30 @@ Docs for authenticare:
 - https://github.com/pohutukawa-2020/jwt-auth
 - https://github.com/don-smith/authenticare/blob/master/docs/client/signIn.md 
 
-B. Create components:
+B. Create components: []
 
-1. Landing page component with:
-    - Nav component, 
-    - Register component, and 
-    - Login component.
+1. Landing page component [] with:
+    - Nav component [] 
+    - Register component [] 
+    - Login component.[]
     
-2. Home page component with:
-    - Nav component (option to move between Home,Signout and Profile)
-    - List component with:
-          - List Item component
-    -Add component (outside of List component)*
+2. Home page component [] with:
+    - Nav component [] (option to move between Home,Signout and Profile)
+    - List component [] with:
+          - List Item component []
+    - Add component [] (outside of List component)*
 
-3. Profile page component with:
-   - Personal info component (has an update profile button)
-   - My list component with:
-      - Add component (when clicked, it generates a form to fill and submit)*
+3. Profile page component [] with:
+   - Personal info component [] (has an update profile button)
+   - My list component [] with:
+      - Add component [] (when clicked, it generates a form to fill and submit)*
 
-4. List Item component page
+4. List Item component page []
 
-C. Create hash router and routes to link components/pages
+C. Create hash router and routes to link components/pages []
 
 ## Early deployment to Heroku!
-
+![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
 
 ## (ii) Back-End
 
@@ -71,7 +71,7 @@ A. Database schema
 
 (link to be attached once ready)
 
-B .API routes 
+B .API routes []
 
 Failure response (HTTP status: 500):
 
