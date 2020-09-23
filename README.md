@@ -23,18 +23,20 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 ## Dependencies 
 verify we have installed everything needed:
 
-- [ ] Package.json (npm init??)
-- [ ] Jest/supertest/ anything else for tests? 
-- [ ] Webpack 
-- [ ] SQLite3
+- [X] Package.json 
+- [X] Jest/supertest/ anything else for tests? 
+- [X] Webpack 
+- [X] SQLite3
 - [ ] Bulma and wired up Bulma correctly (For later) 
+- [X] React-Dom
+- [X] Authenticare
 - [ ] Anything else? 
 
 ## Branching and Merging frequency (Team to discuss)
-- Master (Do we protect the master branch?)
+- Master 
 - Dev
 - Feature branches created and merged through pull request regularly.
-- Merge to Master daily after checking all merge to dev successful without any unresolved conflict?? Team to discuss
+- Merge to Dev daily after checking all merge to dev successful without any unresolved conflict.
 
 ## Steps aiming at MVP 
 
@@ -48,25 +50,25 @@ Docs for authenticare:
 
 B. Create components:
 
-1. Landing page component with:
-    - Nav component
-    - Register component 
-    - Login component.
+1. [X] Landing page component with:
+    - [ ] Nav component
+    - [X] Register component 
+    - [X] Login component.
     
-2. Home page component with:
-    - Nav component (option to move between Home,Signout and Profile)
-    - List component with:
-          - List Item component
-    - Add component (outside of List component)*
+2. [X] Home page component with:
+    - [ ] Nav component (option to move between Home,Signout and Profile)
+    - [ ] List component with:
+          - [ ] List Item component
+    - [ ] Add component (outside of List component)*
 
-3. Profile page component with:
-   - Personal info component (has an update profile button)
-   - My list component with:
-      - Add component (when clicked, it generates a form to fill and submit)*
+3. [ ] Profile page component with:
+   - [ ] Personal info component (has an update profile button)
+   - [ ] My list component with:
+      - [ ] Add component (when clicked, it generates a form to fill and submit)*
 
-4. List Item component page
+4. [ ] List Item component page
 
-C. Create hash router and routes to link components/pages
+C. [ ] Create hash router and routes to link components/pages
 
 ## Early deployment to Heroku!
 ![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
@@ -184,7 +186,8 @@ https://trailhead.salesforce.com/content/learn/projects/quickstart-heroku-connec
 
 ## Stretches
 
-1. Change of name for the app and Logo for it??
+1.- [X] Change of name for the app
+  - [ ] Logo for it - find a cool pear
 
 https://namelix.com/app/?keywords=skill+sharing
 https://www.canva.com/design/DAEIm0XK3Tg/MhtOyotyp6Fq5thGZhSx9Q/edit?category=tACZCvjI6mE&utm_source=onboarding
