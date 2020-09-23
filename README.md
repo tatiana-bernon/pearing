@@ -23,12 +23,12 @@ Image or Daryl whimsical
 ## Dependencies 
 verify we have installed everything needed:
 
-[ ] package.json (npm init??)
-[ ] jest/supertest/ anything else for tests?
-[ ] webpack
-[ ] SQLite3
-[ ] Bulma and wired up Bulma correctly (For later)
-[ ] Anything else?
+- Package.json (npm init??) [ ]
+- Jest/supertest/ anything else for tests? [ ]
+- Webpack [ ]
+- SQLite3 [ ]
+- Bulma and wired up Bulma correctly (For later) [ ]
+- Anything else? [ ]
 
 ## Steps aiming at MVP 
 
