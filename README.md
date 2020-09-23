@@ -184,11 +184,16 @@ https://trailhead.salesforce.com/content/learn/projects/quickstart-heroku-connec
 
 ## Stretches
 
-1. Add skill levels
-2. Filtering in the skill level
-3. Recommendations
-4. Edit/update profile info
-5. Categories: languages, cooking.
+1. Change of name for the app and Logo for it??
+
+https://namelix.com/app/?keywords=skill+sharing
+https://www.canva.com/design/DAEIm0XK3Tg/MhtOyotyp6Fq5thGZhSx9Q/edit?category=tACZCvjI6mE&utm_source=onboarding
+
+2. Add skill levels
+3. Filtering in the skill level
+4. Recommendations
+5. Edit/update profile info
+6. Categories: languages, cooking.
 
 ## TEAM Wellbeing and Conflict Resolution Plan
 
