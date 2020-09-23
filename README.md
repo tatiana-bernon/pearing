@@ -18,7 +18,7 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 
 ## User interface (proposal) - wireframes
 
-![alt text](desktop/20200923_174223.jpg)
+![alt text](tatiana/desktop/20200923_174223.jpg)
 
 ## Dependencies 
 verify we have installed everything needed:
