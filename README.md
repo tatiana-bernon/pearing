@@ -18,7 +18,7 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 
 ## User interface (proposal) - wireframes
 
-![alt text](tatiana/desktop/20200923_174223.jpg)
+![alt text](PRIMARY_HD/Users/tatiana/desktop/20200923_174223.jpg)
 
 ## Dependencies 
 verify we have installed everything needed:
@@ -224,7 +224,7 @@ However, we agreed that if we felt the need (due to productivity slowing down, t
 
 ## Team Members Availability
 
-Andrash - Thur-Friday (available after 8.30 online)
+Andras - Thur-Friday (available after 8.30 online)
         - Weekend available
         - Mon to Wed next week available
         
@@ -237,7 +237,7 @@ Tati    - Very flexible except I cannot stay later than 10.30 pm as I take the p
 
 ## Team Members Expectations
 
--Andrash shared that he really wants to have a complete product to share and mentioned that in aiming in doing so,  this journey will be one filled of learning.
+-Andras shared that he really wants to have a complete product to share and mentioned that in aiming in doing so,  this journey will be one filled of learning.
 
 -Daryl shared about how he would estimate time as per task. (cutting it into 1/3 of initial time he thought of) and that of course he is focussed on enjoying the learning journey of this process but also would want a good end product to showcase.
 
