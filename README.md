@@ -229,7 +229,6 @@ Bhiv    - Very flexible except Thur Lunch
 Tati    - Very flexible except I cannot stay later than 10.30 pm as I take the public transport and need to go before last bus/train
 
 
-
 ## Team Members Expectations
 
 -Andrash shared that he really wants to have a complete product to share and mentioned that in aiming in doing so,  this journey will be one filled of learning.
@@ -239,3 +238,5 @@ Tati    - Very flexible except I cannot stay later than 10.30 pm as I take the p
 - Bhiv shared that the experience is mostly important and the learning out of it, if we have a neat end product amazing if its not exactly what we planned, the experience would have been a rich one anyways.
 
 - Tatiana shared that she would really want to see a completed product to demo at Graduation, but also expects lots of fun and learning through this final group project.
+
+![alt text](https://miro.medium.com/max/2644/1*-mCWVWM_8rgv9EbwhlcFUA.jpeg)
