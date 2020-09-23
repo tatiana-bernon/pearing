@@ -174,7 +174,7 @@ The team will split and dedicate time on testing and styling.
 
 ## DEPLOYMENT TO HEROKU!!!!!!!!!!!
 
-![alt text](https://profi.co/wp-content/uploads/2017/04/yoda-meme.jpg)
+![alt text](https://www.cryan.com/qa/graphics/ReleaseDeployment.jpg)
 
 Docs to ensure all the steps are done:
 https://github.com/pohutukawa-2020/heroku-checklist
