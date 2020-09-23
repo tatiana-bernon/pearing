@@ -1,4 +1,4 @@
-### SkillShare
+#SkillShare
 
 > A platform bringing developers together to help each other or just jam!
 
@@ -38,7 +38,7 @@ verify we have installed everything needed:
 
 ## Steps aiming at MVP 
 
-# (i) Front- End
+### (i) Front- End
 
 A. Auth using authenticare - for Register and Login component
 
@@ -71,7 +71,7 @@ C. Create hash router and routes to link components/pages
 ## Early deployment to Heroku!
 ![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
 
-# (ii) Back-End
+### (ii) Back-End
 
 A. Database schema 
 
@@ -166,10 +166,10 @@ Response (201):
   to specify
 }
 ```
-## CSS 
+### CSS 
 Bulma will be used in this project. Please refer to the documentation https://bulma.io/documentation/
 
-## Testing
+### Testing
 The team will split and dedicate time on testing and styling.
 
 ## DEPLOYMENT TO HEROKU!!!!!!!!!!!
