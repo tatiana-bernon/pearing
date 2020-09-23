@@ -110,7 +110,7 @@ Response (200):
 ```
 
 
-(ii) For the List item component - getListing `GET /api/v1/gardens/:id`
+(ii) For the List item component - getListing `GET /api/v1/home/:id`
 
 Response (200):
 
@@ -139,7 +139,7 @@ Response (201):
 }
 ```
 
-(iv) For the info component - getUserInfo `GET /api/v1/events/:id/users` (user_id)
+(iv) For the info component - getUserInfo `GET /api/v1/events/:id/users` (user_id) to confirm
 
 Response (200):
 
@@ -149,7 +149,7 @@ Response (200):
 }
 ```
 
-(v) For the myList component - getMyList `POST /api/v1/events/:id/users` (user_id)
+(v) For the myList component - getMyList `POST /api/v1/events/:id/users` (user_id) to confirm
 
 Request:
 
@@ -173,6 +173,8 @@ Bulma will be used in this project. Please refer to the documentation https://bu
 The team will split and dedicate time on testing and styling.
 
 ## DEPLOYMENT TO HEROKU!!!!!!!!!!!
+
+![alt text](https://profi.co/wp-content/uploads/2017/04/yoda-meme.jpg)
 
 Docs to ensure all the steps are done:
 https://github.com/pohutukawa-2020/heroku-checklist
