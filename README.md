@@ -23,12 +23,12 @@ Image or Daryl whimsical
 ## Dependencies 
 verify we have installed everything needed:
 
-[] package.json (npm init??)
-[] jest/supertest/ anything else for tests?
-[] webpack
-[] SQLite3
-[] Bulma and wired up Bulma correctly (For later)
-[] Anything else?
+[ ] package.json (npm init??)
+[ ] jest/supertest/ anything else for tests?
+[ ] webpack
+[ ] SQLite3
+[ ] Bulma and wired up Bulma correctly (For later)
+[ ] Anything else?
 
 ## Steps aiming at MVP 
 
@@ -40,27 +40,27 @@ Docs for authenticare:
 - https://github.com/pohutukawa-2020/jwt-auth
 - https://github.com/don-smith/authenticare/blob/master/docs/client/signIn.md 
 
-B. Create components: []
+B. Create components: [ ]
 
-1. Landing page component [] with:
-    - Nav component [] 
-    - Register component [] 
-    - Login component.[]
+1. Landing page component [ ] with:
+    - Nav component [ ] 
+    - Register component [ ] 
+    - Login component.[ ]
     
-2. Home page component [] with:
-    - Nav component [] (option to move between Home,Signout and Profile)
-    - List component [] with:
-          - List Item component []
-    - Add component [] (outside of List component)*
+2. Home page component [ ] with:
+    - Nav component [ ] (option to move between Home,Signout and Profile)
+    - List component [ ] with:
+          - List Item component [ ]
+    - Add component [ ] (outside of List component)*
 
-3. Profile page component [] with:
-   - Personal info component [] (has an update profile button)
-   - My list component [] with:
-      - Add component [] (when clicked, it generates a form to fill and submit)*
+3. Profile page component [ ] with:
+   - Personal info component [ ] (has an update profile button)
+   - My list component [ ] with:
+      - Add component [ ] (when clicked, it generates a form to fill and submit)*
 
-4. List Item component page []
+4. List Item component page [ ]
 
-C. Create hash router and routes to link components/pages []
+C. Create hash router and routes to link components/pages [ ]
 
 ## Early deployment to Heroku!
 ![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
@@ -71,7 +71,7 @@ A. Database schema
 
 (link to be attached once ready)
 
-B .API routes []
+B .API routes [ ]
 
 Failure response (HTTP status: 500):
 
@@ -182,7 +182,7 @@ https://trailhead.salesforce.com/content/learn/projects/quickstart-heroku-connec
 4. Edit/update profile info
 5. Categories: languages, cooking.
 
-## Wellbeing and Conflict Resolution Plan
+## TEAM Wellbeing and Conflict Resolution Plan
 
 In terms of well-being:
 
@@ -203,8 +203,6 @@ We unanimosly agreed on:
 - If a situation of tension arises, and as a team, we are unable to solve it, we will be reaching our to one of the facilitators.
 - We will also voice out our needs (individual or group, it could also take the form of a constructive feedback).
 - In moments of incertainty, or doubt or both, we would be using looping as a technique to help clear doubts and ensure we are on the same page.
-
-
 
 ## Roles
 As a team, we noticed that during preparation we naturally took turns into stepping in and out of different roles as per the need and tempo of the project. We thus, decided not to assign particulart roles to each one of us. 
