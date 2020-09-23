@@ -61,14 +61,14 @@ B. Create components:
           - [ ] List Item component
     - [ ] Add component (outside of List component)*
 
-3. [ ] Profile page component with:
+3. - [ ] Profile page component with:
    - [ ] Personal info component (has an update profile button)
    - [ ] My list component with:
       - [ ] Add component (when clicked, it generates a form to fill and submit)*
 
-4. [ ] List Item component page
+4. - [ ] List Item component page
 
-C. [ ] Create hash router and routes to link components/pages
+C. - [ ] Create hash router and routes to link components/pages
 
 ## Early deployment to Heroku!
 ![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
