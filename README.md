@@ -21,6 +21,7 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 ![alt text](server/public/images/20200923_174223.jpg)
 
 ## Dependencies 
+```
 verify we have installed everything needed:
 
 - [X] Package.json 
@@ -31,6 +32,7 @@ verify we have installed everything needed:
 - [X] React-Dom
 - [X] Authenticare
 - [ ] Anything else? 
+
 
 ## Branching and Merging frequency (Team to discuss)
 - Master 
