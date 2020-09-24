@@ -8,7 +8,7 @@ import Register from './Register'
 import SignIn from './SignIn'
 import LandingPage from './LandingPage'
 import Subjects from './Subjects'
-// import EditEvent from './EditEvent'
+import Profile from './Profile'
 
 function App () {
   const [, setUser] = useContext(UserContext)
@@ -29,6 +29,7 @@ function App () {
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />
           <Route path="/subjects" component={Subjects} />
+          <Route path="/profile" component={Profile} />
         </div>
       </div>
     </>

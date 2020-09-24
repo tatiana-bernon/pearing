@@ -11,10 +11,10 @@ exports.seed = (knex) => {
     ]))
     .then(([ darylHash, tatiHash, bhivHash, andrasHash ]) =>
       knex('users').insert([
-        { id: 1, username: 'daryl', hash: darylHash },
-        { id: 2, username: 'tati', hash: tatiHash },
-        { id: 3, username: 'bhiv', hash: bhivHash },
-        { id: 4, username: 'andras', hash: andrasHash }
+        { id: 1, username: 'daryl', hash: darylHash, email: 'test1@test.com', info: 'yeah' },
+        { id: 2, username: 'tati', hash: tatiHash, email: 'test2@test.com', info: 'nah' },
+        { id: 3, username: 'bhiv', hash: bhivHash, email: 'test3@test.com', info: 'maybe' },
+        { id: 4, username: 'andras', hash: andrasHash, email: 'test4@test.com', info: 'what?' }
       ])
     )
 }
