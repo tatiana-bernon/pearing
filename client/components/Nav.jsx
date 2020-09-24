@@ -48,6 +48,7 @@ export default function Nav (props) {
       navLanding = (
         <>
           <Link to="/contact">Contact</Link>
+          <Link to ="/profile">Profile</Link>
           <Link to ="/home">Home</Link>
           <Link to ="/subjects">Subjects</Link>
           <Link to ="/signOut">SignOut</Link>
