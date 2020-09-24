@@ -20,7 +20,7 @@ function Register (props) {
       .then(() => {
         if (isAuthenticated()) {
           updateUserContext(setUser)
-          return props.history.push('/user')
+          return props.history.push('/home')
         }
         return null
       })
