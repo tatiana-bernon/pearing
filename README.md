@@ -22,7 +22,7 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 
 ## Dependencies 
 verify we have installed everything needed:
-```
+
 - [X] Package.json 
 - [X] Jest/supertest/ anything else for tests? 
 - [X] Webpack 
@@ -31,7 +31,7 @@ verify we have installed everything needed:
 - [X] React-Dom
 - [X] Authenticare
 - [ ] Anything else? 
-```
+
 
 ## Branching and Merging frequency (Team to discuss)
 - Master 
@@ -53,7 +53,7 @@ Docs for authenticare:
 - https://github.com/don-smith/authenticare/blob/master/docs/client/signIn.md 
 
 B. Create components:
-```
+
 1. [X] Landing page component with:
     - [ ] Nav component
     - [X] Register component 
@@ -71,12 +71,12 @@ B. Create components:
       - [ ] Add component (when clicked, it generates a form to fill and submit)*
 
 4. [ ] List Item component page
-```
+
 C. Routes 
-```
+
 - [ ] Create hash router 
 - [ ] Create routes to link components/pages with App component.
-```
+
 ## Early deployment to Heroku!
 ![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
 
@@ -192,19 +192,20 @@ additional info if having issues with deployment due to database:
 https://trailhead.salesforce.com/content/learn/projects/quickstart-heroku-connect/qs-heroku-connect-1
 
 ## Stretches
-```
-1.- [X] Change of name for the app
+
+1. - [X] Change of name for the app
   - [ ] Logo for it - find a cool pear
 
 https://namelix.com/app/?keywords=skill+sharing
 https://www.canva.com/design/DAEIm0XK3Tg/MhtOyotyp6Fq5thGZhSx9Q/edit?category=tACZCvjI6mE&utm_source=onboarding
+
 
 2. - [ ] Add skill levels
 3. - [ ] Filtering in the skill level
 4. - [ ] Recommendations
 5. - [ ] Edit/update profile info
 6. - [ ] Categories: languages, cooking.
-```
+
 ## TEAM Wellbeing and Conflict Resolution Plan
 
 *In terms of well-being:*
@@ -215,8 +216,10 @@ We will be using a stress pig to alert that we are actually feeling a bit overwh
 
 We genuine care for each other, and will ensure we are encouraging one another to have enough sleep, eat well and hydrate well. We basically have one another´s back.
 
-Last but not least, keep moral up with spontaneous and amazingly funny DAD JOKES! https://dadjokegenerator.com/
+Last but not least, keep moral up with spontaneous and amazingly funny DAD JOKES! 
 ```
+https://dadjokegenerator.com/
+
 *In terms of conflicts:*
 ```
 We unanimosly agreed on:
