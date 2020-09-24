@@ -3,7 +3,8 @@ import { Route } from 'react-router-dom'
 import { isAuthenticated } from 'authenticare/client'
 
 import { UserContext, updateUserContext } from './UserContext'
-import Nav from './Nav'
+import NavAuth from './NavAuth'
+import NavUnauth from './NavUnauth'
 import Register from './Register'
 import SignIn from './SignIn'
 import Welcome from './Welcome'
@@ -25,7 +26,8 @@ function App () {
         <h1 className="title">pearing</h1>
         <div className='columns'>
           <Route exact path='/' component={ Welcome } />
-          <Route path="/" component={Nav} />
+          <Route path="/" component={NavAuth} />
+          <Route path="/" component={NavUnauth} />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />
         </div>

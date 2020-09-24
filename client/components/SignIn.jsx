@@ -65,14 +65,7 @@ function SignIn (props) {
           Sign in
         </button>
       </div>
-      <div className="signInRight">
-        <img
-          src="#"
-          alt=""
-          style={{ width: '600px', height: '500px' }}
-        />
       </div>
-    </div>
   )
 }
 export default SignIn
