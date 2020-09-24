@@ -16,3 +16,11 @@ export function updatePersonalInfo (info) {
   .send(info)
   .then(res => res.body)
 }
+
+export function getList () {
+  return request
+    .get(url + '/listings')
+    .then(res => {
+      return res.body
+    })
+}

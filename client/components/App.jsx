@@ -11,6 +11,7 @@ import Welcome from './Welcome'
 // import AddEvent from './AddEvent'
 import Subjects from './Subjects'
 import Profile from './Profile'
+import Home from './Home'
 
 function App () {
   const [, setUser] = useContext(UserContext)
@@ -33,6 +34,7 @@ function App () {
           <Route path="/signin" component={SignIn} />
           <Route path="/subjects" component={Subjects} />
           <Route path="/profile" component={Profile} />
+          <Route path="/home" component={Home} />
         </div>
       </div>
     </>

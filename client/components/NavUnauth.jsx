@@ -30,10 +30,10 @@ export default function NavUnauth(props) {
     case '/contact':
       navLandingUnauth = (
         <>
-        <Link to="/about">About</Link>
-        <Link to="/">Welcome</Link>
-         <Link to="/signin">Sign in</Link>
-        <Link to="/register">Register</Link>
+          <Link to="/about">About</Link>
+          <Link to="/">Welcome</Link>
+          <Link to="/signin">Sign in</Link>
+          <Link to="/register">Register</Link>
         </>
       )
       break
