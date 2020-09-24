@@ -254,7 +254,7 @@ However, we agreed that if we felt the need (due to productivity slowing down, t
 *Tati*    - Very flexible except I cannot stay later than 10.30 pm as I take the public transport and need to go before last bus/train
 ```
 
-## Team Members Expectations
+## Team Members Expectations.
 ```
 - *Andras* shared that he really wants to have a complete product to share and mentioned that in aiming in doing so,  this journey will be one filled of learning.
 
