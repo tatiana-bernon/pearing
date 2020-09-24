@@ -6,10 +6,11 @@ import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 export default function Nav (props) {
   let currentPage = props.location.pathname
   let navLanding = null
+  let navLandingUnauth = null 
 
   switch (currentPage) {
     case '/':
-      navLanding = (
+      navLandingUnauth = (
         <>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
@@ -73,7 +74,7 @@ export default function Nav (props) {
           </Link>
           <Link to="/">Home</Link>
         </IfAuthenticated>
-        <IfNotAuthenticated>{navLanding}</IfNotAuthenticated>
+        <IfNotAuthenticated>{navLandingUnauth}</IfNotAuthenticated>
       </div>
     </>
   )
