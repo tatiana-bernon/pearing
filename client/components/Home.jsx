@@ -1,12 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import List from './List'
 
 function Home () {
   return (
     <>
-      <div className='column is-half-tablet'>
-        <p>Home page</p>
-      </div>
+      <List />
     </>
   )
 }
