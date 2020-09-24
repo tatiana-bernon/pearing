@@ -18,6 +18,8 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 
 ## User interface (proposal) - wireframes
 
+digital wireframes : https://whimsical.com/QDXFdGXtA1EhQW5xkkNT2u
+
 ![alt text](server/public/images/20200923_174223.jpg)
 
 ## Dependencies 
