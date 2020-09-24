@@ -6,7 +6,7 @@ import { UserContext, updateUserContext } from './UserContext'
 import Nav from './Nav'
 import Register from './Register'
 import SignIn from './SignIn'
-import LandingPage from './LandingPage'
+import Welcome from './Welcome'
 // import AddEvent from './AddEvent'
 // import EditEvent from './EditEvent'
 
@@ -24,7 +24,7 @@ function App () {
       <div className="container">
         <h1 className="title">pearing</h1>
         <div className='columns'>
-          <Route exact path='/' component={ LandingPage } />
+          <Route exact path='/' component={ Welcome } />
           <Route path="/" component={Nav} />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />

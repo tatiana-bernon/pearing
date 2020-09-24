@@ -6,11 +6,11 @@ import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 export default function Nav (props) {
   let currentPage = props.location.pathname
   let navLanding = null
-  let navLandingUnauth = null 
+  // let navLandingUnauth = null 
 
   switch (currentPage) {
     case '/':
-      navLandingUnauth = (
+      navLanding = (
         <>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
@@ -22,16 +22,18 @@ export default function Nav (props) {
     case '/about':
       navLanding = (
         <>
-          <Link to="/about">About</Link>
-          <Link to="/home">Home</Link>
+          <Link to="/">Welcome</Link>
+          <Link to="/signin">Sign in</Link>
+          <Link to="/register">Register</Link>
         </>
       )
       break
     case '/contact':
       navLanding = (
         <>
-          <Link to="/contact">Contact</Link>
-          <Link to="/home">Home</Link>
+          <Link to="/">Welcome</Link>
+          <Link to="/signin">Sign in</Link>
+          <Link to="/register">Register</Link>
         </>
       )
       break
@@ -41,8 +43,7 @@ export default function Nav (props) {
           <Link to="/contact">Contact</Link>
           <Link to ="/profile">Profile</Link>
           <Link to ="/subjects">Subjects</Link>
-          <Link to ="/signOut">SignOut</Link>
-          <Link to="/home">Home</Link>
+          <Link to="/">Welcome</Link>
         </>
       )
       case '/profile':
@@ -50,11 +51,27 @@ export default function Nav (props) {
         <>
           <Link to="/contact">Contact</Link>
           <Link to ="/profile">Profile</Link>
-          <Link to ="/home">Home</Link>
+          <Link to="/">Welcome</Link>
           <Link to ="/subjects">Subjects</Link>
-          <Link to ="/signOut">SignOut</Link>
+
         </>
       )
+         break
+         case '/signin':
+           navLanding = (
+             <>
+               <Link to="/">Welcome</Link>
+               <Link to="/register">Register</Link>
+             </>
+      )
+      break
+      case '/register':
+        navLanding = (
+          <>
+            <Link to="/">Welcome</Link>
+            <Link to="/signin">Sign In</Link>
+          </>
+           )
       break
       default:
         navLanding = (
@@ -69,12 +86,12 @@ export default function Nav (props) {
     <>
       <div className="nav">
         <IfAuthenticated>
-          <Link to="/" onClick={logOff}>
+        <Link to="/" onClick={logOff}>
             Log out
           </Link>
-          <Link to="/">Home</Link>
+          <Link to="/">Welcome</Link>
         </IfAuthenticated>
-        <IfNotAuthenticated>{navLandingUnauth}</IfNotAuthenticated>
+        <IfNotAuthenticated>{navLanding}</IfNotAuthenticated>
       </div>
     </>
   )
