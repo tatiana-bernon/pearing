@@ -36,7 +36,9 @@ verify we have installed everything needed:
 - Master 
 - Dev
 - Feature branches created and merged through pull request regularly.
-- Merge to Dev daily after checking all merge to dev successful without any unresolved conflict.
+- Merge to Dev daily after checking all merge to dev successful without any unresolved conflict following the image below:
+![alt text](server/public/images/20200918_162126.jpg)
+
 
 ## Steps aiming at MVP 
 
