@@ -9,6 +9,7 @@ import Register from './Register'
 import SignIn from './SignIn'
 import Welcome from './Welcome'
 // import AddEvent from './AddEvent'
+import Subjects from './Subjects'
 // import EditEvent from './EditEvent'
 
 function App () {
@@ -30,6 +31,7 @@ function App () {
           <Route path="/" component={NavUnauth} />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />
+          <Route path="/subjects" component={Subjects} />
         </div>
       </div>
     </>
