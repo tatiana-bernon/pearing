@@ -24,7 +24,7 @@ function SignIn (props) {
       .then(() => {
         if (isAuthenticated()) {
           updateUserContext(setUser)
-          return props.history.push('/user')
+          return props.history.push('/home')
         }
         return null
       })
@@ -65,14 +65,7 @@ function SignIn (props) {
           Sign in
         </button>
       </div>
-      <div className="signInRight">
-        <img
-          src="#"
-          alt=""
-          style={{ width: '600px', height: '500px' }}
-        />
       </div>
-    </div>
   )
 }
 export default SignIn
