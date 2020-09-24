@@ -20,7 +20,7 @@ function Register (props) {
       .then(() => {
         if (isAuthenticated()) {
           updateUserContext(setUser)
-          return props.history.push('/user')
+          return props.history.push('/home')
         }
         return null
       })
@@ -63,11 +63,6 @@ function Register (props) {
         </button>
       </div>
       <div className="rightRegister">
-        <img
-          src="#"
-          alt=""
-          style={{ width: '600px', height: '500px' }}
-        />
       </div>
     </div>
   )

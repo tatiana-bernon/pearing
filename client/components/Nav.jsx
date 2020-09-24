@@ -13,6 +13,8 @@ export default function Nav (props) {
         <>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/signin">Sign in</Link>
+          <Link to="/register">Register</Link>
         </>
       )
       break
@@ -20,6 +22,7 @@ export default function Nav (props) {
       navLanding = (
         <>
           <Link to="/about">About</Link>
+          <Link to="/home">Home</Link>
         </>
       )
       break
@@ -27,6 +30,7 @@ export default function Nav (props) {
       navLanding = (
         <>
           <Link to="/contact">Contact</Link>
+          <Link to="/home">Home</Link>
         </>
       )
       break
@@ -37,6 +41,7 @@ export default function Nav (props) {
           <Link to ="/profile">Profile</Link>
           <Link to ="/subjects">Subjects</Link>
           <Link to ="/signOut">SignOut</Link>
+          <Link to="/home">Home</Link>
         </>
       )
       case '/profile':
