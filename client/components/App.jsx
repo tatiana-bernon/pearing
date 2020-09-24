@@ -7,7 +7,7 @@ import Nav from './Nav'
 import Register from './Register'
 import SignIn from './SignIn'
 import LandingPage from './LandingPage'
-// import AddEvent from './AddEvent'
+import Subjects from './Subjects'
 // import EditEvent from './EditEvent'
 
 function App () {
@@ -28,6 +28,7 @@ function App () {
           <Route path="/" component={Nav} />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />
+          <Route path="/subjects" component={Subjects} />
         </div>
       </div>
     </>
