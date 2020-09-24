@@ -7,7 +7,7 @@
 To get started, clone this repo and then:
 
 ```
-cd skillshare
+cd pearing
 npm install
 npm run db:migrate
 npm run db:seed
