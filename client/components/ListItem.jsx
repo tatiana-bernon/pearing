@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import { getListItem, getUserById } from '../api'
+import React, { useState, useEffect, useContext } from 'react'
+import { UserContext } from './UserContext'
+import { getListItem, getUserById, showInterest } from '../api'
 
 function ListItem (props) {
+  const [user, setUser] = useContext(UserContext)
   const [listItem, setListItem] = useState([])
   const [author, setAuthor] = useState('')
-  // const id = Number(props.location.pathname.split('/')[2])
+  const [interestButton, setInterestButton] = useState('Show Interest')
   const id = Number(props.match.params.id)
 
   useEffect(() => {
@@ -16,7 +18,6 @@ function ListItem (props) {
       .then((id) => {
         return getUserById(id)
           .then(res => {
-            console.log(res)
             setAuthor(res.user.username)
             return null
           })
@@ -26,11 +27,30 @@ function ListItem (props) {
       })
   }, [])
 
+  const handleClick = () => {
+    const interest = {
+      user_id: user.id,
+      listing_id: listItem.id,
+      author_id: listItem.user_id
+    }
+    showInterest(interest)
+    interestButton === 'Show Interest' ? setInterestButton('Remove Interest') : setInterestButton('Show Interest')
+  }
+
   return (
     <>
-      <h3>{listItem.title}  </h3>
-      <p>{listItem.description}</p>
-      <p>by {author}</p>
+      <div>
+        <h3>{listItem.title}  </h3>
+        <p>{listItem.description}</p>
+        <p>by {author}</p>
+      </div>
+      <button
+        type="button"
+        className="button is-primary"
+        onClick={handleClick}
+        data-testid="submitButton">
+        {interestButton}
+      </button>
     </>
   )
 }

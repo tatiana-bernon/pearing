@@ -19,7 +19,6 @@ router.get('/:id', (req, res) => {
   const id = Number(req.params.id)
   db.getUserById(id)
     .then(user => {
-      console.log(user)
       return res.json({ user })
     })
     .catch(err => {
