@@ -9,7 +9,7 @@ exports.seed = (knex) => {
       generateHash('bhiv'),
       generateHash('andras')
     ]))
-    .then(([ darylHash, tatiHash, bhivHash, andrasHash ]) =>
+    .then(([darylHash, tatiHash, bhivHash, andrasHash]) =>
       knex('users').insert([
         { id: 1, username: 'daryl', hash: darylHash, email: 'test1@test.com', info: 'yeah' },
         { id: 2, username: 'tati', hash: tatiHash, email: 'test2@test.com', info: 'nah' },

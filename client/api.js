@@ -12,9 +12,9 @@ export function getSubjects () {
 
 export function updatePersonalInfo (info) {
   return request
-  .post(url + '/users')
-  .send(info)
-  .then(res => res.body)
+    .post(url + '/users')
+    .send(info)
+    .then(res => res.body)
 }
 
 export function getList () {
