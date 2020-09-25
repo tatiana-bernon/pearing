@@ -49,7 +49,7 @@ function PersonalInfoEdit () {
           className="button is-primary"
           onClick={handleClick}
           data-testid="submitButton">
-        Submit
+          Submit
         </button>
       </form>
     </>

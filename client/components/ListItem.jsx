@@ -6,8 +6,6 @@ function ListItem (props) {
   const [author, setAuthor] = useState('')
   // const id = Number(props.location.pathname.split('/')[2])
   const id = Number(props.match.params.id)
-  // const [description, setDescription] = useState('')
-  // const [author, setAuthor] = useState('')
 
   useEffect(() => {
     getListItem(id)
@@ -18,6 +16,7 @@ function ListItem (props) {
       .then((id) => {
         return getUserById(id)
           .then(res => {
+            console.log(res)
             setAuthor(res.user.username)
             return null
           })
@@ -29,7 +28,9 @@ function ListItem (props) {
 
   return (
     <>
-      <h3>{listItem.title} by {author} </h3>
+      <h3>{listItem.title}  </h3>
+      <p>{listItem.description}</p>
+      <p>by {author}</p>
     </>
   )
 }
