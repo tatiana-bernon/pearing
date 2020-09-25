@@ -21,6 +21,7 @@ export function getList () {
   return request
     .get(url + '/listings')
     .then(res => {
+      console.log(res.body)
       return res.body
     })
 }

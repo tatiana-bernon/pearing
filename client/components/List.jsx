@@ -22,7 +22,7 @@ function List () {
       {list.map(listing => (
         <Link key={listing.id} to={`/listings/${listing.id}`} >
           <>
-            <h3>{listing.title} - {listing.subject_id}</h3>
+            <h3>{listing.title} - {listing.subject}</h3>
           </>
         </Link>
       ))}
