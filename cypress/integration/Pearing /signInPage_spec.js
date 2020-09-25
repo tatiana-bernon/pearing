@@ -7,6 +7,5 @@ describe('Checking the sign in function', () => {
     cy.get('#password').type('test1@test.com')
     cy.get('.button').click()
     cy.title().should('include', 'pearing')
-
-})
+  })
 })

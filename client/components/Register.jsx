@@ -30,7 +30,7 @@ function Register(props) {
   }
 
   return (
-    
+    <>
       <div className="registerContainer container">
         <div className="leftRegister">
           <div className="registerTitle">
@@ -58,7 +58,7 @@ function Register(props) {
             className="button is-primary"
             onClick={handleClick}
             data-testid="submitButton">
-            Register
+          Register
           </button>
 
         </div>
@@ -83,11 +83,12 @@ function Register(props) {
           className="button is-primary"
           onClick={handleClick}
           data-testid="submitButton">
-          Register
+        Register
         </button>
       </div>
       <div className="rightRegister">
       </div>
+      </>
     
 }
 
