@@ -12,6 +12,7 @@ import Welcome from './Welcome'
 import Subjects from './Subjects'
 import Profile from './Profile'
 import Home from './Home'
+import ListItem from './ListItem'
 
 function App () {
   const [, setUser] = useContext(UserContext)
@@ -35,6 +36,7 @@ function App () {
           <Route path="/subjects" component={Subjects} />
           <Route path="/profile" component={Profile} />
           <Route path="/home" component={Home} />
+          <Route path="/listings/:id" component={ListItem} />
         </div>
       </div>
     </>
