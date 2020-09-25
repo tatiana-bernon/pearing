@@ -62,9 +62,31 @@ function Register(props) {
           </button>
 
         </div>
-        <div className="rightRegister">
-        </div>
-
+        <label className="label">Username</label>
+        <input
+          className="input"
+          type="username"
+          value={username}
+          placeholder="username"
+          onChange={(e) => setUsername(e.target.value)}>
+        </input>
+        <label className="label">Password</label>
+        <input
+          className="input"
+          type="password"
+          value={password}
+          placeholder="password"
+          onChange={(e) => setPassword(e.target.value)}>
+        </input>
+        <button
+          type="button"
+          className="button is-primary"
+          onClick={handleClick}
+          data-testid="submitButton">
+          Register
+        </button>
+      </div>
+      <div className="rightRegister">
       </div>
     
 }

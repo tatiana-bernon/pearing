@@ -6,9 +6,9 @@ import PersonalListing from './PersonalListing'
 function Profile () {
   return (
     <>
-    <PersonalInfo />
-    <hr/>
-    <PersonalListing />
+      <PersonalInfo />
+      <hr/>
+      <PersonalListing />
     </>
   )
 }

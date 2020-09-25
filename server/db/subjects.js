@@ -4,10 +4,10 @@ module.exports = {
   getSubjects
 }
 function getSubjects (db = connection) {
-return db('subjects')
-  .select()
-  .catch(err => {
-    console.error(err)
-    throw err
-  })
+  return db('subjects')
+    .select()
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
 }
