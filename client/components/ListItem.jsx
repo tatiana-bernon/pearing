@@ -6,6 +6,8 @@ function ListItem (props) {
   const [author, setAuthor] = useState('')
   // const id = Number(props.location.pathname.split('/')[2])
   const id = Number(props.match.params.id)
+  // const [description, setDescription] = useState('')
+  // const [author, setAuthor] = useState('')
 
   useEffect(() => {
     getListItem(id)
