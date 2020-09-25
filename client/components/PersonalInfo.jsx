@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 
 import { UserContext } from './UserContext'
 
@@ -8,7 +8,7 @@ function PersonalInfo () {
   const [user, setUser] = useContext(UserContext)
   const [email, setEmail] = useState('')
   const [info, setInfo] = useState('')
-  
+
   const handleClick = () => {
     updatePersonalInfo(
       {
@@ -34,7 +34,7 @@ function PersonalInfo () {
       <hr />
       <h3>Update Information</h3>
       <form>
-        <label htmlFor="email">Email: </label>        
+        <label htmlFor="email">Email: </label>
         <input
           className="input"
           name="email"

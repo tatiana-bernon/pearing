@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { IfNotAuthenticated } from './Authenticated'
 
-export default function NavUnauth(props) {
-  let currentPage = props.location.pathname
+export default function NavUnauth (props) {
+  const currentPage = props.location.pathname
   let navLandingUnauth = null
 
   switch (currentPage) {
@@ -20,20 +20,20 @@ export default function NavUnauth(props) {
     case '/about':
       navLandingUnauth = (
         <>
-         <Link to="/contact">Contact</Link>
-         <Link to="/">Welcome</Link>
-         <Link to="/signin">Sign in</Link>
-        <Link to="/register">Register</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/">Welcome</Link>
+          <Link to="/signin">Sign in</Link>
+          <Link to="/register">Register</Link>
         </>
       )
       break
     case '/contact':
       navLandingUnauth = (
         <>
-        <Link to="/about">About</Link>
-        <Link to="/">Welcome</Link>
-         <Link to="/signin">Sign in</Link>
-        <Link to="/register">Register</Link>
+          <Link to="/about">About</Link>
+          <Link to="/">Welcome</Link>
+          <Link to="/signin">Sign in</Link>
+          <Link to="/register">Register</Link>
         </>
       )
       break
