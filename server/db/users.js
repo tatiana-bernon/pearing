@@ -40,7 +40,7 @@ function getUserByName (username, db = connection) {
 }
 
 function getUserById (id, db = connection) {
-  return db('users').select().where('id', id).first()
+  return db('users').select('id', 'username', 'email', 'info').where('id', id).first()
 }
 
 function updatePersonalInfoById (update, db = connection) {

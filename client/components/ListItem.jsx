@@ -16,6 +16,7 @@ function ListItem (props) {
       .then((id) => {
         return getUserById(id)
           .then(res => {
+            console.log(res)
             setAuthor(res.user.username)
             return null
           })
@@ -27,7 +28,9 @@ function ListItem (props) {
 
   return (
     <>
-      <h3>{listItem.title} by {author} </h3>
+      <h3>{listItem.title}  </h3>
+      <p>{listItem.description}</p>
+      <p>by {author}</p>
     </>
   )
 }

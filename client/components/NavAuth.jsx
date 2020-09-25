@@ -48,6 +48,7 @@ export default function NavAuth (props) {
         </>
       )
       break
+      // Subjects is meant to be a dropdown part of the listitem form to be filled and not in the nav bar
     case '/subjects':
       navLanding = (
         <>
@@ -58,6 +59,35 @@ export default function NavAuth (props) {
         </>
       )
       break
+    case '/listItem':
+      navLanding = (
+        <>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/profile">Profile</Link>
+          <Link to="/home">Home</Link>
+        </>
+      )
+      break
+    case '/listings':
+      navLanding = (
+        <>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/profile">Profile</Link>
+          <Link to="/home">Home</Link>
+        </>
+      )
+      break
+    default:
+      navLanding = (
+        <>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/profile">Profile</Link>
+          <Link to="/home">Home</Link>
+        </>
+      )
   }
 
   return (
