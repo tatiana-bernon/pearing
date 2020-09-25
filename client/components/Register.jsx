@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+/* eslint-disable space-before-function-paren */
 import React, { useState, useContext } from 'react'
 import { register, isAuthenticated } from 'authenticare/client'
 
@@ -60,36 +62,11 @@ function Register(props) {
             data-testid="submitButton">
           Register
           </button>
-
-        </div>
-        <label className="label">Username</label>
-        <input
-          className="input"
-          type="username"
-          value={username}
-          placeholder="username"
-          onChange={(e) => setUsername(e.target.value)}>
-        </input>
-        <label className="label">Password</label>
-        <input
-          className="input"
-          type="password"
-          value={password}
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}>
-        </input>
-        <button
-          type="button"
-          className="button is-primary"
-          onClick={handleClick}
-          data-testid="submitButton">
-        Register
-        </button>
       </div>
       <div className="rightRegister">
       </div>
       </>
-    
+  )
 }
 
 export default Register
