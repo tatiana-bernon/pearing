@@ -10,7 +10,7 @@ describe('header test', () => {
     // eslint-disable-next-line jest/expect-expect
     it('can fill the form', () => {
       cy.visit('http://localhost:3000/#/register')
-      cy.get('div')
+      // cy.get('div')
 
       cy.get('input[type="username"]')
         .type("test user")
@@ -30,8 +30,8 @@ describe('header test', () => {
         response: { status: "Registered", code: 201 }
       })
       cy.get('div')
-      cy.get('button').click()
-      cy.visit('http://localhost:3000/#/home')
+      cy.get('.button').click()
+      // cy.visit('http://localhost:3000/#/home')
      
     })
 
