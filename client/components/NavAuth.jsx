@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { logOff } from 'authenticare/client'
 import { IfAuthenticated } from './Authenticated'
 
-export default function NavAuth(props) {
-  let currentPage = props.location.pathname
+export default function NavAuth (props) {
+  const currentPage = props.location.pathname
   let navLanding = null
 
   switch (currentPage) {
@@ -57,9 +57,8 @@ export default function NavAuth(props) {
           <Link to="/home">Home</Link>
         </>
       )
-      break  
+      break
   }
-
 
   return (
     <>

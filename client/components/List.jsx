@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import ListItem from './ListItem'
-
 import { getList } from '../api'
 
 function List () {
@@ -10,17 +8,21 @@ function List () {
 
   useEffect(() => {
     getList()
-    .then(res => {
-      setList(res.list)
-    })
+      .then(res => {
+        setList(res.list)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
   }, [])
-  
+
   return (
     <>
       {list.map(listing => (
         <Link key={listing.id} to={`/listings/${listing.id}`} >
           <>
-          <h3>{listing.title} - {listing.subject_id}</h3>
+            <h3>{listing.title} - {listing.subject_id}</h3>
           </>
         </Link>
       ))}
