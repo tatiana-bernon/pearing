@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 import ListItem from './ListItem'
 
@@ -10,14 +11,18 @@ function List () {
   useEffect(() => {
     getList()
     .then(res => {
-      setList(res.body)
+      setList(res.list)
     })
   }, [])
   
   return (
     <>
       {list.map(listing => (
-        <ListItem key={listing.id} />
+        <Link key={listing.id} to={`/listings/${listing.id}`} >
+          <>
+          <h3>{listing.title} - {listing.subject_id}</h3>
+          </>
+        </Link>
       ))}
     </>
   )

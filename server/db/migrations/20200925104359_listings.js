@@ -4,7 +4,7 @@ exports.up = (knex) => {
     table.string('title')
     table.integer('subject_id')
     table.string('description')
-    table.integer('counter')
+    table.integer('status')
     table.integer('interested')
     table.integer('user_id')
   })
