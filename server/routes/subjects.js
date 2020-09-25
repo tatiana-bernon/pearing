@@ -4,7 +4,6 @@ const db = require('../db/subjects')
 
 const router = express.Router()
 
-
 router.get('/', (req, res) => {
   db.getSubjects()
     .then(subjects => {

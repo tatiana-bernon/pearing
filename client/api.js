@@ -21,6 +21,23 @@ export function getList () {
   return request
     .get(url + '/listings')
     .then(res => {
+      console.log(res.body)
+      return res.body
+    })
+}
+
+export function getListItem (id) {
+  return request
+    .get(url + '/listings/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
+export function getUserById (id) {
+  return request
+    .get(url + '/users/' + id)
+    .then(res => {
       return res.body
     })
 }

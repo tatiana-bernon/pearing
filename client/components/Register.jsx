@@ -50,7 +50,7 @@ function Register (props) {
           value={password}
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}>
-        </input>        
+        </input>
         <button
           type="button"
           className="button is-primary"
