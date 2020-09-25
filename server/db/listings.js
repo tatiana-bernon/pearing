@@ -1,12 +1,25 @@
 const connection = require('./connection')
 
 module.exports = {
-  getList
+  getList,
+  getListingById
 }
+
 function getList (db = connection) {
   return db('listings')
     .join('subjects', 'listings.subject_id', 'subjects.id')
     .select('listings.id', 'listings.title', 'listings.status', 'listings.interested', 'subjects.subject')
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function getListingById (id, db = connection) {
+  return db('listings')
+    .select()
+    .where('id', id)
+    .first()
     .catch(err => {
       console.error(err)
       throw err
