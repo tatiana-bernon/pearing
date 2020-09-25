@@ -58,6 +58,16 @@ export default function NavAuth (props) {
         </>
       )
       break
+    case '/listItem':
+      navLanding = (
+        <>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/profile">Profile</Link>
+          <Link to="/home">Home</Link>
+        </>
+      )
+      break
   }
 
   return (
