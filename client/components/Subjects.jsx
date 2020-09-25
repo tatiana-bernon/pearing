@@ -4,7 +4,6 @@ import { getSubjects } from '../api'
 
 
 function subjects() {
-  const [user] = useContext(UserContext)
   const [subjects, setSubjects] = useState([])
 
   useEffect(() => {

@@ -41,24 +41,21 @@ function Register (props) {
           type="username"
           value={username}
           placeholder="username"
-          onChange={(e) => setUsername(e.target.value)}
-        ></input>
+          onChange={(e) => setUsername(e.target.value)}>
+        </input>
         <label className="label">Password</label>
         <input
           className="input"
           type="password"
           value={password}
           placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <label className="label">pearing</label>
-
+          onChange={(e) => setPassword(e.target.value)}>
+        </input>        
         <button
           type="button"
           className="button is-primary"
           onClick={handleClick}
-          data-testid="submitButton"
-        >
+          data-testid="submitButton">
           Register
         </button>
       </div>

@@ -14,7 +14,7 @@ export default function NavAuth(props) {
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/profile">Profile</Link>
-          <Link to="/subject">Subject</Link>
+          <Link to="/subjects">Subjects</Link>
         </>
       )
       break
@@ -23,7 +23,7 @@ export default function NavAuth(props) {
         <>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
-          <Link to="/subject">Subject</Link>
+          <Link to="/subjects">Subjects</Link>
           <Link to="/home">Home</Link>
         </>
       )
@@ -33,7 +33,7 @@ export default function NavAuth(props) {
         <>
           <Link to="/about">About</Link>
           <Link to="/profile">Profile</Link>
-          <Link to="/subject">Subject</Link>
+          <Link to="/subjects">Subjects</Link>
           <Link to="/home">Home</Link>
         </>
       )
@@ -43,10 +43,21 @@ export default function NavAuth(props) {
         <>
           <Link to="/contact">Contact</Link>
           <Link to="/profile">Profile</Link>
-          <Link to="/subject">Subject</Link>
+          <Link to="/subjects">Subjects</Link>
           <Link to="/home">Home</Link>
         </>
       )
+      break
+    case '/subjects':
+      navLanding = (
+        <>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/profile">Profile</Link>
+          <Link to="/home">Home</Link>
+        </>
+      )
+      break  
   }
 
 
