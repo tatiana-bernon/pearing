@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('header test', () => {
   // eslint-disable-next-line jest/expect-expect
   it('Has the correct headers', () => {
@@ -13,26 +14,25 @@ describe('header test', () => {
       // cy.get('div')
 
       cy.get('input[type="username"]')
-        .type("test user")
-        .should("have.value", "test user")
+        .type('test user')
+        .should('have.value', 'test user')
 
       cy.get('input[type="password"]')
-        .type("test password")
-        .should("have.value", "test password")
+        .type('test password')
+        .should('have.value', 'test password')
     })
 
     // eslint-disable-next-line jest/expect-expect
     it('can submit the form', () => {
-      cy.server();
+      cy.server()
       cy.route({
-        url: "http://localhost:3000/#/home",
-        method: "POST",
-        response: { status: "Registered", code: 201 }
+        url: 'http://localhost:3000/#/home',
+        method: 'POST',
+        response: { status: 'Registered', code: 201 }
       })
       cy.get('div')
       cy.get('.button').click()
       // cy.visit('http://localhost:3000/#/home')
-     
     })
 
     // cy.get('form').within(($form) => {
@@ -46,8 +46,4 @@ describe('header test', () => {
     //   cy.root().submit()
     // })
   })
-
-
-
 })
-

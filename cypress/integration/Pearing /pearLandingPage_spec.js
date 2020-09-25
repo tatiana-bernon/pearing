@@ -1,3 +1,6 @@
+/* eslint-disable indent */
+/* eslint-disable jest/expect-expect */
+/* eslint-disable no-undef */
 describe('Landing page tests', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
