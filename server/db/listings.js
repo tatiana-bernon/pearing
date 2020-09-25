@@ -17,6 +17,8 @@ function getList (db = connection) {
 function getListingById (id, db = connection) {
   return db('listings')
     .select()
+    .where('id', id)
+    .first()
     .catch(err => {
       console.error(err)
       throw err

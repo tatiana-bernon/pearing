@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-
-import { getListItem } from '../api'
+import { getListItem, getUserById } from '../api'
 
 function ListItem (props) {
   const [listItem, setListItem] = useState([])
-  const id = Number(props.location.pathname.split('/')[2])
+  const [author, setAuthor] = useState('')
+  // const id = Number(props.location.pathname.split('/')[2])
+  const id = Number(props.match.params.id)
 
   useEffect(() => {
     getListItem(id)
       .then(res => {
-        setListItem(res.listItem)
-        return null
+        setListItem(res)
+        return res.user_id
+      })
+      .then((id) => {
+        return getUserById(id)
+          .then(res => {
+            setAuthor(res.user.username)
+            return null
+          })
       })
       .catch((error) => {
         console.log('error: ', error.message)
@@ -20,13 +27,7 @@ function ListItem (props) {
 
   return (
     <>
-      {listItem.map(listing => (
-        <Link key={listing.id} to={`/listings/${listing.id}`} >
-          <>
-            <h3>{listing.title} - {listing.listing_id}</h3>
-          </>
-        </Link>
-      ))}
+      <h3>{listItem.title} by {author} </h3>
     </>
   )
 }

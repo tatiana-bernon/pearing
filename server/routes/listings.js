@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   const id = Number(req.params.id)
-  console.log(id)
   db.getListingById(id)
     .then(listing => {
       return res.json(listing)

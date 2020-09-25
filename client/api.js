@@ -32,3 +32,11 @@ export function getListItem (id) {
       return res.body
     })
 }
+
+export function getUserById (id) {
+  return request
+    .get(url + '/users/' + id)
+    .then(res => {
+      return res.body
+    })
+}
