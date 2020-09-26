@@ -2,7 +2,8 @@ const connection = require('./connection')
 
 module.exports = {
   getList,
-  getListingById
+  getListingById,
+  showInterest
 }
 
 function getList (db = connection) {
@@ -20,6 +21,15 @@ function getListingById (id, db = connection) {
     .select()
     .where('id', id)
     .first()
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function showInterest (interest, db = connection) {
+  return db('interestedUsers')
+    .insert('listing_id', interest.listing_id)
     .catch(err => {
       console.error(err)
       throw err

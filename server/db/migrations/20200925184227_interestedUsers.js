@@ -1,8 +1,9 @@
 exports.up = (knex) => {
   return knex.schema.createTable('interestedUsers', table => {
     table.increments('id')
-    table.integer('interested_id')
+    table.integer('listing_id')
     table.integer('user_id')
+    table.integer('author_id')
   })
 }
 
