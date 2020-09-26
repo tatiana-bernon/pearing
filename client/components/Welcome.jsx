@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom'
 function Landing () {
   return (
     <>
-      <div className='landingPage'>
-        <h1> Welcome to Pearing! </h1>
-      </div>
-
-      <div className='button'>
+      <div>
         <Link to='/signin'>
           <button
             type="button"
