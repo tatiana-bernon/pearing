@@ -41,17 +41,25 @@ export function getUserById (id) {
     })
 }
 
-export function checkInterest (userId, id) {
+export function addForm (id) {
   return request
-    .post(url + '/listings/' + id)
-    .send(userId)
-    .then(res => res.body)
+    .get(url + '/addform/' + id)
+    .then(res => {
+      return res.body
+    })
 }
 
-export function showInterest (interest) {
-  console.log(interest)
+// export function showInterest (interest, id) {
+//   return request
+//     .post(url + '/listings/' + id)
+//     .send(userId)
+//     .then(res => res.body)
+// }
+
+export function addNewListing (newListing) {
+  console.log(newListing)
   return request
     .post(url + '/listings/')
-    .send(interest)
+    .send(newListing)
     .then(res => res.body)
 }

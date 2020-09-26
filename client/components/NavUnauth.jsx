@@ -12,8 +12,6 @@ export default function NavUnauth (props) {
         <>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
-          <Link to="/signin">Sign in</Link>
-          <Link to="/register">Register</Link>
         </>
       )
       break
@@ -45,6 +43,14 @@ export default function NavUnauth (props) {
         </>
       )
       break
+    case '/register':
+      navLandingUnauth = (
+        <>
+          <Link to="/">Welcome</Link>
+          <Link to="/signin">Sign in</Link>
+        </>
+      )
+      break
     default:
       navLandingUnauth = (
         <>
@@ -55,7 +61,7 @@ export default function NavUnauth (props) {
   }
   return (
     <>
-      <div className="nav">
+      <div className="navUnauth">
         <IfNotAuthenticated>
           {navLandingUnauth}
         </IfNotAuthenticated>

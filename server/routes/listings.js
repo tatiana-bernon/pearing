@@ -48,4 +48,15 @@ router.post('/:id', (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+  const newListing = req.body
+  db.addNewListing(newListing)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 module.exports = router
