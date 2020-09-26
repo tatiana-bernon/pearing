@@ -29,8 +29,10 @@ function App () {
     <>
       <div className="container">
         <div className='columns'>
-          <Route path="/" component={NavAuth} />
-          <Route path="/" component={NavUnauth} />
+          <div>
+            <Route path="/" component={NavAuth} />
+            <Route path="/" component={NavUnauth} />
+          </div>
           <Route exact path='/' component={ Welcome } />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />

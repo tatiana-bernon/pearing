@@ -26,7 +26,6 @@ function Landing () {
               Register
           </button>
         </Link>
-
       </div>
     </>
   )
