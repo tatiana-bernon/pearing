@@ -55,7 +55,7 @@ export default function NavUnauth (props) {
   }
   return (
     <>
-      <div className="nav">
+      <div className="navUnauth">
         <IfNotAuthenticated>
           {navLandingUnauth}
         </IfNotAuthenticated>
