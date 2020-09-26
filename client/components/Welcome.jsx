@@ -48,16 +48,16 @@ function Landing() {
         </div>
         
         <div className="columns container">
-      <figure class="column image is-square mx-2 mt-2 mb-5">
+      <figure className="column image is-square mx-2 mt-2 mb-5">
         <img src="https://bulma.io/images/placeholders/128x128.png"/>
       </figure>
-      <figure class="column image is-square mx-2 mt-2 mb-5">
+      <figure className="column image is-square mx-2 mt-2 mb-5">
         <img src="https://bulma.io/images/placeholders/128x128.png"/>
       </figure>
-      <figure class="column image is-square mx-2 mt-2 mb-5">
+      <figure className="column image is-square mx-2 mt-2 mb-5">
         <img src="https://bulma.io/images/placeholders/128x128.png"/>
       </figure>
-      <figure class="column image is-square mx-2 mt-2 mb-5">
+      <figure className="column image is-square mx-2 mt-2 mb-5">
         <img src="https://bulma.io/images/placeholders/128x128.png"/>
       </figure>
       </div>
