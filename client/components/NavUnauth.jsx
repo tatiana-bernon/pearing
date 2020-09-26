@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { IfNotAuthenticated } from './Authenticated'
 
-export default function NavUnauth (props) {
+export default function NavUnauth(props) {
   const currentPage = props.location.pathname
   let navLandingUnauth = null
 
@@ -10,8 +10,16 @@ export default function NavUnauth (props) {
     case '/':
       navLandingUnauth = (
         <>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <div id="navbarBasicExample " class="navbar-menu is-size-4">
+            <div class="navbar-end navbar-tab-hover-background-color">
+              <a class="navbar-item ">
+                <Link to="/about">About</Link>
+              </a>
+              <a class="navbar-item">
+                <Link to="/contact">Contact</Link>
+              </a>
+            </div>
+          </div>
         </>
       )
       break
@@ -20,8 +28,24 @@ export default function NavUnauth (props) {
         <>
           <Link to="/contact">Contact</Link>
           <Link to="/">Welcome</Link>
-          <Link to="/signin">Sign in</Link>
-          <Link to="/register">Register</Link>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <Link to="/signin">Sign in</Link>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <Link to="/register">Register</Link>
+                </a>
+              </div>
+            </div>
+          </div>
         </>
       )
       break
@@ -61,10 +85,19 @@ export default function NavUnauth (props) {
   }
   return (
     <>
-      <div className="navUnauth">
+      <div className="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#" />
+          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" />
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </div>
         <IfNotAuthenticated>
           {navLandingUnauth}
         </IfNotAuthenticated>
+
       </div>
     </>
   )

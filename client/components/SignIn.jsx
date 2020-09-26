@@ -31,9 +31,9 @@ function SignIn (props) {
   }
 
   return (
-    <div className="signInContainer container">
-      <div className="signInLeft">
-        <div className="signInTitle">
+    <div>
+      <div>
+        <div>
           <h1>Sign in</h1>
         </div>
 

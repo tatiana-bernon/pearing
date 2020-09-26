@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import { Route } from 'react-router-dom'
 import { isAuthenticated } from 'authenticare/client'
 
+
 import { UserContext, updateUserContext } from './UserContext'
 import NavAuth from './NavAuth'
 import NavUnauth from './NavUnauth'
@@ -28,7 +29,6 @@ function App () {
   return (
     <>
       <div className="container">
-        <div className='columns'>
           <div>
             <Route path="/" component={NavAuth} />
             <Route path="/" component={NavUnauth} />
@@ -43,7 +43,6 @@ function App () {
           <Route path="/addform" component={AddForm} />
           <Footer/>
         </div>
-      </div>
     </>
   )
 }
