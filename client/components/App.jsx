@@ -14,6 +14,7 @@ import Profile from './Profile'
 import Home from './Home'
 import ListItem from './ListItem'
 import AddForm from './AddForm'
+import Footer from './Footer'
 
 function App () {
   const [, setUser] = useContext(UserContext)
@@ -39,6 +40,7 @@ function App () {
           <Route path="/home" component={Home} />
           <Route path="/listings/:id" component={ListItem} />
           <Route path="/addform" component={AddForm} />
+          <Footer/>
         </div>
       </div>
     </>
