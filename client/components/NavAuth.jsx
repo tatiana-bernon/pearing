@@ -92,7 +92,7 @@ export default function NavAuth (props) {
 
   return (
     <>
-      <div className="nav">
+      <div className="navAuth">
         <IfAuthenticated>
           <Link to="/" onClick={logOff}>
             Log out
