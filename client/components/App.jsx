@@ -28,11 +28,10 @@ function App () {
   return (
     <>
       <div className="container">
-        <h1 className="title">pearing</h1>
         <div className='columns'>
-          <Route exact path='/' component={ Welcome } />
           <Route path="/" component={NavAuth} />
           <Route path="/" component={NavUnauth} />
+          <Route exact path='/' component={ Welcome } />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />
           <Route path="/subjects" component={Subjects} />
