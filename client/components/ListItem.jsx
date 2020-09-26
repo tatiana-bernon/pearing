@@ -1,13 +1,20 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { UserContext } from './UserContext'
-import { getListItem, getUserById, checkInterest, showInterest } from '../api'
+import {
+  getListItem,
+  getUserById,
+  showInterest,
+  removeInterest,
+  increaseInterested,
+  decreaseInterested
+} from '../api'
 
 function ListItem (props) {
   const [user] = useContext(UserContext)
   const [listItem, setListItem] = useState([])
   const [author, setAuthor] = useState('')
-  const [interest, setInterest] = useState('Show Interest')
+  const [interestButton, setInterestButton] = useState('Show Interest')
   const id = Number(props.match.params.id)
 
   useEffect(() => {
@@ -26,14 +33,6 @@ function ListItem (props) {
       .catch((error) => {
         console.log('error: ', error.message)
       })
-    checkInterest(user.id)
-      // .then(res => {
-      //   setAuthor(res.user.username)
-      //   return null
-      // })
-      // .catch((error) => {
-      //   console.log('error: ', error.message)
-      // })
   }, [])
 
   const handleClick = () => {
@@ -42,11 +41,17 @@ function ListItem (props) {
       listing_id: listItem.id,
       author_id: listItem.user_id
     }
-    // if interest is Show Interest
-    showInterest(interest)
-    // else Remove Interest
 
-    interest === 'Show Interest' ? setInterest('Remove Interest') : setInterest('Show Interest')
+    if (interestButton === 'Show Interest' &&
+      listItem.status < 2) {
+      showInterest(interest)
+      increaseInterested(listItem.id)
+    } else {
+      removeInterest(interest)
+      decreaseInterested(listItem.id)
+    }
+
+    interestButton === 'Show Interest' ? setInterestButton('Remove Interest') : setInterestButton('Show Interest')
   }
 
   return (
@@ -61,7 +66,7 @@ function ListItem (props) {
         className="button is-primary"
         onClick={handleClick}
         data-testid="submitButton">
-        {interest}
+        {interestButton}
       </button>
       <Link to='/home'>
         <button

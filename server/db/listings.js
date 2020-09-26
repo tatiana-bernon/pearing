@@ -4,6 +4,9 @@ module.exports = {
   getList,
   getListingById,
   showInterest,
+  removeInterest,
+  increaseInterested,
+  decreaseInterested,
   addNewListing
 }
 
@@ -31,6 +34,40 @@ function getListingById (id, db = connection) {
 function showInterest (interest, db = connection) {
   return db('interestedUsers')
     .insert(interest)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function removeInterest (interest, db = connection) {
+  return db('interestedUsers')
+    .where('listing_id', interest.listing_id)
+    .where('user_id', interest.user_id)
+    .del()
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function increaseInterested (id, db = connection) {
+  return db('listings')
+    .select()
+    .where('id', id)
+    .increment('interested', 1)
+    .update('status', 1)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function decreaseInterested (id, db = connection) {
+  return db('listings')
+    .select()
+    .where('id', id)
+    .decrement('interested', 1)
     .catch(err => {
       console.error(err)
       throw err

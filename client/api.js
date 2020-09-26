@@ -49,17 +49,45 @@ export function addForm (id) {
     })
 }
 
-// export function showInterest (interest, id) {
+// export function checkInterest (myInterest) {
 //   return request
-//     .post(url + '/listings/' + id)
-//     .send(userId)
+//     .post(url + '/listings/')
+//     .send(myInterest)
 //     .then(res => res.body)
 // }
+
+export function showInterest (interest) {
+  return request
+    .post(url + '/listings/show')
+    .send(interest)
+    .then(res => res.body)
+}
+
+export function removeInterest (interest) {
+  return request
+    .post(url + '/listings/remove')
+    .send(interest)
+    .then(res => res.body)
+}
 
 export function addNewListing (newListing) {
   console.log(newListing)
   return request
-    .post(url + '/listings/')
+    .post(url + '/listings')
     .send(newListing)
+    .then(res => res.body)
+}
+
+export function increaseInterested (id) {
+  return request
+    .post(url + '/listings/increase/' + id)
+    .send()
+    .then(res => res.body)
+}
+
+export function decreaseInterested (id) {
+  return request
+    .post(url + '/listings/decrease/' + id)
+    .send()
     .then(res => res.body)
 }
