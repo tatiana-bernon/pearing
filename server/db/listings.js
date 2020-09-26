@@ -29,7 +29,7 @@ function getListingById (id, db = connection) {
 
 function showInterest (interest, db = connection) {
   return db('interestedUsers')
-    .insert('listing_id', interest.listing_id)
+    .insert(interest)
     .catch(err => {
       console.error(err)
       throw err

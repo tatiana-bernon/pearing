@@ -40,9 +40,18 @@ export function getUserById (id) {
       return res.body
     })
 }
-export function showInterest (interest, id) {
+
+export function checkInterest (userId, id) {
   return request
     .post(url + '/listings/' + id)
+    .send(userId)
+    .then(res => res.body)
+}
+
+export function showInterest (interest) {
+  console.log(interest)
+  return request
+    .post(url + '/listings/')
     .send(interest)
     .then(res => res.body)
 }

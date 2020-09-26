@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { UserContext } from './UserContext'
-import { getListItem, getUserById, showInterest } from '../api'
+import { getListItem, getUserById, checkInterest, showInterest } from '../api'
 
 function ListItem (props) {
-  const [user, setUser] = useContext(UserContext)
+  const [user] = useContext(UserContext)
   const [listItem, setListItem] = useState([])
   const [author, setAuthor] = useState('')
-  const [interestButton, setInterestButton] = useState('Show Interest')
+  const [interest, setInterest] = useState('Show Interest')
   const id = Number(props.match.params.id)
 
   useEffect(() => {
@@ -25,6 +25,14 @@ function ListItem (props) {
       .catch((error) => {
         console.log('error: ', error.message)
       })
+    checkInterest(user.id)
+      // .then(res => {
+      //   setAuthor(res.user.username)
+      //   return null
+      // })
+      // .catch((error) => {
+      //   console.log('error: ', error.message)
+      // })
   }, [])
 
   const handleClick = () => {
@@ -33,8 +41,11 @@ function ListItem (props) {
       listing_id: listItem.id,
       author_id: listItem.user_id
     }
+    // if interest is Show Interest
     showInterest(interest)
-    interestButton === 'Show Interest' ? setInterestButton('Remove Interest') : setInterestButton('Show Interest')
+    // else Remove Interest
+
+    interest === 'Show Interest' ? setInterest('Remove Interest') : setInterest('Show Interest')
   }
 
   return (
@@ -49,7 +60,7 @@ function ListItem (props) {
         className="button is-primary"
         onClick={handleClick}
         data-testid="submitButton">
-        {interestButton}
+        {interest}
       </button>
     </>
   )
