@@ -4,6 +4,7 @@ import { UserContext } from './UserContext'
 import {
   getListItem,
   getUserById,
+  checkInterest,
   showInterest,
   removeInterest,
   countInterested
@@ -28,6 +29,18 @@ function ListItem (props) {
             setAuthor(res.user.username)
             return null
           })
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+    checkInterest(user.id, id)
+      .then(res => {
+        if (res.length === 0) {
+          setInterestButton('Show Interest')
+        } else {
+          setInterestButton('Remove Interest')
+        }
+        return null
       })
       .catch((error) => {
         console.log('error: ', error.message)

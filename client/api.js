@@ -49,12 +49,12 @@ export function addForm (id) {
     })
 }
 
-// export function checkInterest (myInterest) {
-//   return request
-//     .post(url + '/listings/')
-//     .send(myInterest)
-//     .then(res => res.body)
-// }
+export function checkInterest (userId, listingId) {
+  return request
+    .post(url + '/listings/checkinterest')
+    .send({ userId, listingId })
+    .then(res => res.body)
+}
 
 export function showInterest (interest) {
   return request

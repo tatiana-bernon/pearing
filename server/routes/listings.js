@@ -25,6 +25,17 @@ router.get('/:id', (req, res) => {
     })
 })
 
+router.post('/checkinterest', (req, res) => {
+  const interest = req.body
+  db.checkInterest(interest)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.post('/show', (req, res) => {
   const interest = req.body
   db.showInterest(interest)

@@ -3,6 +3,7 @@ const connection = require('./connection')
 module.exports = {
   getList,
   getListingById,
+  checkInterest,
   showInterest,
   removeInterest,
   getInterestById,
@@ -24,6 +25,16 @@ function getListingById (id, db = connection) {
     .select()
     .where('id', id)
     .first()
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function checkInterest (interest, db = connection) {
+  return db('interestedUsers')
+    .where('user_id', interest.userId)
+    .where('listing_id', interest.listingId)
     .catch(err => {
       console.error(err)
       throw err
