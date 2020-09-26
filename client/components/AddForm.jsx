@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { getSubjects } from '../api'
 
 function AddForm () {
@@ -6,6 +6,17 @@ function AddForm () {
   const [subjects, setSubjects] = useState([])
   const [description, setDescription] = useState('')
   const [pearLevel, setpearLevel] = useState('')
+
+  useEffect(() => {
+    getSubjects()
+      .then(res => {
+        setSubjects(res.subjects)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+  }, [])
 
   function handleSubmit (e) {
     e.preventDefault()
@@ -26,15 +37,13 @@ function AddForm () {
               value={ pearLevel } onChange={event => setpearLevel(event.target.value)}/>
 
             <select
-              onChange={(e) => getSubjects(e.target.value)}
               className="select"
               name="subjects"
-              id="subject"
-            >
-              <option hidden>Select your subject</option>
-              <option value="1">react</option>
-              <option value="2">redux </option>
-              <option value="3">HTML</option>
+              id="subject">
+              <option>Select your subject</option>
+              {subjects.map(subject => (
+                <option key={subject.id} value='1'>{subject.subject}</option>
+              ))}
             </select>
 
             <h3> Title </h3>
