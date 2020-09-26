@@ -40,3 +40,11 @@ export function getUserById (id) {
       return res.body
     })
 }
+
+export function addForm (id) {
+  return request
+    .get(url + '/addform/' + id)
+    .then(res => {
+      return res.body
+    })
+}

@@ -13,6 +13,7 @@ import Subjects from './Subjects'
 import Profile from './Profile'
 import Home from './Home'
 import ListItem from './ListItem'
+import AddForm from './AddForm'
 
 function App () {
   const [, setUser] = useContext(UserContext)
@@ -37,6 +38,7 @@ function App () {
           <Route path="/profile" component={Profile} />
           <Route path="/home" component={Home} />
           <Route path="/listings/:id" component={ListItem} />
+          <Route path="/addform" component={AddForm} />
         </div>
       </div>
     </>
