@@ -13,6 +13,8 @@ import Subjects from './Subjects'
 import Profile from './Profile'
 import Home from './Home'
 import ListItem from './ListItem'
+import AddForm from './AddForm'
+import Footer from './Footer'
 
 function App () {
   const [, setUser] = useContext(UserContext)
@@ -26,17 +28,18 @@ function App () {
   return (
     <>
       <div className="container">
-        <h1 className="title">pearing</h1>
         <div className='columns'>
-          <Route exact path='/' component={ Welcome } />
           <Route path="/" component={NavAuth} />
           <Route path="/" component={NavUnauth} />
+          <Route exact path='/' component={ Welcome } />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />
           <Route path="/subjects" component={Subjects} />
           <Route path="/profile" component={Profile} />
           <Route path="/home" component={Home} />
           <Route path="/listings/:id" component={ListItem} />
+          <Route path="/addform" component={AddForm} />
+          <Footer/>
         </div>
       </div>
     </>

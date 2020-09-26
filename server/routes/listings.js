@@ -27,8 +27,18 @@ router.get('/:id', (req, res) => {
 
 router.post('/:id', (req, res) => {
   const interest = req.body
-  console.log(interest)
   db.showInterest(interest)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.post('/', (req, res) => {
+  const newListing = req.body
+  db.addNewListing(newListing)
     .then(listing => {
       return res.json(listing)
     })
