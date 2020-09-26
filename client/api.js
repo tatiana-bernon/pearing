@@ -55,3 +55,11 @@ export function showInterest (interest, id) {
     .send(interest)
     .then(res => res.body)
 }
+
+export function addNewListing (newListing) {
+  console.log(newListing)
+  return request
+    .post(url + '/listings/')
+    .send(newListing)
+    .then(res => res.body)
+}

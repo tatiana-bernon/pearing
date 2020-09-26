@@ -3,7 +3,8 @@ const connection = require('./connection')
 module.exports = {
   getList,
   getListingById,
-  showInterest
+  showInterest,
+  addNewListing
 }
 
 function getList (db = connection) {
@@ -30,6 +31,15 @@ function getListingById (id, db = connection) {
 function showInterest (interest, db = connection) {
   return db('interestedUsers')
     .insert('listing_id', interest.listing_id)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function addNewListing (newListing, db = connection) {
+  return db('listings')
+    .insert(newListing)
     .catch(err => {
       console.error(err)
       throw err

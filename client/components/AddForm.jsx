@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import { getSubjects } from '../api'
+import React, { useState, useEffect, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
+import { getSubjects, addNewListing } from '../api'
+
+import { UserContext } from './UserContext'
 
 function AddForm () {
-  const [title, setTitle] = useState('')
+  const [user] = useContext(UserContext)
+  const [title, setTitle] = useState(null)
+  const [subject, setSubject] = useState(null)
   const [subjects, setSubjects] = useState([])
-  const [description, setDescription] = useState('')
-  const [pearLevel, setpearLevel] = useState('')
+  const [description, setDescription] = useState(null)
+  // const [pearLevel, setpearLevel] = useState(null)
+  const history = useHistory()
 
   useEffect(() => {
     getSubjects()
@@ -20,7 +26,30 @@ function AddForm () {
 
   function handleSubmit (e) {
     e.preventDefault()
-    console.log(title, subjects, description)
+    const newListing = {
+      user_id: user.id,
+      subject_id: subject,
+      // pearLevel: pearLevel,
+      title: title,
+      description: description,
+      status: 0,
+      interested: 0
+    }
+    if (
+      newListing.subject_id &&
+      newListing.title &&
+      newListing.description
+    ) {
+      addNewListing(newListing)
+        .then(res => {
+          // setAuthor(res.user.username)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      history.push('/home')
+    }
   }
 
   return (
@@ -31,18 +60,19 @@ function AddForm () {
           <h3>Create new invitation</h3>
           <form onSubmit={handleSubmit}>
 
-            <input className="input is-normal" type="text"
+            {/* <input className="input is-normal" type="text"
               placeholder="Pear level 1-10"
               name="pearLevel"
-              value={ pearLevel } onChange={event => setpearLevel(event.target.value)}/>
+              value={ pearLevel } onChange={event => setpearLevel(event.target.value)}/> */}
 
             <select
               className="select"
               name="subjects"
-              id="subject">
+              id="subject"
+              onChange={event => setSubject(event.target.value)}>
               <option>Select your subject</option>
               {subjects.map(subject => (
-                <option key={subject.id} value='1'>{subject.subject}</option>
+                <option key={subject.id} value={subject.id}>{subject.subject}</option>
               ))}
             </select>
 
