@@ -5,8 +5,7 @@ module.exports = {
   getListingById,
   showInterest,
   removeInterest,
-  increaseInterested,
-  decreaseInterested,
+  getInterestById,
   addNewListing
 }
 
@@ -51,23 +50,16 @@ function removeInterest (interest, db = connection) {
     })
 }
 
-function increaseInterested (id, db = connection) {
-  return db('listings')
-    .select()
-    .where('id', id)
-    .increment('interested', 1)
-    .update('status', 1)
-    .catch(err => {
-      console.error(err)
-      throw err
+function getInterestById (id, db = connection) {
+  return db('interestedUsers')
+    .where('listing_id', id)
+    .count('listing_id as count')
+    .first()
+    .then(count => {
+      return db('listings')
+        .where('listings.id', id)
+        .update({ interested: count.count })
     })
-}
-
-function decreaseInterested (id, db = connection) {
-  return db('listings')
-    .select()
-    .where('id', id)
-    .decrement('interested', 1)
     .catch(err => {
       console.error(err)
       throw err

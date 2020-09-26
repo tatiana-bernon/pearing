@@ -78,16 +78,10 @@ export function addNewListing (newListing) {
     .then(res => res.body)
 }
 
-export function increaseInterested (id) {
+export function countInterested (id) {
   return request
-    .post(url + '/listings/increase/' + id)
-    .send()
-    .then(res => res.body)
-}
-
-export function decreaseInterested (id) {
-  return request
-    .post(url + '/listings/decrease/' + id)
-    .send()
-    .then(res => res.body)
+    .get(url + '/listings/interest/' + id)
+    .then(res => {
+      return res.body
+    })
 }

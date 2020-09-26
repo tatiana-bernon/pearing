@@ -6,8 +6,7 @@ import {
   getUserById,
   showInterest,
   removeInterest,
-  increaseInterested,
-  decreaseInterested
+  countInterested
 } from '../api'
 
 function ListItem (props) {
@@ -45,10 +44,10 @@ function ListItem (props) {
     if (interestButton === 'Show Interest' &&
       listItem.status < 2) {
       showInterest(interest)
-      increaseInterested(listItem.id)
+      countInterested(listItem.id)
     } else {
       removeInterest(interest)
-      decreaseInterested(listItem.id)
+      countInterested(listItem.id)
     }
 
     interestButton === 'Show Interest' ? setInterestButton('Remove Interest') : setInterestButton('Show Interest')

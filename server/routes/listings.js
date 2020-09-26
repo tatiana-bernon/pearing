@@ -25,18 +25,6 @@ router.get('/:id', (req, res) => {
     })
 })
 
-// router.post('/:id', (req, res) => {
-//   const id = req
-// console.log(id)
-// db.showInterest(interest)
-//   .then(listing => {
-//     return res.json(listing)
-//   })
-//   .catch(err => {
-//     res.status(500).json({ error: err.message })
-//   })
-// })
-
 router.post('/show', (req, res) => {
   const interest = req.body
   db.showInterest(interest)
@@ -59,21 +47,9 @@ router.post('/remove', (req, res) => {
     })
 })
 
-router.post('/increase/:id', (req, res) => {
-  const id = req.params.id
-  // console.log(id)
-  db.increaseInterested(id)
-    .then(listing => {
-      return res.json(listing)
-    })
-    .catch(err => {
-      res.status(500).json({ error: err.message })
-    })
-})
-
-router.post('/decrease/:id', (req, res) => {
-  const id = req.params.id
-  db.decreaseInterested(id)
+router.get('/interest/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getInterestById(id)
     .then(listing => {
       return res.json(listing)
     })
