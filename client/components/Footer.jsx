@@ -6,9 +6,9 @@ const Footer = () => {
 
     <>
 
-      <footer className="footer">
+      <footer className="container">
 
-        <div className="content has-text-centered">
+        <div className="column">
           <p><strong>pearing&#169; </strong> Pōhutukawa Cohort 2020</p>
         </div>
       </footer>

@@ -88,7 +88,7 @@ export default function NavAuth (props) {
 
   return (
     <>
-      <div className="navAuth">
+      <div className="container">
         <IfAuthenticated>
           <Link to="/" onClick={logOff}>
             Log out

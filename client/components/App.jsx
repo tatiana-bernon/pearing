@@ -28,20 +28,45 @@ function App () {
   return (
     <>
       <div className="container">
-        <div className='columns'>
+        <div className='container'>
+
+          <nav className="navbar" role="navigation" aria-label="main navigation">
+            <div>
+
+              <Route path="/" component={NavAuth} />
+            </div>
+          </nav>
+
           <div>
-            <Route path="/" component={NavAuth} />
             <Route path="/" component={NavUnauth} />
           </div>
-          <Route exact path='/' component={ Welcome } />
-          <Route path="/register" component={Register} />
-          <Route path="/signin" component={SignIn} />
-          <Route path="/subjects" component={Subjects} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/home" component={Home} />
-          <Route path="/listings/:id" component={ListItem} />
-          <Route path="/addform" component={AddForm} />
-          <Footer/>
+          <div>
+            <Route exact path='/' component={ Welcome } />
+          </div>
+          <div>
+            <Route path="/register" component={Register} />
+          </div>
+          <div>
+            <Route path="/signin" component={SignIn} />
+          </div>
+          <div>
+            <Route path="/subjects" component={Subjects} />
+          </div>
+          <div>
+            <Route path="/profile" component={Profile} />
+          </div>
+          <div>
+            <Route path="/home" component={Home} />
+          </div>
+          <div>
+            <Route path="/listings/:id" component={ListItem} />
+          </div>
+          <div>
+            <Route path="/addform" component={AddForm} />
+          </div>
+          <div className='container'>
+            <Footer/>
+          </div>
         </div>
       </div>
     </>
