@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { getSubjects, addNewListing } from '../api'
 
 import { UserContext } from './UserContext'
@@ -88,6 +88,14 @@ function AddForm () {
               value={description} onChange={event => setDescription(event.target.value)}/>
             <button className="button my-4 is-primary">Submit</button>
           </form>
+          <Link to='/home'>
+            <button
+              type="button"
+              className="button is-primary"
+              data-testid="submitButton">
+            Back
+            </button>
+          </Link>
         </div>
       </div>
     </>
