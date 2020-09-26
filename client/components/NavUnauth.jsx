@@ -10,12 +10,12 @@ export default function NavUnauth(props) {
     case '/':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample " class="navbar-menu is-size-4">
-            <div class="navbar-end navbar-tab-hover-background-color">
-              <a class="navbar-item ">
+          <div id="navbarBasicExample " className="navbar-menu is-size-4">
+            <div className="navbar-end navbar-tab-hover-background-color">
+              <a className="navbar-item ">
                 <Link to="/about">About</Link>
               </a>
-              <a class="navbar-item">
+              <a className="navbar-item">
                 <Link to="/contact">Contact</Link>
               </a>
             </div>
@@ -85,7 +85,7 @@ export default function NavUnauth(props) {
   }
   return (
     <>
-      <div className="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div className="navbar is-primary is-flex-widescreen" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a className="navbar-item" href="#" />
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
