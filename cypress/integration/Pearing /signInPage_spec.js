@@ -1,3 +1,4 @@
+/* eslint-disable jest/no-commented-out-tests */
 /* eslint-disable promise/always-return */
 /* eslint-disable promise/catch-or-return */
 /* eslint-disable jest/valid-expect-in-promise */
@@ -38,7 +39,6 @@ describe('Checks sign in/Sign out and navbar', () => {
       cy.get('#username').type('dhah')
       cy.get('#password').type('1g23')
       cy.get('button').contains('Sign in').click()
-    
 
     cy.contains('Profile').click()
     cy.get('h1').contains('pearing')
@@ -81,6 +81,7 @@ describe('Can update the user profile', () => {
 
 // come back to this!
 // describe('Check and edit the user profile on profiles page', () => {
+// eslint-disable-next-line jest/no-commented-out-tests
 //   it('Has the correct links', () => {
 //     cy.visit('http://localhost:3000/#/profile')
 //     cy.contains('About').click()
@@ -103,7 +104,6 @@ describe('Can update the user profile', () => {
 //   })
 
 //   it('Can update profile information', () => {
-   
 
 //       cy.contains('Profile').click()
 
