@@ -1,6 +1,5 @@
 import React from 'react'
-import SignIn from './SignIn'
-import Register from './Register'
+import { Link } from 'react-router-dom'
 
 function Landing () {
   return (
@@ -10,12 +9,23 @@ function Landing () {
       </div>
 
       <div className='button'>
-        <link to={SignIn}>
-          <button type='button'> Sign In </button>
-        </link>
-        <link to={Register}>
-          <button type='button'> Register </button>
-        </link>
+        <Link to='/signin'>
+          <button
+            type="button"
+            className="button is-primary"
+            data-testid="submitButton">
+            Sign In
+          </button>
+        </Link>
+
+        <Link to='/register'>
+          <button
+            type="button"
+            className="button is-primary"
+            data-testid="submitButton">
+              Register
+          </button>
+        </Link>
 
       </div>
     </>
