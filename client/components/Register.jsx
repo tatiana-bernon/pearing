@@ -3,7 +3,7 @@ import { register, isAuthenticated } from 'authenticare/client'
 
 import { UserContext, updateUserContext } from './UserContext'
 
-function Register (props) {
+function Register(props) {
   const [, setUser] = useContext(UserContext)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -30,36 +30,39 @@ function Register (props) {
   }
 
   return (
-    <div className="registerContainer container">
-      <div className="leftRegister">
-        <div className="registerTitle">
-          <h1>Register</h1>
+    <div className="register container has-text-centered">
+      <div className="columns is-centered mt-6 mp-6">
+        <div className="columns is-5-tablet is-4-desktop is-3-widescreen">
+          <div className="box">
+            <div className="field mt-5 mb-5">
+              <label className="label mt-5 mb-5">Username</label>
+              <input
+                className="input is-medium"
+                type="username"
+                value={username}
+                placeholder="username"
+                onChange={(e) => setUsername(e.target.value)}>
+              </input>
+              <label className="label">Password</label>
+              <input
+                className="input"
+                type="password"
+                value={password}
+                placeholder="password"
+                onChange={(e) => setPassword(e.target.value)}>
+              </input>
+              <button
+                type="button"
+                className="button is-primarybutton is-primary mx-6 mt-6 mb-6 has-text-weight-medium is-centered"
+                onClick={handleClick}
+                data-testid="submitButton">
+                Register
+              </button>
+            </div>
+            <div className="rightRegister">
+            </div>
+          </div>
         </div>
-        <label className="label">Username</label>
-        <input
-          className="input"
-          type="username"
-          value={username}
-          placeholder="username"
-          onChange={(e) => setUsername(e.target.value)}>
-        </input>
-        <label className="label">Password</label>
-        <input
-          className="input"
-          type="password"
-          value={password}
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}>
-        </input>
-        <button
-          type="button"
-          className="button is-primary"
-          onClick={handleClick}
-          data-testid="submitButton">
-          Register
-        </button>
-      </div>
-      <div className="rightRegister">
       </div>
     </div>
   )
