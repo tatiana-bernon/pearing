@@ -26,29 +26,31 @@ function AddForm () {
 
   function handleSubmit (e) {
     e.preventDefault()
-    const newListing = {
-      user_id: user.id,
-      subject_id: subject,
-      // pearLevel: pearLevel,
-      title: title,
-      description: description,
-      status: 0,
-      interested: 0
-    }
-    if (
-      newListing.subject_id &&
+    if (user.id) {
+      const newListing = {
+        user_id: user.id,
+        subject_id: subject,
+        // pearLevel: pearLevel,
+        title: title,
+        description: description,
+        status: 0,
+        interested: 0
+      }
+      if (
+        newListing.subject_id &&
       newListing.title &&
       newListing.description
-    ) {
-      addNewListing(newListing)
-        .then(res => {
+      ) {
+        addNewListing(newListing)
+          .then(res => {
           // setAuthor(res.user.username)
-          return null
-        })
-        .catch((error) => {
-          console.log('error: ', error.message)
-        })
-      history.push('/home')
+            return null
+          })
+          .catch((error) => {
+            console.log('error: ', error.message)
+          })
+        history.push('/home')
+      }
     }
   }
 

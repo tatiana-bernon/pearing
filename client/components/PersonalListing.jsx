@@ -2,12 +2,12 @@ import React, { useState, useEffect, useContext } from 'react'
 import { UserContext } from './UserContext'
 import { Link } from 'react-router-dom'
 
-import { getMyList, deleteListing } from '../api'
+import { getMyList, deleteListing, getInterestedList } from '../api'
 
 function PersonalListing () {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
-  const [showHideButton, setShowHideButton] = useState('Show')
+  // const [showHideButton, setShowHideButton] = useState('Show')
   // const [value, setValue] = useState(null)
 
   useEffect(() => {
@@ -37,14 +37,20 @@ function PersonalListing () {
       })
   }
 
+  const handleInterested = (e) => {
+    const id = e.target.value
+    // getInterestedList(id)
+  }
+
   return (
     <>
       <h2>My Listings</h2>
       <ul>
         {myList.map(listing => (
           <li key={listing.id}>
-              ID: {listing.id} - {listing.title} - interested: {listing.interested}
+            ID: {listing.id} - {listing.title} - interested: {listing.interested}
             <button value={listing.id} onClick={handleDelete}>Delete</button>
+            <button value={listing.id} onClick={handleInterested}>Interests</button>
           </li>
         ))}
       </ul>

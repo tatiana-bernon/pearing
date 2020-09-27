@@ -99,3 +99,12 @@ export function deleteListing (id) {
     .send()
     .then(res => res.body)
 }
+
+export function getInterestedList (id) {
+  return request
+    .get(url + '/users/interested/' + id)
+    .then(res => {
+      console.log(res.body)
+      return res.body
+    })
+}
