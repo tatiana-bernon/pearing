@@ -71,7 +71,6 @@ export function removeInterest (interest) {
 }
 
 export function addNewListing (newListing) {
-  console.log(newListing)
   return request
     .post(url + '/listings')
     .send(newListing)
@@ -82,6 +81,30 @@ export function countInterested (id) {
   return request
     .get(url + '/listings/interest/' + id)
     .then(res => {
+      return res.body
+    })
+}
+
+export function getMyList (id) {
+  return request
+    .get(url + '/listings/mylist/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
+export function deleteListing (id) {
+  return request
+    .post(url + '/listings/delete/' + id)
+    .send()
+    .then(res => res.body)
+}
+
+export function getInterestedList (id) {
+  return request
+    .get(url + '/users/interested/' + id)
+    .then(res => {
+      console.log(res.body)
       return res.body
     })
 }

@@ -1,3 +1,4 @@
+const { del } = require('superagent')
 const connection = require('./connection')
 
 module.exports = {
@@ -7,7 +8,9 @@ module.exports = {
   showInterest,
   removeInterest,
   getInterestById,
-  addNewListing
+  addNewListing,
+  getMyList,
+  deleteListing
 }
 
 function getList (db = connection) {
@@ -85,3 +88,26 @@ function addNewListing (newListing, db = connection) {
       throw err
     })
 }
+
+function getMyList (id, db = connection) {
+  return db('listings')
+    .select()
+    .where('user_id', id)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function deleteListing (id, db = connection) {
+  return db('listings')
+    .select()
+    .where('id', id)
+    .del()
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+

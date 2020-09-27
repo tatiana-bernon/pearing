@@ -6,10 +6,10 @@ import { UserContext } from './UserContext'
 
 function AddForm () {
   const [user] = useContext(UserContext)
-  const [title, setTitle] = useState(null)
-  const [subject, setSubject] = useState(null)
+  const [title, setTitle] = useState('')
+  const [subject, setSubject] = useState('')
   const [subjects, setSubjects] = useState([])
-  const [description, setDescription] = useState(null)
+  const [description, setDescription] = useState('')
   // const [pearLevel, setpearLevel] = useState(null)
   const history = useHistory()
 
@@ -26,29 +26,31 @@ function AddForm () {
 
   function handleSubmit (e) {
     e.preventDefault()
-    const newListing = {
-      user_id: user.id,
-      subject_id: subject,
-      // pearLevel: pearLevel,
-      title: title,
-      description: description,
-      status: 0,
-      interested: 0
-    }
-    if (
-      newListing.subject_id &&
+    if (user.id) {
+      const newListing = {
+        user_id: user.id,
+        subject_id: subject,
+        // pearLevel: pearLevel,
+        title: title,
+        description: description,
+        status: 0,
+        interested: 0
+      }
+      if (
+        newListing.subject_id &&
       newListing.title &&
       newListing.description
-    ) {
-      addNewListing(newListing)
-        .then(res => {
+      ) {
+        addNewListing(newListing)
+          .then(res => {
           // setAuthor(res.user.username)
-          return null
-        })
-        .catch((error) => {
-          console.log('error: ', error.message)
-        })
-      history.push('/home')
+            return null
+          })
+          .catch((error) => {
+            console.log('error: ', error.message)
+          })
+        history.push('/home')
+      }
     }
   }
 
@@ -93,7 +95,15 @@ function AddForm () {
               type="button"
               className="button is-primary"
               data-testid="submitButton">
-            Back
+            Home
+            </button>
+          </Link>
+          <Link to='/profile'>
+            <button
+              type="button"
+              className="button is-primary"
+              data-testid="submitButton">
+            My Profile
             </button>
           </Link>
         </div>

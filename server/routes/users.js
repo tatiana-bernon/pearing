@@ -26,4 +26,30 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// router.get('/interested/:id', (req, res) => {
+//   const id = Number(req.params.id)
+//   db.getInterestedList(id)
+//     .then(listing => {
+//       // const users = []
+//       return res.json(listing.map(user => {
+//         // console.log(user.user_id)
+//         db.getUserById(user.user_id)
+//           .then(res => {
+//             console.log(res)
+//             return res
+//           })
+//       }))
+//       // return users
+//     })
+//     .catch(err => {
+//       res.status(500).json({ error: err.message })
+//     })
+// })
+
+// return getUserById(id)
+//           .then(res => {
+//             setAuthor(res.user.username)
+//             return null
+//           })
+
 module.exports = router

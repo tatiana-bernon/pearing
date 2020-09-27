@@ -54,16 +54,17 @@ function ListItem (props) {
       author_id: listItem.user_id
     }
 
-    if (interestButton === 'Show Interest' &&
+    if (Number(user.id) !== Number(listItem.user_id)) {
+      interestButton === 'Show Interest' ? setInterestButton('Remove Interest') : setInterestButton('Show Interest')
+      if (interestButton === 'Show Interest' &&
       listItem.status < 2) {
-      showInterest(interest)
-      countInterested(listItem.id)
-    } else {
-      removeInterest(interest)
-      countInterested(listItem.id)
+        showInterest(interest)
+        countInterested(listItem.id)
+      } else {
+        removeInterest(interest)
+        countInterested(listItem.id)
+      }
     }
-
-    interestButton === 'Show Interest' ? setInterestButton('Remove Interest') : setInterestButton('Show Interest')
   }
 
   return (
