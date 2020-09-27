@@ -9,11 +9,12 @@
 /* eslint-disable indent */
 /* eslint-disable jest/expect-expect */
 /* eslint-disable no-undef */
+
 describe('Checks sign in/Sign out and navbar', () => {
   // eslint-disable-next-line jest/expect-expect
   it('Signs in', () => {
     cy.visit('http://localhost:3000/#/')
-    cy.get('.navUnauth').contains('Sign in').click()
+    cy.get('.button').contains('Sign In').click()
     cy.get('#username').type('dhah')
     cy.get('#password').type('1g23')
     cy.get('button').contains('Sign in').click()
@@ -27,21 +28,21 @@ describe('Checks sign in/Sign out and navbar', () => {
     cy.contains('Home').click()
     cy.contains('Profile').click()
     cy.contains('Home').click()
-    cy.contains('Subjects').click()
-    cy.contains('Home').click()
+    // cy.contains('Subjects').click()
+    // cy.contains('Home').click()
     cy.contains('Log out').click()
   })
 
   it('Checks the pages content', () => {
     
       cy.visit('http://localhost:3000/#/')
-      cy.get('.navUnauth').contains('Sign in').click()
+      cy.get('.button').contains('Sign In').click()
       cy.get('#username').type('dhah')
       cy.get('#password').type('1g23')
       cy.get('button').contains('Sign in').click()
 
     cy.contains('Profile').click()
-    cy.get('h1').contains('pearing')
+    // cy.get('h1').contains('pearing')
     cy.get('h2').contains('Personal Information')
     cy.get('h3').contains('Username')
     cy.get('h3').contains('Email')
@@ -53,7 +54,7 @@ describe('Checks sign in/Sign out and navbar', () => {
 describe('Can update the user profile', () => {
   it('Signs in', () => {
     cy.visit('http://localhost:3000/#/')
-    cy.get('.navUnauth').contains('Sign in').click()
+    cy.get('.button').contains('Sign In').click()
     cy.get('#username').type('dhah')
     cy.get('#password').type('1g23')
     cy.get('button').contains('Sign in').click()
@@ -74,11 +75,35 @@ describe('Can update the user profile', () => {
       // should take you back to profile
       cy.contains('Home').click()
       cy.contains('Profile').click()
-      
+      cy.contains('Home').click()
   })
 
 })
 
+describe('It can add a new listing', () => {
+
+  it('Adds a new listing and verifies it', () => {
+    cy.get('.button').contains('Add New Listing').click()
+    cy.get('form')
+    .get('select')
+    .select('redux')
+
+    cy.get('input[type="text"]')
+        .type('Daryl needs help with Redux')
+        .should('have.value', 'Daryl needs help with Redux')
+
+      cy.get('textarea[name="description"]')
+        .type('Help! I really need help with Redux!')
+        .should('have.value', 'Help! I really need help with Redux!')
+
+        cy.contains('Back').click() // change this to Submit once delete button works
+    
+  })
+
+  it('Can show interest', () => {
+
+  })
+})
 // come back to this!
 // describe('Check and edit the user profile on profiles page', () => {
 // eslint-disable-next-line jest/no-commented-out-tests
