@@ -4,6 +4,7 @@ import React from 'react'
 function Contact () {
   return (
     <>
+     <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> The story behind Pearing! </h1>
       <div className="field">
         <label className="label">Name</label>
         <div className="control">
@@ -52,41 +53,41 @@ function Contact () {
         </div>
       </div>
 
-      <div class="field">
-        <label class="label">Message</label>
-        <div class="control">
-          <textarea class="textarea" placeholder="Textarea"></textarea>
+      <div className="field">
+        <label className="label">Message</label>
+        <div className="control">
+        <textarea className="textarea is-primary" placeholder="Primary textarea"></textarea>
         </div>
       </div>
 
-      <div class="field">
-        <div class="control">
-          <label class="checkbox">
+      <div className="field">
+        <div className="control">
+          <label className="checkbox">
             <input type="checkbox" />
                     I agree to the <a href="#">terms and conditions</a>
           </label>
         </div>
       </div>
 
-      <div class="field">
-        <div class="control">
-          <label class="radio">
+      <div className="field">
+        <div className="control">
+          <label className="radio">
             <input type="radio" name="question" />
                       Yes
     </label>
-          <label class="radio">
+          <label className="radio">
             <input type="radio" name="question" />
                         No
     </label>
         </div>
       </div>
 
-      <div class="field is-grouped">
-        <div class="control">
-          <button class="button is-link">Submit</button>
+      <div className="field is-grouped">
+        <div className="control">
+          <button className="button is-primary">Submit</button>
         </div>
-        <div class="control">
-          <button class="button is-link is-light">Cancel</button>
+        <div className="control">
+          <button className="button is-primary is-light">Cancel</button>
         </div>
       </div>
     </>
