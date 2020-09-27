@@ -49,17 +49,62 @@ export function addForm (id) {
     })
 }
 
-export function showInterest (interest, id) {
+export function checkInterest (userId, listingId) {
   return request
-    .post(url + '/listings/' + id)
+    .post(url + '/listings/checkinterest')
+    .send({ userId, listingId })
+    .then(res => res.body)
+}
+
+export function showInterest (interest) {
+  return request
+    .post(url + '/listings/show')
+    .send(interest)
+    .then(res => res.body)
+}
+
+export function removeInterest (interest) {
+  return request
+    .post(url + '/listings/remove')
     .send(interest)
     .then(res => res.body)
 }
 
 export function addNewListing (newListing) {
-  console.log(newListing)
   return request
-    .post(url + '/listings/')
+    .post(url + '/listings')
     .send(newListing)
     .then(res => res.body)
+}
+
+export function countInterested (id) {
+  return request
+    .get(url + '/listings/interest/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
+export function getMyList (id) {
+  return request
+    .get(url + '/listings/mylist/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
+export function deleteListing (id) {
+  return request
+    .post(url + '/listings/delete/' + id)
+    .send()
+    .then(res => res.body)
+}
+
+export function getInterestedList (id) {
+  return request
+    .get(url + '/users/interested/' + id)
+    .then(res => {
+      console.log(res.body)
+      return res.body
+    })
 }
