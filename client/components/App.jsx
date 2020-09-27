@@ -42,7 +42,7 @@ function App () {
             <Route path="/" component={NavUnauth} />
           </div>
           <div>
-            <Route exact path='/' component={Welcome} />
+            <Route exact path='/' component={ Welcome } />
           </div>
           <div>
             <Route path="/register" component={Register} />
@@ -69,7 +69,7 @@ function App () {
             <Route path="/about" component={About} />
           </div>
           <div className='container'>
-            <Footer />
+            <Footer/>
           </div>
         </div>
       </div>
