@@ -7,7 +7,7 @@
 To get started, clone this repo and then:
 
 ```
-cd skillshare
+cd pearing
 npm install
 npm run db:migrate
 npm run db:seed
@@ -18,23 +18,31 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 
 ## User interface (proposal) - wireframes
 
+digital wireframes : https://whimsical.com/QDXFdGXtA1EhQW5xkkNT2u
+
 ![alt text](server/public/images/20200923_174223.jpg)
 
 ## Dependencies 
 verify we have installed everything needed:
 
-- [ ] Package.json (npm init??)
-- [ ] Jest/supertest/ anything else for tests? 
-- [ ] Webpack 
-- [ ] SQLite3
+- [X] Package.json 
+- [X] Jest/supertest/ anything else for tests? 
+- [X] Webpack 
+- [X] SQLite3
 - [ ] Bulma and wired up Bulma correctly (For later) 
+- [X] React-Dom
+- [X] Authenticare
 - [ ] Anything else? 
 
+
 ## Branching and Merging frequency (Team to discuss)
-- Master (Do we protect the master branch?)
+- Master 
 - Dev
 - Feature branches created and merged through pull request regularly.
-- Merge to Master daily after checking all merge to dev successful without any unresolved conflict?? Team to discuss
+- Merge to Dev daily after checking all merge to dev successful without any unresolved conflict following the image below:
+
+![alt text](https://github.com/pohutukawa-2020/pearing/blob/f05581eca2ba100ba6964b956a9c813136d838bf/server/public/images/20200918_162126.jpg)
+
 
 ## Steps aiming at MVP 
 
@@ -48,25 +56,28 @@ Docs for authenticare:
 
 B. Create components:
 
-1. Landing page component with:
-    - Nav component
-    - Register component 
-    - Login component.
+1. [X] Landing page component with:
+    - [ ] Nav component
+    - [X] Register component 
+    - [X] Login component.
     
-2. Home page component with:
-    - Nav component (option to move between Home,Signout and Profile)
-    - List component with:
-          - List Item component
-    - Add component (outside of List component)*
+2. [X] Home page component with:
+    - [ ] Nav component (option to move between Home,Signout and Profile)
+    - [ ] List component with:
+          - [ ] List Item component
+    - [ ] Add component (outside of List component)*
 
-3. Profile page component with:
-   - Personal info component (has an update profile button)
-   - My list component with:
-      - Add component (when clicked, it generates a form to fill and submit)*
+3. [ ] Profile page component with:
+   - [ ] Personal info component (has an update profile button)
+   - [ ] My list component with:
+      - [ ] Add component (when clicked, it generates a form to fill and submit)*
 
-4. List Item component page
+4. [ ] List Item component page
 
-C. Create hash router and routes to link components/pages
+C. Routes 
+
+- [ ] Create hash router 
+- [ ] Create routes to link components/pages with App component.
 
 ## Early deployment to Heroku!
 ![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
@@ -184,31 +195,35 @@ https://trailhead.salesforce.com/content/learn/projects/quickstart-heroku-connec
 
 ## Stretches
 
-1. Change of name for the app and Logo for it??
+1. - [X] Change of name for the app
+  - [ ] Logo for it - find a cool pear
 
 https://namelix.com/app/?keywords=skill+sharing
 https://www.canva.com/design/DAEIm0XK3Tg/MhtOyotyp6Fq5thGZhSx9Q/edit?category=tACZCvjI6mE&utm_source=onboarding
 
-2. Add skill levels
-3. Filtering in the skill level
-4. Recommendations
-5. Edit/update profile info
-6. Categories: languages, cooking.
+
+2. - [ ] Add skill levels
+3. - [ ] Filtering in the skill level
+4. - [ ] Recommendations
+5. - [ ] Edit/update profile info
+6. - [ ] Categories: languages, cooking.
 
 ## TEAM Wellbeing and Conflict Resolution Plan
 
 *In terms of well-being:*
-
+```
 once more, our expectations as a team being guided by inclusiveness, understanding and respect, we decided to voice out our needs as they arise. Whether it is taking some time away from the screen or needing help, among many other cases. 
 
 We will be using a stress pig to alert that we are actually feeling a bit overwhelmed and stress which could be sometimes easier that actually saying it. Apologies to the other groups in advance for the noise.
 
 We genuine care for each other, and will ensure we are encouraging one another to have enough sleep, eat well and hydrate well. We basically have one another´s back.
 
-Last but not least, keep moral up with spontaneous and amazingly funny DAD JOKES! https://dadjokegenerator.com/
+Last but not least, keep moral up with spontaneous and amazingly funny DAD JOKES! 
+```
+https://dadjokegenerator.com/
 
 *In terms of conflicts:*
-
+```
 We unanimosly agreed on:
 
 - Using timeboxing, especially in situations where we are stuck and seek help if we reach our time limit.
@@ -216,9 +231,9 @@ We unanimosly agreed on:
 - If a situation of tension arises, and as a team, we are unable to solve it, we will be reaching our to one of the facilitators.
 - We will also voice out our needs (individual or group, it could also take the form of a constructive feedback).
 - In moments of incertainty, or doubt or both, we would be using looping as a technique to help clear doubts and ensure we are on the same page.
-
+```
 ## Roles
-
+```
 As a team, we noticed that during preparation we naturally took turns into stepping in and out of different roles as per the need and tempo of the project. We thus, decided not to assign particulart roles to each one of us. 
 This decision is based on our knowledge of agile practices - especially valueing flexibility as per the changing needs of the the team in regards to the product and time left to deliver.
 
@@ -227,9 +242,9 @@ This decision highlights our common values; communication, honesty, respect, fle
 Another rational has been also the fact that being a small team of 4, we stress on open honest communication as needed, a value reiterated by establishing at an early stage our working routine(stand ups and checkins every day in the morning and before lunch as well as one at the end of each day) and availability (see next point)
 
 However, we agreed that if we felt the need (due to productivity slowing down, too much stress, or us not respecting our estimated time allocations per tasks) we would be open to assign a scrum master.
-
+```
 ## Team Members Availability
-
+```
 *Andras* - Thur-Friday (available after 8.30 online)
         - Weekend available
         - Mon to Wed next week available
@@ -239,10 +254,10 @@ However, we agreed that if we felt the need (due to productivity slowing down, t
 *Bhiv*    - Very flexible except Thur Lunch
 
 *Tati*    - Very flexible except I cannot stay later than 10.30 pm as I take the public transport and need to go before last bus/train
+```
 
-
-## Team Members Expectations
-
+## Team Members Expectations.
+```
 - *Andras* shared that he really wants to have a complete product to share and mentioned that in aiming in doing so,  this journey will be one filled of learning.
 
 - *Daryl* shared about how he would estimate time as per task. (cutting it into 1/3 of initial time he thought of) and that of course he is focussed on enjoying the learning journey of this process but also would want a good end product to showcase.
@@ -250,5 +265,5 @@ However, we agreed that if we felt the need (due to productivity slowing down, t
 - *Bhiv* shared that the experience is mostly important and the learning out of it, if we have a neat end product amazing if its not exactly what we planned, the experience would have been a rich one anyways.
 
 - *Tati* shared that she would really want to see a completed product to demo at Graduation, but also expects lots of fun and learning through this final group project.
-
+```
 ![alt text](https://miro.medium.com/max/2644/1*-mCWVWM_8rgv9EbwhlcFUA.jpeg)
