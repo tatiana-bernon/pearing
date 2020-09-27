@@ -6,10 +6,10 @@ import { UserContext } from './UserContext'
 
 function AddForm () {
   const [user] = useContext(UserContext)
-  const [title, setTitle] = useState(null)
-  const [subject, setSubject] = useState(null)
+  const [title, setTitle] = useState('')
+  const [subject, setSubject] = useState('')
   const [subjects, setSubjects] = useState([])
-  const [description, setDescription] = useState(null)
+  const [description, setDescription] = useState('')
   // const [pearLevel, setpearLevel] = useState(null)
   const history = useHistory()
 
@@ -93,7 +93,15 @@ function AddForm () {
               type="button"
               className="button is-primary"
               data-testid="submitButton">
-            Back
+            Home
+            </button>
+          </Link>
+          <Link to='/profile'>
+            <button
+              type="button"
+              className="button is-primary"
+              data-testid="submitButton">
+            My Profile
             </button>
           </Link>
         </div>

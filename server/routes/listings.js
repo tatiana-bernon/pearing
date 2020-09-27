@@ -80,4 +80,26 @@ router.post('/', (req, res) => {
     })
 })
 
+router.get('/mylist/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getMyList(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.post('/delete/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.deleteListing(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 module.exports = router
