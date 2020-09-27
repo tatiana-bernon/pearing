@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { UserContext } from './UserContext'
-import { getListItem, getUserById, showInterest } from '../api'
+import {
+  getListItem,
+  getUserById,
+  checkInterest,
+  showInterest,
+  removeInterest,
+  countInterested
+} from '../api'
 
 function ListItem (props) {
-  const [user, setUser] = useContext(UserContext)
+  const [user] = useContext(UserContext)
   const [listItem, setListItem] = useState([])
   const [author, setAuthor] = useState('')
   const [interestButton, setInterestButton] = useState('Show Interest')
@@ -26,6 +33,18 @@ function ListItem (props) {
       .catch((error) => {
         console.log('error: ', error.message)
       })
+    checkInterest(user.id, id)
+      .then(res => {
+        if (res.length === 0) {
+          setInterestButton('Show Interest')
+        } else {
+          setInterestButton('Remove Interest')
+        }
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
   }, [])
 
   const handleClick = () => {
@@ -34,8 +53,18 @@ function ListItem (props) {
       listing_id: listItem.id,
       author_id: listItem.user_id
     }
-    showInterest(interest)
-    interestButton === 'Show Interest' ? setInterestButton('Remove Interest') : setInterestButton('Show Interest')
+
+    if (Number(user.id) !== Number(listItem.user_id)) {
+      interestButton === 'Show Interest' ? setInterestButton('Remove Interest') : setInterestButton('Show Interest')
+      if (interestButton === 'Show Interest' &&
+      listItem.status < 2) {
+        showInterest(interest)
+        countInterested(listItem.id)
+      } else {
+        removeInterest(interest)
+        countInterested(listItem.id)
+      }
+    }
   }
 
   return (
