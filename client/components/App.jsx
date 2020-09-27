@@ -32,7 +32,7 @@ function App () {
         <div>
           <div>
             <div className="navbar is-primary" role="navigation" aria-label="main navigation">
-              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+              <img src="" width="112" height="28" />
               <div className="navbar-brand navbar-end">
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" />
                 <span aria-hidden="true"></span>

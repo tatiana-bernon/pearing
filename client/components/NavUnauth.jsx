@@ -47,8 +47,8 @@ export default function NavUnauth (props) {
           </div>
           <div className="navbar-end">
             <div className="navbar-item">
-              <div className="buttons is-outlined ">
-                <a className="button is-primary has-text-primary ">
+              <div className="buttons">
+                <a className="button is-primary is-light">
                   <Link to="/register">Register</Link>
                 </a>
               </div>
@@ -73,7 +73,7 @@ export default function NavUnauth (props) {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-primary is-medium">
+                <a className="button is-primary is-light">
                   <Link to="/signin">Sign in</Link>
                 </a>
               </div>
@@ -82,7 +82,7 @@ export default function NavUnauth (props) {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-primary is-medium">
+                <a className="button is-primary is-light">
                   <Link to="/register">Register</Link>
                 </a>
               </div>
@@ -99,9 +99,15 @@ export default function NavUnauth (props) {
               <a className="navbar-item">
                 <Link to="/">Welcome</Link>
               </a>
-              <a className="navbar-item">
-                <Link to="/register">Register</Link>
-              </a>
+              <div className="navbar-end">
+                <div className="navbar-item">
+                  <div className="buttons">
+                    <a className="button is-primary is-light">
+                      <Link to="/register">Register</Link>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </>
@@ -113,14 +119,20 @@ export default function NavUnauth (props) {
           <div id="navbarBasicExample" className="navbar-menu is-size-5">
             <div className="navbar-end">
               <a className="navbar-item">
-                <Link to="/About">About</Link>
+                <Link to="/about">About</Link>
               </a>
               <a className="navbar-item">
                 <Link to="/">Welcome</Link>
               </a>
-              <a className="navbar-item">
-                <Link to="/signin">Sign in</Link>
-              </a>
+              <div className="navbar-end">
+                <div className="navbar-item">
+                  <div className="buttons">
+                    <a className="button is-primary is-light">
+                      <Link to="/signin">Sign in</Link>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </>
