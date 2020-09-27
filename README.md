@@ -14,7 +14,7 @@ npm run db:seed
 npm run dev
 ```
 
-You can find the server running on [http://localhost:3000](http://localhost:3000).
+You can find the server running on [http://localhost:3000](http://localhost:3000)
 
 ## User interface (proposal) - wireframes
 
