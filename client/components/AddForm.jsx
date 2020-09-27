@@ -102,15 +102,7 @@ function AddForm() {
               type="button"
               className="button is-primary"
               data-testid="submitButton">
-              Home
-            </button>
-          </Link>
-          <Link to='/profile'>
-            <button
-              type="button"
-              className="button is-primary"
-              data-testid="submitButton">
-              My Profile
+              Back
             </button>
           </Link>
         </div>
