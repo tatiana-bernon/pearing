@@ -15,6 +15,7 @@ import Home from './Home'
 import ListItem from './ListItem'
 import AddForm from './AddForm'
 import Footer from './Footer'
+import About from './About'
 
 function App () {
   const [, setUser] = useContext(UserContext)
@@ -27,21 +28,23 @@ function App () {
 
   return (
     <>
-      <div className="container">
-        <div className='container'>
-
-          <nav className="navbar" role="navigation" aria-label="main navigation">
-            <div>
-
-              <Route path="/" component={NavAuth} />
-            </div>
-          </nav>
-
+      <div>
+        <div>
           <div>
-            <Route path="/" component={NavUnauth} />
+            <div className="navbar is-primary" role="navigation" aria-label="main navigation">
+              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+              <div className="navbar-brand navbar-end">
+                <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" />
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <Route path="/" component={NavAuth} />
+                <Route path="/" component={NavUnauth} />
+              </div>
+            </div>
           </div>
           <div>
-            <Route exact path='/' component={ Welcome } />
+            <Route exact path='/' component={Welcome} />
           </div>
           <div>
             <Route path="/register" component={Register} />
@@ -64,8 +67,11 @@ function App () {
           <div>
             <Route path="/addform" component={AddForm} />
           </div>
+          <div>
+            <Route path="/about" component={About} />
+          </div>
           <div className='container'>
-            <Footer/>
+            <Footer />
           </div>
         </div>
       </div>
