@@ -4,10 +4,11 @@ import React from 'react'
 function Contact () {
   return (
     <>
+     <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> Send us a message! </h1>
       <div className="field">
         <label className="label">Name</label>
         <div className="control">
-          <input className="input" type="text" placeholder="Text input" />
+        <input className="input is-primary" type="text" placeholder="Primary input" />
         </div>
       </div>
 
@@ -54,7 +55,7 @@ function Contact () {
       <div className="field">
         <label className="label">Message</label>
         <div className="control">
-          <textarea className="textarea" placeholder="Textarea"></textarea>
+        <textarea className="textarea is-primary" placeholder="Primary textarea"></textarea>
         </div>
       </div>
 
@@ -72,7 +73,7 @@ function Contact () {
           <label className="radio">
             <input type="radio" name="question" />
                       Yes
-          </label>
+    </label>
           <label className="radio">
             <input type="radio" name="question" />
                         No
@@ -82,10 +83,10 @@ function Contact () {
 
       <div className="field is-grouped">
         <div className="control">
-          <button className="button is-link">Submit</button>
+          <button className="button is-primary">Submit</button>
         </div>
         <div className="control">
-          <button className="button is-link is-light">Cancel</button>
+          <button className="button is-primary is-light">Cancel</button>
         </div>
       </div>
     </>
