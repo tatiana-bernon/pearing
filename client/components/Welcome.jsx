@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Landing() {
+function Landing () {
   return (
     <>
       <div className='landingPage'>
@@ -27,39 +27,38 @@ function Landing() {
         </p>
       </div>
 
-
-        <div className="container has-text-centered">
-          <Link to='/signin'>
-            <button
-              type="button"
-              className="button is-medium is-primary mx-6 mt-6 mb-6 has-text-weight-medium is-centered"
-              data-testid="submitButton">
+      <div className="container has-text-centered">
+        <Link to='/signin'>
+          <button
+            type="button"
+            className="button is-medium is-primary mx-6 mt-6 mb-6 has-text-weight-medium is-centered"
+            data-testid="submitButton">
               Sign In
           </button>
-          </Link>
-          <Link to='/register'>
-            <button
-              type="button"
-              className="button  is-medium is-primary is-outlined mx-6 mt-6 mb-6 has-text-weight-medium is-centered"
-              data-testid="submitButton">
+        </Link>
+        <Link to='/register'>
+          <button
+            type="button"
+            className="button is-medium is-primary is-outlined mx-6 mt-6 mb-6 has-text-weight-medium is-centered"
+            data-testid="submitButton">
               Register
           </button>
-          </Link>
-        </div>
-        
-        <div className="columns container">
-      <figure className="column image is-square mx-2 mt-2 mb-5">
-        <img src="https://bulma.io/images/placeholders/128x128.png"/>
-      </figure>
-      <figure className="column image is-square mx-2 mt-2 mb-5">
-        <img src="https://bulma.io/images/placeholders/128x128.png"/>
-      </figure>
-      <figure className="column image is-square mx-2 mt-2 mb-5">
-        <img src="https://bulma.io/images/placeholders/128x128.png"/>
-      </figure>
-      <figure className="column image is-square mx-2 mt-2 mb-5">
-        <img src="https://bulma.io/images/placeholders/128x128.png"/>
-      </figure>
+        </Link>
+      </div>
+
+      <div className="columns container">
+        <figure className="column image is-square mx-2 mt-2 mb-5">
+          <img src="https://bulma.io/images/placeholders/128x128.png"/>
+        </figure>
+        <figure className="column image is-square mx-2 mt-2 mb-5">
+          <img src="https://bulma.io/images/placeholders/128x128.png"/>
+        </figure>
+        <figure className="column image is-square mx-2 mt-2 mb-5">
+          <img src="https://bulma.io/images/placeholders/128x128.png"/>
+        </figure>
+        <figure className="column image is-square mx-2 mt-2 mb-5">
+          <img src="https://bulma.io/images/placeholders/128x128.png"/>
+        </figure>
       </div>
     </>
   )

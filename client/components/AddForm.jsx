@@ -54,8 +54,8 @@ function AddForm () {
 
   return (
     <>
-      <div className="create-event-form columns is-8">
-        <div className="column">
+      <div className="">
+        <div className="">
           <h1>Kindly fill the form below!</h1>
           <h3>Create new invitation</h3>
           <form onSubmit={handleSubmit}>
