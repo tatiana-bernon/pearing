@@ -11,8 +11,8 @@ export default function NavUnauth (props) {
       navLandingUnauth = (
         <>
           <div id="navbarBasicExample " className="navbar-menu is-size-4">
-            <div className="navbar-end navbar-tab-hover-background-color">
-              <a className="navbar-item ">
+            <div className="navbar-end">
+              <a className="navbar-item">
                 <Link to="/about">About</Link>
               </a>
               <a className="navbar-item">
@@ -26,12 +26,20 @@ export default function NavUnauth (props) {
     case '/about':
       navLandingUnauth = (
         <>
-          <Link to="/contact">Contact</Link>
-          <Link to="/">Welcome</Link>
+          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+            <div className="navbar-end">
+              <a className="navbar-item">
+                <Link to="/contact">Contact</Link>
+              </a>
+              <a className="navbar-item">
+                <Link to="/">Welcome</Link>
+              </a>
+            </div>
+          </div>
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-primary">
+                <a className="button is-primary is-medium">
                   <Link to="/signin">Sign in</Link>
                 </a>
               </div>
@@ -40,7 +48,7 @@ export default function NavUnauth (props) {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-primary">
+                <a className="button is-primary is-medium">
                   <Link to="/register">Register</Link>
                 </a>
               </div>
@@ -52,34 +60,85 @@ export default function NavUnauth (props) {
     case '/contact':
       navLandingUnauth = (
         <>
-          <Link to="/about">About</Link>
-          <Link to="/">Welcome</Link>
-          <Link to="/signin">Sign in</Link>
-          <Link to="/register">Register</Link>
+          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+            <div className="navbar-end">
+              <a className="navbar-item">
+                <Link to="/About">About</Link>
+              </a>
+              <a className="navbar-item">
+                <Link to="/">Welcome</Link>
+              </a>
+            </div>
+          </div>
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="buttons">
+                <a className="button is-primary is-medium">
+                  <Link to="/signin">Sign in</Link>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="buttons">
+                <a className="button is-primary is-medium">
+                  <Link to="/register">Register</Link>
+                </a>
+              </div>
+            </div>
+          </div>
         </>
       )
       break
     case '/signin':
       navLandingUnauth = (
         <>
-          <Link to="/">Welcome</Link>
-          <Link to="/register">Register</Link>
+          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+            <div className="navbar-end">
+              <a className="navbar-item">
+                <Link to="/">Welcome</Link>
+              </a>
+              <a className="navbar-item">
+                <Link to="/register">Register</Link>
+              </a>
+            </div>
+          </div>
         </>
       )
       break
     case '/register':
       navLandingUnauth = (
         <>
-          <Link to="/">Welcome</Link>
-          <Link to="/signin">Sign in</Link>
+          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+            <div className="navbar-end">
+              <a className="navbar-item">
+                <Link to="/About">About</Link>
+              </a>
+              <a className="navbar-item">
+                <Link to="/">Welcome</Link>
+              </a>
+              <a className="navbar-item">
+                <Link to="/signin">Sign in</Link>
+              </a>
+            </div>
+          </div>
         </>
       )
       break
     default:
       navLandingUnauth = (
         <>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+            <div className="navbar-end">
+              <a className="navbar-item">
+                <Link to="/about">About</Link>
+              </a>
+              <a className="navbar-item">
+                <Link to="/contact">Contact</Link>
+              </a>
+            </div>
+          </div>
         </>
       )
   }
@@ -97,7 +156,6 @@ export default function NavUnauth (props) {
         <IfNotAuthenticated>
           {navLandingUnauth}
         </IfNotAuthenticated>
-
       </div>
     </>
   )

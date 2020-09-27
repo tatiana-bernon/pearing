@@ -39,7 +39,7 @@ function Landing () {
         <Link to='/register'>
           <button
             type="button"
-            className="button  is-medium is-primary is-outlined mx-6 mt-6 mb-6 has-text-weight-medium is-centered"
+            className="button is-medium is-primary is-outlined mx-6 mt-6 mb-6 has-text-weight-medium is-centered"
             data-testid="submitButton">
               Register
           </button>
