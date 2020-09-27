@@ -8,7 +8,7 @@ function Contact () {
       <div className="field">
         <label className="label">Name</label>
         <div className="control">
-          <input className="input" type="text" placeholder="Text input" />
+        <input className="input is-primary" type="text" placeholder="Primary input" />
         </div>
       </div>
 
