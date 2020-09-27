@@ -1,8 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-
-function About() {
+function About () {
   return (
     <>
       <div className='landingPage'>
