@@ -4,7 +4,7 @@ import React from 'react'
 function Contact () {
   return (
     <>
-     <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> The story behind Pearing! </h1>
+     <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> Send us a message! </h1>
       <div className="field">
         <label className="label">Name</label>
         <div className="control">
