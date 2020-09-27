@@ -13,8 +13,7 @@ export default function NavUnauth(props) {
           <div id="navbarBasicExample " class="navbar-menu is-size-4">
             <div class="navbar-end navbar-tab-hover-background-color">
               <a class="navbar-item ">
-                <Link to="/about">About</Link>
-              </a>
+                <Link to="/about">About</Link></a>
               <a class="navbar-item">
                 <Link to="/contact">Contact</Link>
               </a>
