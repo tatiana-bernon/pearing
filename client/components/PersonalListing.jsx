@@ -2,13 +2,14 @@ import React, { useState, useEffect, useContext } from 'react'
 import { UserContext } from './UserContext'
 import { Link } from 'react-router-dom'
 
-import { getMyList, deleteListing, getInterestedList } from '../api'
+import { getMyList, deleteListing, getInterestedList, getUserById } from '../api'
 
 function PersonalListing () {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
-  // const [showHideButton, setShowHideButton] = useState('Show')
-  // const [value, setValue] = useState(null)
+  const [showHideButton, setShowHideButton] = useState('Show')
+  const [, setInterestedList] = useState([])
+  const [interestedUsers, setInterestedUsers] = useState([])
 
   useEffect(() => {
     getMyList(user.id)
@@ -39,7 +40,25 @@ function PersonalListing () {
 
   const handleInterested = (e) => {
     const id = e.target.value
-    // getInterestedList(id)
+    setInterestedUsers([])
+    getInterestedList(id)
+      .then(res => {
+        setInterestedList(res)
+        return res
+      })
+      .then((res) => {
+        res.map(user => {
+          return getUserById(user.user_id)
+            .then(res => {
+              setInterestedUsers(interestedUsers => [...interestedUsers, res])
+              return null
+            })
+        })
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
   }
 
   return (
@@ -50,10 +69,23 @@ function PersonalListing () {
           <li key={listing.id}>
             ID: {listing.id} - {listing.title} - interested: {listing.interested}
             <button value={listing.id} onClick={handleDelete}>Delete</button>
-            <button value={listing.id} onClick={handleInterested}>Interests</button>
+            <button value={listing.id} onClick={handleInterested}>Show</button>
           </li>
         ))}
       </ul>
+      <hr/>
+      <div>
+        <h2>Pear Options</h2>
+        {interestedUsers.map(user => (
+          <li key={user.user.id}>
+            Name: {user.user.username}<br></br>
+            Email: {user.user.email}<br></br>
+            Info: {user.user.info}<br></br>
+            <button>Accept</button>
+          </li>
+        ))}
+      </div><br></br>
+
       <Link to='/addform'>
         <button
           type="button"

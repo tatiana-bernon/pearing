@@ -46,10 +46,15 @@ router.get('/:id', (req, res) => {
 //     })
 // })
 
-// return getUserById(id)
-//           .then(res => {
-//             setAuthor(res.user.username)
-//             return null
-//           })
+router.get('/interested/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getInterestedList(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
 
 module.exports = router
