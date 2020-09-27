@@ -36,6 +36,7 @@ function SignIn(props) {
         <div className="columns is-5-tablet is-4-desktop is-3-widescreen">
           <div className="box">
             <div className="field mt-5 mb-5">
+              <h1 className="is-centered has-text-primary is-size-4 has-text-weight-medium" >Sign In</h1>
               <label className="label mt-5 mb-5">Username</label>
               <input
                 className="input is-medium"
@@ -44,10 +45,11 @@ function SignIn(props) {
                 value={form.username}
                 onChange={handleChange}
                 placeholder="Username"
-                type="text"
-              />
-
-              <label className="label mt-5 mb-5">Password</label>
+                type="text" />
+              <br></br>
+              <br></br>
+              <label className="label">Password</label>
+              <br></br>
               <input
                 className="input is-medium"
                 id="password"
@@ -57,8 +59,6 @@ function SignIn(props) {
                 placeholder="Password"
                 type="password"
               />
-              <br>
-              </br>
               <button
                 className="button is-primary mx-6 mt-6 mb-6 has-text-weight-medium is-centered"
                 data-testid="submit-button"

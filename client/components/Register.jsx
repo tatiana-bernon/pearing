@@ -30,11 +30,12 @@ function Register(props) {
   }
 
   return (
-    <div className="register container has-text-centered">
+    <div className="container has-text-centered">
       <div className="columns is-centered mt-6 mp-6">
         <div className="columns is-5-tablet is-4-desktop is-3-widescreen">
           <div className="box">
             <div className="field mt-5 mb-5">
+              <h1 className="is-centered has-text-primary is-size-4 has-text-weight-medium" >Register</h1>
               <label className="label mt-5 mb-5">Username</label>
               <input
                 className="input is-medium"
@@ -43,9 +44,12 @@ function Register(props) {
                 placeholder="username"
                 onChange={(e) => setUsername(e.target.value)}>
               </input>
+              <br></br>
+              <br></br>
               <label className="label">Password</label>
+              <br></br>
               <input
-                className="input"
+                className="input is-medium"
                 type="password"
                 value={password}
                 placeholder="password"
@@ -58,8 +62,6 @@ function Register(props) {
                 data-testid="submitButton">
                 Register
               </button>
-            </div>
-            <div className="rightRegister">
             </div>
           </div>
         </div>
