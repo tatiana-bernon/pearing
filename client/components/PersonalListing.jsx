@@ -106,8 +106,8 @@ function PersonalListing() {
 
   return (
     <>
-      <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
-      <h2>My Listings</h2>
+      <h2 className="has-text-primary is-size-2 has-text-centered "> My Pearing Requests</h2>
+      <h2 className="label">My Listings</h2>
       <ul>
         {myList.map(listing => (
           <li key={listing.id}>
@@ -117,17 +117,19 @@ function PersonalListing() {
           </li>
         ))}
       </ul><br></br>
-      <Link to='/addform'>
-        <button
-          type="button"
-          className="button is-primary"
-          data-testid="submitButton">
-          Add New Listing
-        </button>
-      </Link>
-      <hr/>
+      <div className="containter has-text-centered">
+        <Link to='/addform'>
+          <button
+            type="button"
+            className="button is-primary"
+            data-testid="submitButton">
+            Create new pearing invitiation!
+          </button>
+        </Link>
+      </div>
+      <hr />
       <div>
-        <h2>Pear Options</h2>
+        <h2 className="label">Pear Options</h2>
         {interestedUsers.map(user => (
           <li key={user.user.id}>
             Name: {user.user.username}<br></br>
@@ -137,7 +139,7 @@ function PersonalListing() {
           </li>
         ))}
       </div><br></br>
-      <h2>Accepted Pearing</h2>
+      <h2 className="label">Accepted Pearing</h2>
       <ul>
         {acceptedPears.map(pearing => (
           <li key={pearing.id}>
