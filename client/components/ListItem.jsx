@@ -72,7 +72,7 @@ function ListItem (props) {
       <div>
         <h1 className="mt-6 has-text-centered is-size-3 has-text-primary">Kindly read the invitation below!</h1>
         <h3 className="mt-5 has-text-centered is-size-4">If this is your Jam, don't forget to show interest.</h3>
-        <div class="field">
+
         <h3>{listItem.title}  </h3>
         <p>{listItem.description}</p>
         <p>by {author}</p>
