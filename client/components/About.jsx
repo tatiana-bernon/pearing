@@ -22,27 +22,35 @@ function About () {
           And voila!Pearing was born; the platform where developers regardless of skill level, meet up to jam.
         </p>
       </div>
+
+      <div className="container" >
       <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> The original Pears! </h1>
       <div className="columns mb-6">
         <div className="column mx-3">
           <figure className="image is-256x256">
-            <img className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"></img>
+            <img className="is-rounded" src="../images/original pear 1 copy.jpg"></img>
+          <p className="pt-4 is-size-4 has-text-centered has-text-weight-bold">Daryl Chen</p>
+          </figure>
+          
+        </div>
+        <div className="column mx-3">
+          <figure className="image is-256x256">
+            <img className="is-rounded" src="../images/original pear 1.jpg"></img>
+            <p className="pt-4 is-size-4 has-text-centered has-text-weight-bold">Bhavisha Das</p>
           </figure>
         </div>
         <div className="column mx-3">
           <figure className="image is-256x256">
-            <img className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"></img>
+            <img className="is-rounded" src="../images/DSC_1758.JPG"></img>
+            <p className="pt-4 is-size-4 has-text-centered has-text-weight-bold">Andras Balint</p>
           </figure>
         </div>
         <div className="column mx-3">
           <figure className="image is-256x256">
-            <img className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"></img>
+            <img className="is-rounded" src="../images/DSC_1746.JPG"></img>
+            <p className="pt-4 is-size-4 has-text-centered has-text-weight-bold">Tatiana Bernon</p>
           </figure>
         </div>
-        <div className="column mx-3">
-          <figure className="image is-256x256">
-            <img className="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"></img>
-          </figure>
         </div>
       </div>
     </>

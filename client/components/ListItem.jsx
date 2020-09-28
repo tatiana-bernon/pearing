@@ -7,7 +7,9 @@ import {
   checkInterest,
   showInterest,
   removeInterest,
-  countInterested
+  countInterested,
+  changeStatusToZero,
+  changeStatusToOne
 } from '../api'
 
 function ListItem (props) {
@@ -60,9 +62,11 @@ function ListItem (props) {
       listItem.status < 2) {
         showInterest(interest)
         countInterested(listItem.id)
+        changeStatusToOne(listItem.id)
       } else {
         removeInterest(interest)
         countInterested(listItem.id)
+        changeStatusToZero(listItem.id)
       }
     }
   }
