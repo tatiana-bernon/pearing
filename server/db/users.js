@@ -50,6 +50,9 @@ function updatePersonalInfoById (update, db = connection) {
     .where('username', update.username)
     .first()
     .update('email', update.email)
+    .update('phone', update.phone)
+    .update('linkedin', update.linkedin)
+    .update('discord', update.discord)
     .update('info', update.info)
 }
 
@@ -58,11 +61,6 @@ function getInterestedList (id, db = connection) {
     .join('interestedUsers', 'listings.id', 'interestedUsers.listing_id')
     .select('interestedUsers.user_id', 'interestedUsers.listing_id')
     .where('listings.id', id)
-    // .then(usersList => {
-    //   return db('users')
-    //     .select('id', 'username', 'email', 'info')
-    //     .where('id', usersList[1].user_id)
-    // })
     .catch(err => {
       console.error(err)
       throw err
