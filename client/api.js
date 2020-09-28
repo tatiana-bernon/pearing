@@ -144,6 +144,14 @@ export function getMyPearings (id) {
     })
 }
 
+export function getMyPearingsByOthers (id) {
+  return request
+    .get(url + '/listings/mypearingsbyothers/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
 export function addPear (pearing) {
   return request
     .post(url + '/listings/addpear/')
@@ -154,6 +162,14 @@ export function addPear (pearing) {
 export function getMyCompleted (id) {
   return request
     .get(url + '/listings/completedpearings/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
+export function getMyCompletedByOthers (id) {
+  return request
+    .get(url + '/listings/completedpearingsbyothers/' + id)
     .then(res => {
       return res.body
     })
