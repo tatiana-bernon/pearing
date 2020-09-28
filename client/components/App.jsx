@@ -4,6 +4,7 @@ import { isAuthenticated } from 'authenticare/client'
 
 import { UserContext, updateUserContext } from './UserContext'
 import NavAuth from './NavAuth'
+// eslint-disable-next-line import/no-named-as-default-member
 import NavUnauth from './NavUnauth'
 import Register from './Register'
 import SignIn from './SignIn'
@@ -16,6 +17,7 @@ import ListItem from './ListItem'
 import AddForm from './AddForm'
 import Footer from './Footer'
 import About from './About'
+import Contact from './Contact'
 
 function App () {
   const [, setUser] = useContext(UserContext)
@@ -32,7 +34,7 @@ function App () {
         <div>
           <div>
             <div className="navbar is-primary" role="navigation" aria-label="main navigation">
-              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+              <img src="" width="112" height="28" />
               <div className="navbar-brand navbar-end">
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" />
                 <span aria-hidden="true"></span>
@@ -44,7 +46,7 @@ function App () {
             </div>
           </div>
           <div>
-            <Route exact path='/' component={Welcome} />
+            <Route exact path='/' component={ Welcome } />
           </div>
           <div>
             <Route path="/register" component={Register} />
@@ -70,8 +72,11 @@ function App () {
           <div>
             <Route path="/about" component={About} />
           </div>
+          <div>
+            <Route path="/contact" component={Contact} />
+          </div>
           <div className='container'>
-            <Footer />
+            <Footer/>
           </div>
         </div>
       </div>

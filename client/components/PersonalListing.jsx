@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { getMyList, deleteListing, getInterestedList, getUserById } from '../api'
 
-function PersonalListing () {
+function PersonalListing() {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [showHideButton, setShowHideButton] = useState('Show')
@@ -63,6 +63,7 @@ function PersonalListing () {
 
   return (
     <>
+      <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
       <h2>My Listings</h2>
       <ul>
         {myList.map(listing => (
@@ -91,7 +92,7 @@ function PersonalListing () {
           type="button"
           className="button is-primary"
           data-testid="submitButton">
-            Add New Listing
+          Add New Listing
         </button>
       </Link>
     </>
