@@ -50,6 +50,9 @@ function updatePersonalInfoById (update, db = connection) {
     .where('username', update.username)
     .first()
     .update('email', update.email)
+    .update('phone', update.phone)
+    .update('linkedin', update.linkedin)
+    .update('discord', update.discord)
     .update('info', update.info)
 }
 
