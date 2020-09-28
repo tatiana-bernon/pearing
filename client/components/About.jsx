@@ -9,21 +9,17 @@ function About () {
       </div>
       <div className="is-size-4  has-text-centered mx-5 mt-5 mb-5">
         <p>
-          A platform bringing developers together to help each other or just jam!
+          While we were completing our programming journey with EDA. During our bootcamp, pair programming was one of the main highlights which enabled us in growing our technical skills.
         </p>
         <p>
-          This idea spawned from a question. 'What is a resource I would want as a Junior Web Developer who has just graduated bootcamp?'
+          This led us to the following reflection: 'What could I use as a Junior Web Developer,once I graduated from bootcamp, to continue improving my technical skills while extending my tech network?'
         </p>
         <p>
-          With that in mind, the concept of an app where developers regardless of skill level could meet up to jam.
-        </p>
-        <br />
-        <p>
-          (Change this) And while you will definitely find solutions to your bugs while working with someone else, you will also be extending your network! <br />How cool is that!
+          This idea, kept brewing until we gathered to make such concept a reality.  where developers regardless of skill level could meet up to jam.
         </p>
         <br />
         <p>
-          (Change this) If it sounds like the website, you have always been hopeful to find, go ahead, you know what to do! <br />Oh, I forgot! <br />May the joys of pearing be with you!
+          And voila!Pearing was born; the platform where developers regardless of skill level, meet up to jam.
         </p>
       </div>
       <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> The original Pears! </h1>

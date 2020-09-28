@@ -70,27 +70,48 @@ function ListItem (props) {
   return (
     <>
       <div>
-        <h1 className="mt-6 has-text-centered is-size-3">Kindly read the invitation below!</h1>
-        <h3 className="mt-5 has-text-centered is-size-4">If this is your jam, don't forget to show your</h3>
-        <h3>{listItem.title}  </h3>
-        <p>{listItem.description}</p>
-        <p>by {author}</p>
+        <h1 className="mt-6 has-text-centered is-size-3 has-text-primary">Kindly read the invitation below!</h1>
+        <h3 className="mt-5 has-text-centered is-size-4">If this is your Jam, don't forget to show interest.</h3>
       </div>
-      <button
-        type="button"
-        className="button is-primary"
-        onClick={handleClick}
-        data-testid="submitButton">
-        {interestButton}
-      </button>
-      <Link to='/home'>
+
+      <div className="columns box  mt-6">
+        <div className="column container mx-6">
+          <div className="is-centered is-primary is-light mb-4">
+            <h3 className="mb-2 label"> Title </h3>
+            <input className="input is-normal is-primary" type="text"
+              name="title"
+              value={listItem.title}/>
+          </div>
+          <div className="is-centered mb-5">
+            <h3 className="mb-2 label"> Description </h3>
+            <input className="input is-normal is-primary" type="text"
+              name="title"
+              value={listItem.description}/>
+          </div>
+          <div className="is-centered mb-5">
+            <h3 className="mb-2 label"> Invitation created by </h3>
+            <input className="input is-normal is-primary" type="text"
+              placeholder="Enter your title"
+              name="title"
+              value={author}/>
+          </div>
+        </div>
+      </div>
+      <div className= "container has-text-centered">
         <button
-          type="button"
-          className="button is-primary"
+          className="button is-medium is-primary mx-4 mt-6 mb-6 has-text-weight-medium is-centered"
+          onClick={handleClick}
           data-testid="submitButton">
-            Back
+          {interestButton}
         </button>
-      </Link>
+        <Link to='/home'>
+          <button
+            className="button is-medium is-primary mx-4 mt-6 mb-6 has-text-weight-medium is-centered"
+            data-testid="submitButton">
+            Back
+          </button>
+        </Link>
+      </div>
     </>
   )
 }

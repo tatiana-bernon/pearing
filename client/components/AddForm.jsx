@@ -4,7 +4,7 @@ import { getSubjects, addNewListing } from '../api'
 
 import { UserContext } from './UserContext'
 
-function AddForm() {
+function AddForm () {
   const [user] = useContext(UserContext)
   const [title, setTitle] = useState('')
   const [subject, setSubject] = useState('')
@@ -24,7 +24,7 @@ function AddForm() {
       })
   }, [])
 
-  function handleSubmit(e) {
+  function handleSubmit (e) {
     e.preventDefault()
     if (user.id) {
       const newListing = {
@@ -56,19 +56,19 @@ function AddForm() {
 
   return (
     <>
-      <div className="">
+      <div>
         <br></br>
-        <div className="">
-          <h1>Kindly fill the form below!</h1>
-          <br></br>
-          <h3>Create new invitation</h3>
+        <div>
+          <div className="has-text-primary mt-5 has-text-centered is-size-2 mb-2">
+            <h1>Create a new pearing invitation!</h1>
+          </div>
           <form onSubmit={handleSubmit}>
 
             {/* <input className="input is-normal" type="text"
               placeholder="Pear level 1-10"
               name="pearLevel"
               value={ pearLevel } onChange={event => setpearLevel(event.target.value)}/> */}
-            <div className="select is-primary mb-5">
+            <div className="has-text-centered select is-primary mb-5">
               <select
                 className="select"
                 name="subjects"
@@ -80,31 +80,27 @@ function AddForm() {
                 ))}
               </select>
             </div>
-            <div className="mb-5">
-              <h3> Title </h3>
+            <div className="is-centered mb-5">
+              <h3 className="mb-2 label"> Title </h3>
               <input className="input is-normal is-primary" type="text"
                 placeholder="Enter your title"
                 name="title"
                 value={title} onChange={event => setTitle(event.target.value)} />
             </div>
-            <div>
-              <h5>Description</h5>
-              <textarea className="textarea is-normal is-primary"
-                placeholder="Enter your description"
-                name="description"
-                value={description} onChange={event => setDescription(event.target.value)} />
-              <br></br>
-              <button className="button my-4 is-primary">Submit</button>
+
+            <h5 h3 className="mb-2 label">Description</h5>
+            <textarea className="textarea is-normal is-primary"
+              placeholder="Enter your description"
+              name="description"
+              value={description} onChange={event => setDescription(event.target.value)} />
+            <br></br>
+            <div className= "container has-text-centered">
+              <button className="button is-medium is-primary mx-4 mt-6 mb-6 has-text-weight-medium is-centered">Submit</button>
+              <Link to='/home'>
+                <button className="button is-medium is-primary is-outlined mx-4 mt-6 mb-6 has-text-weight-medium is-centered">Back</button>
+              </Link>
             </div>
           </form>
-          <Link to='/home'>
-            <button
-              type="button"
-              className="button is-primary"
-              data-testid="submitButton">
-              Back
-            </button>
-          </Link>
         </div>
       </div>
     </>
