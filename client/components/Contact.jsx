@@ -59,12 +59,10 @@ function Contact () {
         </div>
       </div>
 
-      <div className="field is-grouped">
+      <div className="container has-text-centered">
         <div className="control">
-          <button className="button is-primary">Submit</button>
-        </div>
-        <div className="control">
-          <button className="button is-primary is-outlined">Cancel</button>
+          <button className="button is-medium is-primary mx-4 mt-6 mb-6 has-text-weight-medium is-centered">Submit</button>
+          <button className="button is-medium is-primary is-outlined mx-4 mt-6 mb-6 has-text-weight-medium is-centered">Cancel</button>
         </div>
       </div>
     </>

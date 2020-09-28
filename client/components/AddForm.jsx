@@ -59,9 +59,9 @@ function AddForm () {
       <div>
         <br></br>
         <div>
-          <h1 className="mt-6 has-text-centered is-size-3">Kindly fill the form below!</h1>
-          <br/>
-          <p className=" mt-5 has-text-centered is-size-5 mb-2">Create a new pearing invitation!</p>
+          <div className="has-text-primary mt-5 has-text-centered is-size-2 mb-2">
+            <h1>Create a new pearing invitation!</h1>
+          </div>
           <form onSubmit={handleSubmit}>
 
             {/* <input className="input is-normal" type="text"
@@ -74,21 +74,21 @@ function AddForm () {
                 name="subjects"
                 id="subject"
                 onChange={event => setSubject(event.target.value)}>
-                <option className="has-text-weight-medium">Select your subject</option>
+                <option>Select your subject</option>
                 {subjects.map(subject => (
                   <option key={subject.id} value={subject.id}>{subject.subject}</option>
                 ))}
               </select>
             </div>
             <div className="is-centered mb-5">
-              <h3 className="mb-2 has-text-weight-medium"> Title </h3>
+              <h3 className="mb-2 label"> Title </h3>
               <input className="input is-normal is-primary" type="text"
                 placeholder="Enter your title"
                 name="title"
                 value={title} onChange={event => setTitle(event.target.value)} />
             </div>
 
-            <h5 h3 className="mb-2 has-text-weight-medium">Description</h5>
+            <h5 h3 className="mb-2 label">Description</h5>
             <textarea className="textarea is-normal is-primary"
               placeholder="Enter your description"
               name="description"
