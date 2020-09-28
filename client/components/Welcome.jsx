@@ -2,15 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Slideshow from './Slideshow'
 
-function Landing () {
+function Landing() {
   return (
     <>
       <div>
-      <Slideshow/>
-        <div className='landingPage'>
-          <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> Welcome to pearing! </h1>
-        </div>
-
+        <Slideshow />
+      </div>
+      <div className="landingPage has-background-primary">
+        <h1 className="has-text-white is-size-1 has-text-centered "> Welcome to pearing! </h1>
+      </div>
+      <div>
         <div className="is-size-4  has-text-centered mx-5 mt-5 mb-5">
           <p>
             Pearing is not like any platform on the internet.
@@ -52,7 +53,7 @@ function Landing () {
           </Link>
         </div>
       </div>
-      
+
     </>
   )
 }
