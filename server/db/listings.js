@@ -15,8 +15,10 @@ module.exports = {
   changeStatusToTwo,
   changeStatusToThree,
   getMyPearings,
+  getMyPearingsByOthers,
   addPear,
   getMyCompleted,
+  getMyCompletedByOthers,
   getMyInterests
 }
 
@@ -177,6 +179,18 @@ function getMyPearings (id, db = connection) {
     })
 }
 
+function getMyPearingsByOthers (id, db = connection) {
+  return db('listings')
+    .join('users', 'listings.user_id', 'users.id')
+    .select('listings.id', 'listings.title', 'listings.description', 'users.username')
+    .where('listings.pear_id', id)
+    .where('listings.status', 2)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
 function addPear (pearId, id, db = connection) {
   return db('listings')
     .select()
@@ -193,6 +207,18 @@ function getMyCompleted (id, db = connection) {
     .join('users', 'listings.pear_id', 'users.id')
     .select('listings.id', 'listings.title', 'users.username')
     .where('listings.user_id', id)
+    .where('listings.status', 3)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function getMyCompletedByOthers (id, db = connection) {
+  return db('listings')
+    .join('users', 'listings.user_id', 'users.id')
+    .select('listings.id', 'listings.title', 'users.username')
+    .where('listings.pear_id', id)
     .where('listings.status', 3)
     .catch(err => {
       console.error(err)
