@@ -186,7 +186,7 @@ function PersonalListing () {
         ))}
       </div>
       <div>
-        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Accepted Pearings</h2>
+        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Aceepted Pearings</h2>
         <ul>
           {acceptedPears.map(pearing => (
             <li key={pearing.id}>
