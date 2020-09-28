@@ -2,14 +2,23 @@ import React, { useState, useEffect, useContext } from 'react'
 import { UserContext } from './UserContext'
 import { Link } from 'react-router-dom'
 
-import { getMyList, deleteListing, getInterestedList, getUserById } from '../api'
+import {
+  getMyList,
+  deleteListing,
+  getInterestedList,
+  getUserById,
+  changeStatusToTwo,
+  getMyPearings,
+  addPear
+} from '../api'
 
 function PersonalListing() {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
-  const [showHideButton, setShowHideButton] = useState('Show')
   const [, setInterestedList] = useState([])
   const [interestedUsers, setInterestedUsers] = useState([])
+  const [selected, setSelected] = useState(null)
+  const [acceptedPears, setAcceptedPears] = useState([])
 
   useEffect(() => {
     getMyList(user.id)
@@ -20,13 +29,18 @@ function PersonalListing() {
       .catch((error) => {
         console.log('error: ', error.message)
       })
+    getMyPearings(user.id)
+      .then(res => {
+        setAcceptedPears(res)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
   }, [])
 
-  // const handleShowHide = () => {
-  //   showHideButton === 'Show' ? setShowHideButton('Hide') : setShowHideButton('Show')
-  // }
   const handleDelete = (e) => {
-    const id = e.target.value
+    const id = Number(e.target.value)
     deleteListing(id)
     getMyList(user.id)
       .then(res => {
@@ -39,8 +53,9 @@ function PersonalListing() {
   }
 
   const handleInterested = (e) => {
-    const id = e.target.value
+    const id = Number(e.target.value)
     setInterestedUsers([])
+    setSelected(id)
     getInterestedList(id)
       .then(res => {
         setInterestedList(res)
@@ -61,6 +76,34 @@ function PersonalListing() {
       })
   }
 
+  const handleAccept = (e) => {
+    // const pearId = e.target.value
+    // const id = selected
+    const pearing = {
+      pearId: e.target.value,
+      id: selected
+    }
+    setInterestedUsers([])
+    changeStatusToTwo(selected)
+    addPear(pearing)
+    getMyList(user.id)
+      .then(res => {
+        setMyList(res)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+    getMyPearings(user.id)
+      .then(res => {
+        setAcceptedPears(res)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+  }
+
   return (
     <>
       <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
@@ -73,20 +116,7 @@ function PersonalListing() {
             <button value={listing.id} onClick={handleInterested}>Show</button>
           </li>
         ))}
-      </ul>
-      <hr/>
-      <div>
-        <h2>Pear Options</h2>
-        {interestedUsers.map(user => (
-          <li key={user.user.id}>
-            Name: {user.user.username}<br></br>
-            Email: {user.user.email}<br></br>
-            Info: {user.user.info}<br></br>
-            <button>Accept</button>
-          </li>
-        ))}
-      </div><br></br>
-
+      </ul><br></br>
       <Link to='/addform'>
         <button
           type="button"
@@ -95,6 +125,30 @@ function PersonalListing() {
           Add New Listing
         </button>
       </Link>
+      <hr/>
+      <div>
+        <h2>Pear Options</h2>
+        {interestedUsers.map(user => (
+          <li key={user.user.id}>
+            Name: {user.user.username}<br></br>
+            Email: {user.user.email}<br></br>
+            Info: {user.user.info}<br></br>
+            <button value={user.user.id} onClick={handleAccept}>Accept</button>
+          </li>
+        ))}
+      </div><br></br>
+      <h2>Accepted Pearing</h2>
+      <ul>
+        {acceptedPears.map(pearing => (
+          <li key={pearing.id}>
+            {pearing.title}<br></br>
+            {pearing.pear_id}
+
+            {/* <button value={pearing.id} onClick={handleCompleted}>Completed</button> */}
+          </li>
+
+        ))}
+      </ul>
     </>
   )
 }

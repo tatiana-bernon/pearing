@@ -12,11 +12,13 @@ import Welcome from './Welcome'
 // import AddEvent from './AddEvent'
 import Subjects from './Subjects'
 import Profile from './Profile'
+import PersonalInfoEdit from './PersonalInfoEdit'
 import Home from './Home'
 import ListItem from './ListItem'
 import AddForm from './AddForm'
 import Footer from './Footer'
 import About from './About'
+// import PersonalInfo from './PersonalInfo'
 import Contact from './Contact'
 
 function App () {
@@ -58,7 +60,10 @@ function App () {
             <Route path="/subjects" component={Subjects} />
           </div>
           <div>
-            <Route path="/profile" component={Profile} />
+            <Route exact path="/profile" component={Profile} />
+          </div>
+          <div>
+            <Route path="/profile/edit" component={PersonalInfoEdit} />
           </div>
           <div>
             <Route path="/home" component={Home} />
