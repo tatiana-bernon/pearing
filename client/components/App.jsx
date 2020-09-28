@@ -21,7 +21,7 @@ import About from './About'
 // import PersonalInfo from './PersonalInfo'
 import Contact from './Contact'
 
-function App () {
+function App() {
   const [, setUser] = useContext(UserContext)
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function App () {
             </div>
           </div>
           <div>
-            <Route exact path='/' component={ Welcome } />
+            <Route exact path='/' component={Welcome} />
           </div>
           <div>
             <Route path="/register" component={Register} />
@@ -81,7 +81,7 @@ function App () {
             <Route path="/contact" component={Contact} />
           </div>
           <div className='container'>
-            <Footer/>
+            <Footer />
           </div>
         </div>
       </div>

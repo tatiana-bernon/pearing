@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { logOff } from 'authenticare/client'
 import { IfAuthenticated } from './Authenticated'
 
-export default function NavAuth (props) {
+export default function NavAuth(props) {
   const currentPage = props.location.pathname
   let navLanding = null
 
@@ -11,7 +11,11 @@ export default function NavAuth (props) {
     case '/home':
       navLanding = (
         <>
+<<<<<<< HEAD
           <div className="navbar-menu is-size-4">
+=======
+          <div id="navbarBasicExample" className="navbar-menu is-size-3">
+>>>>>>> f013e5eaf8ff7e16c00431bb7c410935494e0c28
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -30,7 +34,11 @@ export default function NavAuth (props) {
     case '/profile':
       navLanding = (
         <>
+<<<<<<< HEAD
           <div className="navbar-menu is-size-4">
+=======
+          <div id="navbarBasicExample " className="navbar-menu is-size-3">
+>>>>>>> f013e5eaf8ff7e16c00431bb7c410935494e0c28
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -49,7 +57,11 @@ export default function NavAuth (props) {
     case '/contact':
       navLanding = (
         <>
+<<<<<<< HEAD
           <div className="navbar-menu is-size-4">
+=======
+          <div id="navbarBasicExample " className="navbar-menu is-size-3">
+>>>>>>> f013e5eaf8ff7e16c00431bb7c410935494e0c28
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -68,7 +80,11 @@ export default function NavAuth (props) {
     case '/about':
       navLanding = (
         <>
+<<<<<<< HEAD
           <div className="navbar-menu is-size-4">
+=======
+          <div id="navbarBasicExample " className="navbar-menu is-size-3">
+>>>>>>> f013e5eaf8ff7e16c00431bb7c410935494e0c28
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/contact">Contact</Link>
@@ -87,7 +103,11 @@ export default function NavAuth (props) {
     case '/listItem':
       navLanding = (
         <>
+<<<<<<< HEAD
           <div className="navbar-menu is-size-4">
+=======
+          <div id="navbarBasicExample " className="navbar-menu is-size-3">
+>>>>>>> f013e5eaf8ff7e16c00431bb7c410935494e0c28
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -109,7 +129,11 @@ export default function NavAuth (props) {
     case '/listings':
       navLanding = (
         <>
+<<<<<<< HEAD
           <div className="navbar-menu is-size-4">
+=======
+          <div id="navbarBasicExample " className="navbar-menu is-size-3">
+>>>>>>> f013e5eaf8ff7e16c00431bb7c410935494e0c28
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -131,7 +155,11 @@ export default function NavAuth (props) {
     default:
       navLanding = (
         <>
+<<<<<<< HEAD
           <div className="navbar-menu is-size-4">
+=======
+          <div id="navbarBasicExample " className="navbar-menu is-size-3">
+>>>>>>> f013e5eaf8ff7e16c00431bb7c410935494e0c28
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -159,7 +187,7 @@ export default function NavAuth (props) {
           <div className="buttons">
             <a className="button is-primary is-light">
               <Link to="/" onClick={logOff}>
-            Log out
+                Log out
               </Link>
             </a>
           </div>
