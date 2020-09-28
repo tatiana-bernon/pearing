@@ -149,7 +149,7 @@ function PersonalListing() {
       </ul><br></br>
       <hr />
       <div>
-        <h2 className="label">Pear Options</h2>
+        <h2 className="label">Pearing Options</h2>
         <Link to='/addform'>
           <button
             type="button"
@@ -184,7 +184,7 @@ function PersonalListing() {
         </ul>
       </div>
       <div>
-        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Aceepted Pearings</h2>
+        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Accepted Pearings</h2>
         <ul>
           {acceptedPears.map(pearing => (
             <li key={pearing.id}>
