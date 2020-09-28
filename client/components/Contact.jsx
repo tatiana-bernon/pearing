@@ -4,18 +4,24 @@ import React from 'react'
 function Contact () {
   return (
     <>
-      <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> Send us a message! </h1>
-      <div className="field">
-        <label className="label">Name</label>
-        <div className="control">
-          <input className="input is-primary" type="text" placeholder="Primary input" />
+      <div className="container mx-6">
+        <div className="columns is-5-tablet is-4-desktop is-3-widescreen">
+          <div className="field mt-5 mb-5">
+            <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> Send us a message! </h1>
+            <div className="field">
+              <label className="label">Name</label>
+              <div className="control">
+                <input className="input is-primary" type="text" placeholder="Name" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="field">
         <label className="label">Username</label>
         <div className="control has-icons-left has-icons-right">
-          <input className="input is-primary" type="text" placeholder="Primary input" />
+          <input className="input is-primary" type="text" placeholder="Username" />
           <span className="icon is-small is-left">
             <i className="fas fa-user"></i>
           </span>
@@ -29,7 +35,7 @@ function Contact () {
       <div className="field">
         <label className="label">Email</label>
         <div className="control has-icons-left has-icons-right">
-          <input className="input is-primary" type="text" placeholder="Primary input" />
+          <input className="input is-primary" type="text" placeholder="Email" />
           <span className="icon is-small is-left">
             <i className="fas fa-envelope"></i>
           </span>
@@ -41,21 +47,9 @@ function Contact () {
       </div>
 
       <div className="field">
-        <label className="label">Subject</label>
-        <div className="control">
-          <div className="select">
-            <select>
-              <option>Select dropdown</option>
-              <option>With options</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div className="field">
         <label className="label">Message</label>
         <div className="control">
-          <textarea className="textarea is-primary" placeholder="Primary textarea"></textarea>
+          <textarea className="textarea is-primary" placeholder="Please enter your message"></textarea>
         </div>
       </div>
 

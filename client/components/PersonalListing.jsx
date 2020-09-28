@@ -8,17 +8,21 @@ import {
   getInterestedList,
   getUserById,
   changeStatusToTwo,
+  changeStatusToThree,
   getMyPearings,
-  addPear
+  addPear,
+  getMyCompleted
 } from '../api'
 
-function PersonalListing() {
+function PersonalListing () {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [, setInterestedList] = useState([])
   const [interestedUsers, setInterestedUsers] = useState([])
   const [selected, setSelected] = useState(null)
+  const [selectedCompleted, setSelectedCompleted] = useState(null)
   const [acceptedPears, setAcceptedPears] = useState([])
+  const [completedPears, setCompletedPears] = useState([])
 
   useEffect(() => {
     getMyList(user.id)
@@ -77,8 +81,6 @@ function PersonalListing() {
   }
 
   const handleAccept = (e) => {
-    // const pearId = e.target.value
-    // const id = selected
     const pearing = {
       pearId: e.target.value,
       id: selected
@@ -104,13 +106,41 @@ function PersonalListing() {
       })
   }
 
+  const handleCompleted = (e) => {
+    changeStatusToThree(selectedCompleted)
+    getMyList(user.id)
+      .then(res => {
+        setMyList(res)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+    getMyPearings(user.id)
+      .then(res => {
+        setAcceptedPears(res)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+    getMyCompleted(user.id)
+      .then(res => {
+        setCompletedPears(res)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+  }
+
   return (
     <>
-      <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
-      <h2>My Listings</h2>
-      <ul>
-        {myList.map(listing => (
-          <li key={listing.id}>
+      <div>
+        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
+        <ul>
+          {myList.map(listing => (
+            <li key={listing.id}>
             ID: {listing.id} - {listing.title} - interested: {listing.interested}
             <button value={listing.id} onClick={handleDelete}>Delete</button>
             <button value={listing.id} onClick={handleInterested}>Show</button>
@@ -127,7 +157,7 @@ function PersonalListing() {
       </Link>
       <hr/>
       <div>
-        <h2>Pear Options</h2>
+        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> Pearing Options</h2>
         {interestedUsers.map(user => (
           <li key={user.user.id}>
             Name: {user.user.username}<br></br>
@@ -136,19 +166,31 @@ function PersonalListing() {
             <button value={user.user.id} onClick={handleAccept}>Accept</button>
           </li>
         ))}
-      </div><br></br>
-      <h2>Accepted Pearing</h2>
-      <ul>
-        {acceptedPears.map(pearing => (
-          <li key={pearing.id}>
-            {pearing.title}<br></br>
-            {pearing.pear_id}
-
-            {/* <button value={pearing.id} onClick={handleCompleted}>Completed</button> */}
-          </li>
-
-        ))}
-      </ul>
+      </div>
+      <div>
+        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Aceepted Pearings</h2>
+        <ul>
+          {acceptedPears.map(pearing => (
+            <li key={pearing.id}>
+            Title: {pearing.title}<br></br>
+            Description: {pearing.description}<br></br>
+            Pear: {pearing.username}<br></br>
+              <button value={pearing.id} onClick={handleCompleted}>Completed</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Completed Pearings</h2>
+        <ul>
+          {completedPears.map(pearing => (
+            <li key={pearing.id}>
+            Title: {pearing.title}<br></br>
+            Pear: {pearing.username}<br></br>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }
