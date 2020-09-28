@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { IfNotAuthenticated } from './Authenticated'
 
-export default function NavUnauth (props) {
+export default function NavUnauth(props) {
   const currentPage = props.location.pathname
   let navLandingUnauth = null
 
@@ -10,14 +10,16 @@ export default function NavUnauth (props) {
     case '/':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample " className="navbar-menu is-size-4">
-            <div className="navbar-end">
-              <a className="navbar-item">
-                <Link to="/about">About</Link>
-              </a>
-              <a className="navbar-item">
-                <Link to="/contact">Contact</Link>
-              </a>
+          <div>
+            <div id="navbarBasicExample" className="navbar-menu is-size-3">
+              <div className="navbar-end">
+                <a className="navbar-item">
+                  <Link to="/about">About</Link>
+                </a>
+                <a className="navbar-item">
+                  <Link to="/contact">Contact</Link>
+                </a>
+              </div>
             </div>
           </div>
         </>
@@ -26,7 +28,7 @@ export default function NavUnauth (props) {
     case '/about':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-3">
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/contact">Contact</Link>
@@ -60,7 +62,7 @@ export default function NavUnauth (props) {
     case '/contact':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-3">
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -94,7 +96,7 @@ export default function NavUnauth (props) {
     case '/signin':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-3">
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/">Welcome</Link>
@@ -116,7 +118,7 @@ export default function NavUnauth (props) {
     case '/register':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-3">
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -141,7 +143,7 @@ export default function NavUnauth (props) {
     default:
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-3">
             <div className="navbar-end ">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
