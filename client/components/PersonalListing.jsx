@@ -142,20 +142,21 @@ function PersonalListing () {
           {myList.map(listing => (
             <li key={listing.id}>
             ID: {listing.id} - {listing.title} - interested: {listing.interested}
-            <button value={listing.id} onClick={handleDelete}>Delete</button>
-            <button value={listing.id} onClick={handleInterested}>Show</button>
-          </li>
-        ))}
-      </ul><br></br>
-      <Link to='/addform'>
-        <button
-          type="button"
-          className="button is-primary"
-          data-testid="submitButton">
+              <button value={listing.id} onClick={handleDelete}>Delete</button>
+              <button value={listing.id} onClick={handleInterested}>Show</button>
+            </li>
+          ))}
+        </ul><br></br>
+        <Link to='/addform'>
+          <button
+            type="button"
+            className="button is-primary"
+            data-testid="submitButton">
           Create Pearing Invitation!
-        </button>
-      </Link>
-      <hr/>
+          </button>
+        </Link>
+        <hr/>
+      </div>
       <div>
         <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> Pearing Options</h2>
         {interestedUsers.map(user => (

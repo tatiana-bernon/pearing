@@ -26,7 +26,7 @@ export default function NavUnauth (props) {
     case '/about':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-4">
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/contact">Contact</Link>
@@ -60,7 +60,7 @@ export default function NavUnauth (props) {
     case '/contact':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-4">
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -94,7 +94,7 @@ export default function NavUnauth (props) {
     case '/signin':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-4">
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/">Welcome</Link>
@@ -116,7 +116,7 @@ export default function NavUnauth (props) {
     case '/register':
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-4">
             <div className="navbar-end">
               <a className="navbar-item">
                 <Link to="/about">About</Link>
@@ -141,7 +141,7 @@ export default function NavUnauth (props) {
     default:
       navLandingUnauth = (
         <>
-          <div id="navbarBasicExample" className="navbar-menu is-size-5">
+          <div id="navbarBasicExample" className="navbar-menu is-size-4">
             <div className="navbar-end ">
               <a className="navbar-item">
                 <Link to="/about">About</Link>

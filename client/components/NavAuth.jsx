@@ -155,12 +155,14 @@ export default function NavAuth (props) {
     <>
       <IfAuthenticated>
         <Link to="/home">{navLanding}</Link>
-        <div className="buttons">
-          <a className="button is-primary is-medium">
-            <Link to="/" onClick={logOff}>
+        <div className="navbar-item">
+          <div className="buttons">
+            <a className="button is-primary is-light">
+              <Link to="/" onClick={logOff}>
             Log out
-            </Link>
-          </a>
+              </Link>
+            </a>
+          </div>
         </div>
       </IfAuthenticated>
     </>
