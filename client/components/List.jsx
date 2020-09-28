@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { getList } from '../api'
 
-function List () {
+function List() {
   const [list, setList] = useState([])
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function List () {
           type="button"
           className="button is-primary"
           data-testid="submitButton">
-            Create Pearing Invitation!
+          Create new pearing invitation!
         </button>
       </Link>
     </>

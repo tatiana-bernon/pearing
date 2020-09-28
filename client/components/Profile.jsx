@@ -3,11 +3,11 @@ import React from 'react'
 import PersonalInfo from './PersonalInfo'
 import PersonalListing from './PersonalListing'
 
-function Profile () {
+function Profile() {
   return (
     <>
       <PersonalInfo />
-      <hr/>
+      <hr />
       <PersonalListing />
     </>
   )
