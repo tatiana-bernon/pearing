@@ -10,7 +10,10 @@ module.exports = {
   getInterestById,
   addNewListing,
   getMyList,
-  deleteListing
+  deleteListing,
+  changeStatusToTwo,
+  getMyPearings,
+  addPear
 }
 
 function getList (db = connection) {
@@ -93,6 +96,7 @@ function getMyList (id, db = connection) {
   return db('listings')
     .select()
     .where('user_id', id)
+    .where('status', '<', 2)
     .catch(err => {
       console.error(err)
       throw err
@@ -110,4 +114,35 @@ function deleteListing (id, db = connection) {
     })
 }
 
+function changeStatusToTwo (id, db = connection) {
+  return db('listings')
+    .select()
+    .where('id', id)
+    .update('status', 2)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
 
+function getMyPearings (id, db = connection) {
+  return db('listings')
+    .select()
+    .where('user_id', id)
+    .where('status', 2)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function addPear (pearId, id, db = connection) {
+  return db('listings')
+    .select()
+    .where('id', id)
+    .update('pear_id', pearId)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}

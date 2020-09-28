@@ -7,6 +7,7 @@ exports.up = (knex) => {
     table.integer('status')
     table.integer('interested')
     table.integer('user_id')
+    table.integer('pear_id')
   })
 }
 
