@@ -11,7 +11,8 @@ import {
   changeStatusToThree,
   getMyPearings,
   addPear,
-  getMyCompleted
+  getMyCompleted,
+  getMyInterests
 } from '../api'
 
 function PersonalListing () {
@@ -20,9 +21,9 @@ function PersonalListing () {
   const [, setInterestedList] = useState([])
   const [interestedUsers, setInterestedUsers] = useState([])
   const [selected, setSelected] = useState(null)
-  const [selectedCompleted, setSelectedCompleted] = useState(null)
   const [acceptedPears, setAcceptedPears] = useState([])
   const [completedPears, setCompletedPears] = useState([])
+  const [myInterests, setMyInterests] = useState([])
 
   useEffect(() => {
     getMyList(user.id)
@@ -36,6 +37,22 @@ function PersonalListing () {
     getMyPearings(user.id)
       .then(res => {
         setAcceptedPears(res)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+    getMyCompleted(user.id)
+      .then(res => {
+        setCompletedPears(res)
+        return null
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+    getMyInterests(user.id)
+      .then(res => {
+        setMyInterests(res)
         return null
       })
       .catch((error) => {
@@ -107,7 +124,7 @@ function PersonalListing () {
   }
 
   const handleCompleted = (e) => {
-    changeStatusToThree(selectedCompleted)
+    changeStatusToThree(e.target.value)
     getMyList(user.id)
       .then(res => {
         setMyList(res)
@@ -142,20 +159,21 @@ function PersonalListing () {
           {myList.map(listing => (
             <li key={listing.id}>
             ID: {listing.id} - {listing.title} - interested: {listing.interested}
-            <button value={listing.id} onClick={handleDelete}>Delete</button>
-            <button value={listing.id} onClick={handleInterested}>Show</button>
-          </li>
-        ))}
-      </ul><br></br>
-      <Link to='/addform'>
-        <button
-          type="button"
-          className="button is-primary"
-          data-testid="submitButton">
+              <button value={listing.id} onClick={handleDelete}>Delete</button>
+              <button value={listing.id} onClick={handleInterested}>Show</button>
+            </li>
+          ))}
+        </ul><br></br>
+        <Link to='/addform'>
+          <button
+            type="button"
+            className="button is-primary"
+            data-testid="submitButton">
           Create Pearing Invitation!
-        </button>
-      </Link>
-      <hr/>
+          </button>
+        </Link>
+        <hr/>
+      </div>
       <div>
         <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> Pearing Options</h2>
         {interestedUsers.map(user => (
@@ -187,6 +205,16 @@ function PersonalListing () {
             <li key={pearing.id}>
             Title: {pearing.title}<br></br>
             Pear: {pearing.username}<br></br>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Waiting to be peared...</h2>
+        <ul>
+          {myInterests.map(pearing => (
+            <li key={pearing.id}>
+              {pearing.title}<br></br>
             </li>
           ))}
         </ul>

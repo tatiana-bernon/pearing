@@ -102,6 +102,28 @@ router.post('/delete/:id', (req, res) => {
     })
 })
 
+router.post('/statuszero/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.changeStatusToZero(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.post('/statusone/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.changeStatusToOne(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.post('/statustwo/:id', (req, res) => {
   const id = Number(req.params.id)
   db.changeStatusToTwo(id)
@@ -150,6 +172,17 @@ router.post('/addpear', (req, res) => {
   const pearId = req.body.pearId
   const id = req.body.id
   db.addPear(pearId, id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.get('/myinterests/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getMyInterests(id)
     .then(listing => {
       return res.json(listing)
     })
