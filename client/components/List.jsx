@@ -34,7 +34,7 @@ function List () {
           type="button"
           className="button is-primary"
           data-testid="submitButton">
-            Add New Listing
+            Create new pearing invitation!
         </button>
       </Link>
     </>

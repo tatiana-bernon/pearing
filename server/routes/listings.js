@@ -25,9 +25,42 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.post('/:id', (req, res) => {
+router.post('/checkinterest', (req, res) => {
+  const interest = req.body
+  db.checkInterest(interest)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.post('/show', (req, res) => {
   const interest = req.body
   db.showInterest(interest)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.post('/remove', (req, res) => {
+  const interest = req.body
+  db.removeInterest(interest)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.get('/interest/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getInterestById(id)
     .then(listing => {
       return res.json(listing)
     })
@@ -46,5 +79,28 @@ router.post('/', (req, res) => {
       res.status(500).json({ error: err.message })
     })
 })
+
+router.get('/mylist/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getMyList(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.post('/delete/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.deleteListing(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 
 module.exports = router

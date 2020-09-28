@@ -17,9 +17,7 @@ function PersonalInfoShow () {
             <h3>Email: {user.email}</h3>
             <h3>Info: {user.info}</h3>
           </div>
-          <div className="column">
-            <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-1 mb-6"> Welcome to my Profile Page</h1>
-          </div>
+          <h1 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> Welcome to my Profile Page</h1>
         </div>
       </div>
 

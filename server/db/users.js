@@ -6,7 +6,8 @@ module.exports = {
   userExists,
   getUserByName,
   getUserById,
-  updatePersonalInfoById
+  updatePersonalInfoById,
+  getInterestedList
 }
 
 function createUser (user, db = connection) {
@@ -50,4 +51,20 @@ function updatePersonalInfoById (update, db = connection) {
     .first()
     .update('email', update.email)
     .update('info', update.info)
+}
+
+function getInterestedList (id, db = connection) {
+  return db('listings')
+    .join('interestedUsers', 'listings.id', 'interestedUsers.listing_id')
+    .select('interestedUsers.user_id', 'interestedUsers.listing_id')
+    .where('listings.id', id)
+    // .then(usersList => {
+    //   return db('users')
+    //     .select('id', 'username', 'email', 'info')
+    //     .where('id', usersList[1].user_id)
+    // })
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
 }
