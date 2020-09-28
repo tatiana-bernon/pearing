@@ -4,14 +4,13 @@ import React from 'react'
 function Contact () {
   return (
     <>
-     <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> Send us a message! </h1>
+      <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> Send us a message! </h1>
       <div className="field">
         <label className="label">Name</label>
         <div className="control">
-        <input className="input is-primary" type="text" placeholder="Primary input" />
+          <input className="input is-primary" type="text" placeholder="Primary input" />
         </div>
       </div>
-
 
       <div className="field">
         <label className="label">Username</label>
@@ -56,7 +55,7 @@ function Contact () {
       <div className="field">
         <label className="label">Message</label>
         <div className="control">
-        <textarea className="textarea is-primary" placeholder="Primary textarea"></textarea>
+          <textarea className="textarea is-primary" placeholder="Primary textarea"></textarea>
         </div>
       </div>
 
@@ -74,11 +73,11 @@ function Contact () {
           <label className="radio">
             <input type="radio" name="question" />
                       Yes
-    </label>
+          </label>
           <label className="radio">
             <input type="radio" name="question" />
                         No
-    </label>
+          </label>
         </div>
       </div>
 
