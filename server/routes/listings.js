@@ -113,6 +113,17 @@ router.post('/statustwo/:id', (req, res) => {
     })
 })
 
+router.post('/statusthree/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.changeStatusToThree(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.get('/mypearings/:id', (req, res) => {
   const id = Number(req.params.id)
   db.getMyPearings(id)
@@ -124,11 +135,20 @@ router.get('/mypearings/:id', (req, res) => {
     })
 })
 
+router.get('/completedpearings/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getMyCompleted(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.post('/addpear', (req, res) => {
-  // const id = Number(req.params.id)
   const pearId = req.body.pearId
   const id = req.body.id
-  console.log(pearId)
   db.addPear(pearId, id)
     .then(listing => {
       return res.json(listing)

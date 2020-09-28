@@ -13,7 +13,9 @@ module.exports = {
   deleteListing,
   changeStatusToTwo,
   getMyPearings,
-  addPear
+  addPear,
+  changeStatusToThree,
+  getMyCompleted
 }
 
 function getList (db = connection) {
@@ -125,11 +127,23 @@ function changeStatusToTwo (id, db = connection) {
     })
 }
 
-function getMyPearings (id, db = connection) {
+function changeStatusToThree (id, db = connection) {
   return db('listings')
     .select()
-    .where('user_id', id)
-    .where('status', 2)
+    .where('id', id)
+    .update('status', 3)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function getMyPearings (id, db = connection) {
+  return db('listings')
+    .join('users', 'listings.pear_id', 'users.id')
+    .select('listings.id', 'listings.title', 'listings.description', 'users.username')
+    .where('listings.user_id', id)
+    .where('listings.status', 2)
     .catch(err => {
       console.error(err)
       throw err
@@ -141,6 +155,18 @@ function addPear (pearId, id, db = connection) {
     .select()
     .where('id', id)
     .update('pear_id', pearId)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function getMyCompleted (id, db = connection) {
+  return db('listings')
+    .join('users', 'listings.pear_id', 'users.id')
+    .select('listings.id', 'listings.title', 'users.username')
+    .where('listings.user_id', id)
+    .where('listings.status', 3)
     .catch(err => {
       console.error(err)
       throw err

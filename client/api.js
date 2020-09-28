@@ -115,6 +115,13 @@ export function changeStatusToTwo (id) {
     .then(res => res.body)
 }
 
+export function changeStatusToThree (id) {
+  return request
+    .post(url + '/listings/statusthree/' + id)
+    .send()
+    .then(res => res.body)
+}
+
 export function getMyPearings (id) {
   return request
     .get(url + '/listings/mypearings/' + id)
@@ -124,9 +131,16 @@ export function getMyPearings (id) {
 }
 
 export function addPear (pearing) {
-  // console.log(pearId)
   return request
     .post(url + '/listings/addpear/')
     .send(pearing)
     .then(res => res.body)
+}
+
+export function getMyCompleted (id) {
+  return request
+    .get(url + '/listings/completedpearings/' + id)
+    .then(res => {
+      return res.body
+    })
 }
