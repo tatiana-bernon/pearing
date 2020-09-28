@@ -58,11 +58,6 @@ function getInterestedList (id, db = connection) {
     .join('interestedUsers', 'listings.id', 'interestedUsers.listing_id')
     .select('interestedUsers.user_id', 'interestedUsers.listing_id')
     .where('listings.id', id)
-    // .then(usersList => {
-    //   return db('users')
-    //     .select('id', 'username', 'email', 'info')
-    //     .where('id', usersList[1].user_id)
-    // })
     .catch(err => {
       console.error(err)
       throw err

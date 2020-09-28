@@ -4,6 +4,9 @@ exports.up = (knex) => {
     table.string('username')
     table.binary('hash')
     table.string('email')
+    table.string('phone')
+    table.string('linkedin')
+    table.string('discord')
     table.string('info')
   })
 }

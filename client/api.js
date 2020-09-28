@@ -107,3 +107,26 @@ export function getInterestedList (id) {
       return res.body
     })
 }
+
+export function changeStatusToTwo (id) {
+  return request
+    .post(url + '/listings/statustwo/' + id)
+    .send()
+    .then(res => res.body)
+}
+
+export function getMyPearings (id) {
+  return request
+    .get(url + '/listings/mypearings/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
+export function addPear (pearing) {
+  // console.log(pearId)
+  return request
+    .post(url + '/listings/addpear/')
+    .send(pearing)
+    .then(res => res.body)
+}
