@@ -1,5 +1,15 @@
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;  
+}
+
+#app{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.MainContent {
+  flex: 1;
 }
 
 .each-slide > div {
@@ -75,18 +85,20 @@ body {
   padding-top: 2%
 } */
 
-.ScrollBar {
-  overflow-y: scroll;  
+.ListContainer {
+  direction: rtl;
+  overflow-y: auto;
   overflow-x: hidden;
-  background-color: #f4b400;
-  outline: 1px solid #00d1b3;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  max-height: 65vh;
+}
+
+.ItemDirection {
+  direction:ltr;
 }
 
 .ImgLogo {
   min-height: 70px !important;
   padding: 5px 0px 5px 0px;
-  
 }
 
 .footer{

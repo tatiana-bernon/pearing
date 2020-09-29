@@ -19,11 +19,11 @@ function List() {
 
   return (
     <>
-      <div className="ScrollBar">
+      <div className="ListContainer">
         {list.map(listing => {
           if (listing.status < 2) {
             return (
-              <div key={listing.id}>
+              <div key={listing.id} className="ItemDirection">
                 <div className="tile is-ancestor">
                   <div className="tile is-vertical is-12">
                     <div className="tile">

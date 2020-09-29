@@ -31,7 +31,7 @@ function App () {
 
   return (
     <>
-      <div>
+      <main className="MainContent">
         <div>
           <div>
             <nav className="navbar is-expanded is-primary has-text-white" role="navigation" aria-label="main navigation">
@@ -88,12 +88,10 @@ function App () {
           </div>
           <div>
             <Route path="/contact" component={Contact} />
-          </div>
-          <div className='footer'>
-            <Footer />
-          </div>
+          </div>          
         </div>
-      </div>
+      </main>      
+      <><Footer /></>
     </>
   )
 }
