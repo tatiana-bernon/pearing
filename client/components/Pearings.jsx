@@ -174,7 +174,7 @@ function Pearings () {
   return (
     <>
       <div>
-        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
+        <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
         <div>
           <ul>
             {myList.map(listing => (
@@ -199,7 +199,7 @@ function Pearings () {
         <hr/>
       </div>
       <div>
-        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6"> Pearing Options</h2>
+        <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> Pearing Options</h2>
         <div>
           <ul>
             {interestedUsers.map(user => (

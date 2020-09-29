@@ -1,3 +1,6 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+}
 
 .each-slide > div {
   display: flex;
@@ -73,5 +76,7 @@
 }
 
 #ScrollBar {
-  overflow: scroll;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
 }

@@ -89,7 +89,7 @@ function App () {
           <div>
             <Route path="/contact" component={Contact} />
           </div>
-          <div className='container'>
+          <div className='container pt-1'>
             <Footer />
           </div>
         </div>
