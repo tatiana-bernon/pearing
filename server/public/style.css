@@ -67,3 +67,11 @@
   border-top: none;
   left: 0;
 }
+
+.ContactPageImage {
+  padding-top: 8%
+}
+
+#ScrollBar {
+  overflow: scroll;
+}

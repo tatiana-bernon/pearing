@@ -27,7 +27,7 @@ function List () {
                 <div className="tile is-vertical is-12">
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
-                      <article className="tile is-child notification is-info">
+                      <article className="tile is-child notification is-primary is-light">
 
                         <Link key={listing.id} to={`/listings/${listing.id}`} >
                           <p className="title">{listing.title} - {listing.subject}</p>
