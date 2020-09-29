@@ -36,9 +36,7 @@ function PersonalInfo() {
     data.append('upload_preset', 'darwin')
     setLoading(true)
     const res = await fetch(
-      'https://api.cloudinary.com/v1_1/dgyp9sqsh/image/upload', {
-      method: 'POST', body: data
-    }
+      'https://api.cloudinary.com/v1_1/dgyp9sqsh/image/upload', { method: 'POST', body: data }
     )
     const file = await res.json()
 
