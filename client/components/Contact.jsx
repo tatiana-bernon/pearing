@@ -4,8 +4,9 @@ import React from 'react'
 function Contact() {
   return (
     <>
+
       <div className="container mx-6">
-        <div className="box">
+        <div className="box ">
           <div className="columns is-centered is-5-tablet is-4-desktop is-3-widescreen">
             <div className="field mt-5 mb-5">
               <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> Send us a message! </h1>
