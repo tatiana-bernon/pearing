@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { logOff } from 'authenticare/client'
 import { IfAuthenticated } from './Authenticated'
 
-export default function NavAuth() {
+export default function NavAuth () {
   const navLanding = null
 
   return (

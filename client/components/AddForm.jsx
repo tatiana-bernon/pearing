@@ -4,7 +4,7 @@ import { getSubjects, addNewListing } from '../api'
 
 import { UserContext } from './UserContext'
 
-function AddForm() {
+function AddForm () {
   const [user] = useContext(UserContext)
   const [title, setTitle] = useState('')
   const [subject, setSubject] = useState('')
@@ -24,7 +24,7 @@ function AddForm() {
       })
   }, [])
 
-  function handleSubmit(e) {
+  function handleSubmit (e) {
     e.preventDefault()
     if (user.id) {
       const newListing = {
@@ -43,7 +43,6 @@ function AddForm() {
       ) {
         addNewListing(newListing)
           .then(res => {
-            // setAuthor(res.user.username)
             return null
           })
           .catch((error) => {
@@ -92,7 +91,7 @@ function AddForm() {
                         value={title} onChange={event => setTitle(event.target.value)} />
                     </div>
 
-                    <h5 h3 className="mb-2 label">Description</h5>
+                    <h5 className="mb-2 label">Description</h5>
                     <textarea className="textarea is-normal is-primary"
                       placeholder="Enter your description"
                       name="description"
