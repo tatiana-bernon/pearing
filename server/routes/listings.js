@@ -157,9 +157,31 @@ router.get('/mypearings/:id', (req, res) => {
     })
 })
 
+router.get('/mypearingsbyothers/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getMyPearingsByOthers(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.get('/completedpearings/:id', (req, res) => {
   const id = Number(req.params.id)
   db.getMyCompleted(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.get('/completedpearingsbyothers/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getMyCompletedByOthers(id)
     .then(listing => {
       return res.json(listing)
     })
