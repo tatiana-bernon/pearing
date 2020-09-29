@@ -20,6 +20,7 @@ import Footer from './Footer'
 import About from './About'
 // import PersonalInfo from './PersonalInfo'
 import Contact from './Contact'
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 function App () {
   const [, setUser] = useContext(UserContext)
@@ -44,8 +45,12 @@ function App () {
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
-                <Route path="/" component={NavAuth} />
-                <Route path="/" component={NavUnauth} />
+                <IfAuthenticated>
+                  <Route path="/" component={NavAuth} />
+                </IfAuthenticated>
+                <IfNotAuthenticated>
+                  <Route path="/" component={NavUnauth} />
+                </IfNotAuthenticated>
               </div>
             </div>
           </div>
