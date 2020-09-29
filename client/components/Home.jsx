@@ -2,16 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import List from './List'
 
-function Home() {
+function Home () {
   return (
     <>
       <div className="container">
         <div className="box has-text centered mx-6 my-6 ">
-        <h1 className="has-text-1 is-size-1 has-text-centered">May your pearing journey begin!</h1>
-        <p className="has-text-centered is-size-4">Go ahead and scroll the list to see all the current pearing invitations open. <br/>And make your choice!</p>
+          <h1 className="has-text-1 is-size-1 has-text-centered">May your pearing journey begin!</h1>
+          <p className="has-text-centered is-size-4">Go ahead and scroll the list to see all the current pearing invitations open. <br/>And make your choice!</p>
         </div>
       </div>
-      
+
       <div className="container">
         <div className="columns">
           <div className="column box mr-2 mt-3 is-half has-text-centered">

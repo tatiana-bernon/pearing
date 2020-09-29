@@ -17,7 +17,7 @@ import {
   getMyInterests
 } from '../api'
 
-function Pearings() {
+function Pearings () {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [, setInterestedList] = useState([])
@@ -30,54 +30,56 @@ function Pearings() {
   const [myInterests, setMyInterests] = useState([])
 
   useEffect(() => {
-    getMyList(user.id)
-      .then(res => {
-        setMyList(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyPearings(user.id)
-      .then(res => {
-        setAcceptedPears(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyPearingsByOthers(user.id)
-      .then(res => {
-        setAcceptedByOtherPears(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyCompleted(user.id)
-      .then(res => {
-        setCompletedPears(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyCompletedByOthers(user.id)
-      .then(res => {
-        setCompletedByOthersPears(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyInterests(user.id)
-      .then(res => {
-        setMyInterests(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
+    if (user.id) {
+      getMyList(user.id)
+        .then(res => {
+          setMyList(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyPearings(user.id)
+        .then(res => {
+          setAcceptedPears(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyPearingsByOthers(user.id)
+        .then(res => {
+          setAcceptedByOtherPears(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyCompleted(user.id)
+        .then(res => {
+          setCompletedPears(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyCompletedByOthers(user.id)
+        .then(res => {
+          setCompletedByOthersPears(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyInterests(user.id)
+        .then(res => {
+          setMyInterests(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+    }
   }, [])
 
   const handleDelete = (e) => {
