@@ -22,7 +22,7 @@ import About from './About'
 import Contact from './Contact'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
-function App() {
+function App () {
   const [, setUser] = useContext(UserContext)
 
   useEffect(() => {
@@ -37,7 +37,9 @@ function App() {
         <div>
           <div>
             <div className="navbar is-primary has-text-white" role="navigation" aria-label="main navigation">
-              <img src="../images/pearinglogo.png" width="155" height="100" />
+              <div className= " mx-2 mt-2 has-text-centered">
+                <img src="../images/pearinglogo.png" width="200" height="50" />
+              </div>
               <div className="navbar-brand navbar-end">
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" />
                 <span aria-hidden="true"></span>

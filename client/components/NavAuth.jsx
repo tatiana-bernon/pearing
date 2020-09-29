@@ -4,8 +4,7 @@ import { logOff } from 'authenticare/client'
 import { IfAuthenticated } from './Authenticated'
 
 export default function NavAuth() {
-
-  let navLanding = null
+  const navLanding = null
 
   return (
     <>
@@ -26,8 +25,8 @@ export default function NavAuth() {
         </div>
       </div >
       <IfAuthenticated>
-        <Link to="/home">{navLanding}</Link>
         <div className="navbar-item">
+          {navLanding}
           <div className="buttons">
             <a className="button is-primary is-light">
               <Link to="/" onClick={logOff}>
