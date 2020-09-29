@@ -73,28 +73,33 @@ function ListItem (props) {
 
   return (
     <>
-      <div>
-        <h1 className="mt-6 has-text-centered is-size-3 has-text-primary">Kindly read the invitation below!</h1>
-        <h3 className="mt-5 has-text-centered is-size-4">If this is your Jam, do not forget to show interest.</h3>
+      <div className="container py-5">      
+          <h1 className="has-text-centered is-size-3 has-text-primary">Kindly read the invitation below!</h1>
+          <h3 className="has-text-centered is-size-4">If this is your Jam, do not forget to show interest.</h3>        
       </div>
 
-      <div className="columns box  mt-6">
-        <div className="column container mx-6">
-          <div className="is-centered is-primary is-light mb-4">
+      <div className="container box">
+        <div className="column container ls-4">
+          <div className="is-primary is-light mb-4">
             <h3 className="mb-2 label"> Title </h3>
-            <input className="input is-normal is-primary" type="text"
+            <input className="input is-static" 
+              type="text"
+              readonly="readonly"
               name="title"
               value={listItem.title}/>
           </div>
-          <div className="is-centered mb-5">
+          <div className="mb-5">
             <h3 className="mb-2 label"> Description </h3>
-            <input className="input is-normal is-primary" type="text"
+            <textarea className="textarea is-static" 
+              rows="5"
+              readonly="readonly"
               name="title"
-              value={listItem.description}/>
+              value={listItem.description}></textarea>
           </div>
-          <div className="is-centered mb-5">
+          <div className="mb-5">
             <h3 className="mb-2 label"> Invitation created by </h3>
-            <input className="input is-normal is-primary" type="text"
+            <input className="input is-static" type="text"
+              readonly="readonly"
               placeholder="Enter your title"
               name="title"
               value={author}/>

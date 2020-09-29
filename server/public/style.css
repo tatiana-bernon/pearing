@@ -1,3 +1,16 @@
+body {
+  font-family: 'Quicksand', sans-serif;  
+}
+
+#app{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.MainContent {
+  flex: 1;
+}
 
 .each-slide > div {
   display: flex;
@@ -67,11 +80,27 @@
   border-top: none;
   left: 0;
 }
-
+/* 
 .ContactPageImage {
-  padding-top: 8%
+  padding-top: 2%
+} */
+
+.ListContainer {
+  direction: rtl;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 65vh;
 }
 
-#ScrollBar {
-  overflow: scroll;
+.ItemDirection {
+  direction:ltr;
+}
+
+.ImgLogo {
+  min-height: 70px !important;
+  padding: 5px 0px 5px 0px;
+}
+
+.footer{
+  padding: 25px 40px 25px 40px;
 }
