@@ -55,6 +55,7 @@ describe('Check Contact Page', () => {
 describe('Checks sign in/Sign out and navbar', () => {
   // eslint-disable-next-line jest/expect-expect
   it('Signs in', () => {
+    cy.viewport(1200, 960)
     cy.visit('http://localhost:3000/#/')
     cy.get('.button').contains('Sign In').click()
     cy.get('#username').type('dhah')
@@ -87,7 +88,7 @@ describe('Checks sign in/Sign out and navbar', () => {
 
     cy.contains('Profile').click()
     // cy.get('h1').contains('pearing')
-    cy.get('h2').contains('Personal Information')
+    cy.get('h2').contains('My Profile')
     cy.get('.column').contains('Username')
     cy.get('.column').contains('Email')
     cy.get('.column').contains('Phone')
@@ -143,6 +144,7 @@ describe('Checks sign in/Sign out and navbar', () => {
 
   describe('It can add a new invitation', () => {
     it('Signs in', () => {
+      cy.viewport(1200, 960)
       cy.visit('http://localhost:3000/#/')
       cy.get('.button').contains('Sign In').click()
       cy.get('#username').type('dhah')
