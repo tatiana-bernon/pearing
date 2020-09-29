@@ -1,4 +1,5 @@
 # pearing
+![alt text](https://github.com/pohutukawa-2020/pearing/blob/f05581eca2ba100ba6964b956a9c813136d838bf/server/public/images/pearinglogo.png)
 
 > A platform bringing developers together to help each other or just jam!
 
