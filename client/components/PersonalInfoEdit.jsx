@@ -5,7 +5,7 @@ import { UserContext } from './UserContext'
 
 import { updatePersonalInfo } from '../api'
 
-function PersonalInfoEdit() {
+function PersonalInfoEdit () {
   const [user, setUser] = useContext(UserContext)
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
@@ -111,7 +111,7 @@ function PersonalInfoEdit() {
             onClick={handleClick}
             data-testid="submitButton">
             Submit
-        </button>
+          </button>
           <br></br>
           <br></br>
           <button
@@ -119,7 +119,7 @@ function PersonalInfoEdit() {
             onClick={handleCancel}
             data-testid="submitButton">
             Cancel
-        </button>
+          </button>
         </div>
       </div>
     </>
