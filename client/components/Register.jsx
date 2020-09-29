@@ -31,14 +31,14 @@ function Register(props) {
 
   return (
     <div className="container has-text-centered">
-      <div className="columns is-centered mt-6 mp-6">
-        <div className="columns is-5-tablet is-4-desktop is-3-widescreen">
-          <div className="box">
+      <div className="columns is-centered pt-6 pb-6 px-6 mx-6 mt-6 mb-6 has-background-primary-light">
+        <div className="columns">
+          <div className="box mb-3">
             <div className="field mt-5 mb-5">
-              <h1 className="is-centered has-text-primary is-size-4 has-text-weight-medium" >Register</h1>
+              <h1 className="is-centered has-text-primary is-size-3 has-text-weight-medium" >Register</h1>
               <label className="label mt-5 mb-5">Username</label>
               <input
-                className="input is-medium"
+                className="input is-medium is-primary"
                 type="username"
                 value={username}
                 placeholder="username"
@@ -49,7 +49,7 @@ function Register(props) {
               <label className="label">Password</label>
               <br></br>
               <input
-                className="input is-medium"
+                className="input is-medium is-primary"
                 type="password"
                 value={password}
                 placeholder="password"

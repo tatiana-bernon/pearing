@@ -4,11 +4,11 @@ import React from 'react'
 function About () {
   return (
     <>
-      <div className='container landingPage has-background-primary-light'>
-        <h1 className="has-text-primary is-size-1 has-text-centered is-size-1"> The story behind Pearing! </h1>
+      <div className='container landingPage'>
+        <h1 className="has-text-primary pb-2 is-size-1 has-text-centered is-size-1"> The story behind Pearing! </h1>
       </div>
-      <div className="box is-size-4 pb-2 has-text-centered is-dark">
-        <div className="my-6">          
+      <div className="container is-size-4 has-text-centered is-dark">
+        <div className="box">          
           <p>
             While we were completing our programming journey with EDA. During our bootcamp, pair programming was one of the main highlights which enabled us in growing our technical skills.
           </p>

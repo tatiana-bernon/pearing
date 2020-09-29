@@ -7,15 +7,13 @@ const Footer = () => {
     <>
       {/* <div className="wrapper"> */}
       {/* <div className="pt-6 hero-body"> */}
-      <div className="container">
-        <footer className="footer mt-3 mb-3">
-          <div className="is-size-5 has-text-centered content has-text-centered">
-            <p><strong>pearing&#169; </strong> Pōhutukawa Cohort 2020</p>
+      <footer className="footer">
+        <div className="container">
+          <div className="content  has-text-centered">
+            <p className="is-size-5"><strong>pearing&#169; </strong> Pōhutukawa Cohort 2020</p>
           </div>
-        </footer>
-      </div>
-      {/* </div> */}
-      {/* </div> */}
+        </div>
+      </footer>
     </>
   )
 }

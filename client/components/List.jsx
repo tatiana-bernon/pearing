@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { getList } from '../api'
 
-function List () {
+function List() {
   const [list, setList] = useState([])
 
   useEffect(() => {
@@ -30,8 +30,9 @@ function List () {
                       <div className="tile is-parent is-vertical">
                         <article className="tile is-child notification has-text-primary is-primary is-light">
                           <Link key={listing.id} to={`/listings/${listing.id}`} >
-                            <p className="title has-text-left">{listing.title} - {listing.subject}</p>
-                            <p className="subtitle has-text-right">Interested: {listing.interested}</p>
+                            <p className="title has-text-left">{listing.title}</p>
+                            <p className="subtitle has-text-left">Subject: {listing.subject}</p>
+                            <p className="subtitle has-text-right has-text-primary-dark">Interested: {listing.interested}</p>
                           </Link>
                         </article>
                       </div>
@@ -43,7 +44,7 @@ function List () {
           }
         })}
       </div>
-      
+
       {/* <Link to='/addform'>
         <button
           type="button"
