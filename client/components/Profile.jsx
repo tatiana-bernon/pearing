@@ -50,8 +50,8 @@ function PersonalInfo() {
     )
   }
   return (
-    <div className="box">
-      <h2 className="label has-text-centered">My Profile</h2>
+    <div className="box mx-6 my-6">
+      <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> My Profile</h2>
       <br></br>
       <br></br>
       <div className="columns is-mobile">

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { getList } from '../api'
 
+// eslint-disable-next-line space-before-function-paren
 function List() {
   const [list, setList] = useState([])
 
