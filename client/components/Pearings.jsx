@@ -17,7 +17,7 @@ import {
   getMyInterests
 } from '../api'
 
-function Pearings () {
+function Pearings() {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [, setInterestedList] = useState([])
