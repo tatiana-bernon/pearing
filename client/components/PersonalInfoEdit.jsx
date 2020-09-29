@@ -110,16 +110,14 @@ function PersonalInfoEdit() {
             className="button is-primary is-medium"
             onClick={handleClick}
             data-testid="submitButton">
-            Submit
-        </button>
+            Submit</button>
           <br></br>
           <br></br>
           <button
             className="button is-primary is-medium"
             onClick={handleCancel}
             data-testid="submitButton">
-            Cancel
-        </button>
+            Cancel</button>
         </div>
       </div>
     </>
