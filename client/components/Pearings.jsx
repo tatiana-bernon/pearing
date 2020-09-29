@@ -17,7 +17,7 @@ import {
   getMyInterests
 } from '../api'
 
-function Pearings () {
+function Pearings() {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [, setInterestedList] = useState([])
@@ -266,7 +266,6 @@ function Pearings () {
         </div>
         <hr></hr>
         <div>
-          <h3>Created By Other Pears</h3>
           <ul>
             {completedByOthersPears.map(pearing => (
               <li key={pearing.id}>
@@ -277,16 +276,28 @@ function Pearings () {
           </ul>
         </div>
       </div>
-      <div>
-        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Waiting to be peared...</h2>
+      <div >
+        <h2 className="has-text-primary is-size-3 has-text-centered pt-3 mx-6 mt-1 mb-3">Waiting to be peared...</h2>
         <div>
-          <ul>
-            {myInterests.map(pearing => (
-              <li key={pearing.id}>
-                {pearing.title}<br></br>
-              </li>
-            ))}
-          </ul>
+          <div className="container box">
+            <div className="container tile is-ancestor">
+              <div className="tile is-vertical is-12">
+                <div className="tile" >
+                  <div className="tile is-parent is-vertical">
+                    <article className="tile is-child notification has-text-primary is-primary is-light">
+                      <ul>
+                        {myInterests.map(pearing => (
+                          <li key={pearing.id}>
+                            {pearing.title}<br></br>
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <hr />
@@ -300,6 +311,7 @@ function Pearings () {
           </button>
         </Link>
       </div>
+      <br></br>
     </>
   )
 }
