@@ -2,9 +2,7 @@ import React from 'react';
 import { Slide } from 'react-slideshow-image';
 
 const slideImages = [
-  '../images/slideshow/30.JPG',
-  '../images/slideshow/3.JPG',
-  '../images/slideshow/13.JPG'
+  '../images/OtherTest.png'
 ];
 
 const Slideshow = () => {
