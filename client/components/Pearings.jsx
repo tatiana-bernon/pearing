@@ -17,7 +17,7 @@ import {
   getMyInterests
 } from '../api'
 
-function Pearings() {
+function Pearings () {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [, setInterestedList] = useState([])
@@ -174,7 +174,7 @@ function Pearings() {
   return (
     <>
       <div>
-        <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
+        <h2 className="has-text-primary is-size-3 has-text-centered pt-3 mx-6 mt-1 mb-3"> My Pearing Requests</h2>
         <div className="container box">
           <div className="container tile is-ancestor">
             <div className="tile is-vertical is-12">
@@ -185,13 +185,17 @@ function Pearings() {
                       {myList.map(listing => (
                         <li key={listing.id}>
                           ID: {listing.id} - {listing.title} - interested: {listing.interested}
-                          <button type="button"
-                            className="button is-primary is-small"
-                            data-testid="submit Button" value={listing.id} onClick={handleDelete}>Delete</button>
-                          <button type="button"
-                            className="button is-primary is-small
-                            "
-                            data-testid="submit Button" value={listing.id} onClick={handleInterested}>Show</button>
+                          <div className="field is-grouped has-text-right">
+                            <p className="control">
+                              <button type="button"
+                                className="button is-primary is-small"
+                                data-testid="submit Button" value={listing.id} onClick={handleDelete}>Delete</button></p>
+                            <p className="control">
+                              <button type="button"
+                                className="button is-primary is-small"
+                                data-testid="submit Button" value={listing.id} onClick={handleInterested}>Show</button>
+                            </p>
+                          </div>
                         </li>
                       ))}
                     </ul>
@@ -293,7 +297,7 @@ function Pearings() {
             className="button is-primary is-large"
             data-testid="submitButton">
             Create Pearing Invitation!
-            </button>
+          </button>
         </Link>
       </div>
     </>
