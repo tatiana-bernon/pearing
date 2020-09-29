@@ -9,6 +9,48 @@
 /* eslint-disable indent */
 /* eslint-disable jest/expect-expect */
 /* eslint-disable no-undef */
+// describe('Check Slideshow', () => {
+//   it('Checks the slideshow works', () => {
+//     cy.visit('http://localhost:3000/#/')
+//     cy.contains('svg').click()
+//     // cy.get('svg').contains('...').click()
+//     // cy.get('svg').contains('...').click()
+//   })
+// })
+
+describe('Check Contact Page', () => {
+  // it('Signs in', () => {
+  //   cy.visit('http://localhost:3000/#/')
+  //   cy.get('.button').contains('Sign In').click()
+  //   cy.get('#username').type('dhah')
+  //   cy.get('#password').type('1g23')
+  //   cy.get('button').contains('Sign in').click()
+
+  // })
+  it('Checks the contact page form', () => {
+    cy.visit('http://localhost:3000/#/')
+    cy.viewport('macbook-11')
+    cy.contains('Contact').click()
+    cy.get('input[placeholder="Name"]')
+      .type('Daryl Chen')
+      .should('have.value', 'Daryl Chen')
+
+    cy.get('input[placeholder="Username"]')
+      .type('Daz 1982')
+      .should('have.value', 'Daz 1982')
+
+    cy.get('input[placeholder="Email"]')
+      .type('Darylchen.w.h@gmail.com')
+      .should('have.value', 'Darylchen.w.h@gmail.com')
+
+    cy.get('textarea[placeholder="Please enter your message"]')
+      .type('This is a test message')
+      .should('have.value', 'This is a test message')
+    cy.get('.button').contains('Cancel').click() // this needs to work
+    cy.get('.navbar-item').contains('Home').click()
+    // cy.get('.button').contains('Log out').click()
+  })
+})
 
 describe('Checks sign in/Sign out and navbar', () => {
   // eslint-disable-next-line jest/expect-expect
@@ -22,20 +64,22 @@ describe('Checks sign in/Sign out and navbar', () => {
   })
 
   it('Checks the navbar', () => {
+    cy.viewport(1200, 960)
     cy.contains('About').click()
     cy.contains('Home').click()
     cy.contains('Contact').click()
     cy.contains('Home').click()
     cy.contains('Profile').click()
     cy.contains('Home').click()
-    // cy.contains('Subjects').click()
-    // cy.contains('Home').click()
+    cy.contains('Contact').click()
+    cy.contains('Home').click()
     cy.contains('Log out').click()
   })
 
   it('Checks the pages content', () => {
 
     cy.visit('http://localhost:3000/#/')
+    cy.viewport(1200, 960)
     cy.get('.button').contains('Sign In').click()
     cy.get('#username').type('dhah')
     cy.get('#password').type('1g23')
@@ -44,16 +88,20 @@ describe('Checks sign in/Sign out and navbar', () => {
     cy.contains('Profile').click()
     // cy.get('h1').contains('pearing')
     cy.get('h2').contains('Personal Information')
-    cy.get('h3').contains('Username')
-    cy.get('h3').contains('Email')
-    cy.get('h3').contains('Info')
-    cy.get('h2').contains('Personal Listing')
+    cy.get('.column').contains('Username')
+    cy.get('.column').contains('Email')
+    cy.get('.column').contains('Phone')
+    cy.get('.column').contains('LinkedIn')
+    cy.get('.column').contains('Discord')
+    cy.get('.column').contains('Details')
     cy.contains('Home').click()
   })
+})
 
   describe('Can update the user profile', () => {
     it('Signs in', () => {
       cy.visit('http://localhost:3000/#/')
+      cy.viewport(1200, 960)
       cy.get('.button').contains('Sign In').click()
       cy.get('#username').type('dhah')
       cy.get('#password').type('1g23')
@@ -61,15 +109,29 @@ describe('Checks sign in/Sign out and navbar', () => {
     })
 
     it('Can update the user profile', () => {
+      cy.viewport(1300, 1000)
       cy.contains('Profile').click()
       cy.contains('Edit').click()
-      cy.get('input[type="text"]')
+      cy.get('input[name="email"]')
         .type('test@test.com')
         .should('have.value', 'test@test.com')
 
-      cy.get('textarea[type="text"]')
-        .type('this is a test')
-        .should('have.value', 'this is a test')
+      cy.get('input[name="phone"]')
+        .type('0220885949')
+        .should('have.value', '0220885949')
+
+      cy.get('input[name="linkedin"]')
+        .type('https://www.linkedin.com/in/daryl-chen-25560418/')
+        .should('have.value', 'https://www.linkedin.com/in/daryl-chen-25560418/')
+
+      cy.get('input[name="discord"]')
+        .type('Daryl #6733')
+        .should('have.value', 'Daryl #6733')
+
+      cy.get('textarea[name="info"]')
+        .type('OMG this is so awesome!')
+        .should('have.value', 'OMG this is so awesome!')
+
 
       cy.contains('Submit').click()
       // should take you back to profile
@@ -80,10 +142,20 @@ describe('Checks sign in/Sign out and navbar', () => {
 
   })
 
-  describe('It can add a new listing', () => {
+  describe('It can add a new invitation', () => {
+    it('Signs in', () => {
+      cy.visit('http://localhost:3000/#/')
+      cy.get('.button').contains('Sign In').click()
+      cy.get('#username').type('dhah')
+      cy.get('#password').type('1g23')
+      cy.get('button').contains('Sign in').click()
 
-    it('Adds a new listing and verifies it', () => {
-      cy.get('.button').contains('Add New Listing').click()
+    })
+
+    it('Create a new Pearing Invitation', () => {
+      cy.viewport(1200, 960)
+      cy.contains('Create new pearing invitation!').click()
+
       cy.get('form')
         .get('select')
         .select('redux')
@@ -97,43 +169,13 @@ describe('Checks sign in/Sign out and navbar', () => {
         .should('have.value', 'Help! I really need help with Redux!')
 
       cy.contains('Back').click() // change this to Submit once delete button works
-
-    })
-
-    it('Can show interest', () => {
-      cy.get('h3').contains('Daryl').click()
-      cy.get('.button').contains('Show Interest').click()
-      cy.get('.button').contains('Remove Interest').click()
-      cy.get('.button').contains('Back').click()
+      cy.get('.title').contains('Back to basics.').click()
+        cy.get('.button').contains('Interest').click()
+        cy.get('.button').contains('Back').click()
+        cy.get('.title').contains('Back to basics.').click()
+        cy.get('.button').contains('Interest').click()
+        cy.get('.button').contains('Back').click()
+        cy.get('.button').contains('Log out').click()
     })
   })
-  // come back to this!
-  // describe('Check and edit the user profile on profiles page', () => {
-  // eslint-disable-next-line jest/no-commented-out-tests
-  //   it('Has the correct links', () => {
-  //     cy.visit('http://localhost:3000/#/profile')
-  //     cy.contains('About').click()
-  //     cy.go('back')
-  //     cy.location('pathname').should('not.include', 'About')
 
-  //     cy.contains('Contact').click()
-  //     cy.go('back')
-  //     cy.location('pathname').should('not.include', 'Contact')
-  //   })
-
-  //   it('Checks the page layout and update info form', () => {
-
-  //     
-  //   })
-  //   it('Checks the cancel button works', () => {
-
-  //     cy.contains('Edit').click()
-  //     cy.contains('Cancel').click()
-  //   })
-
-  //   it('Can update profile information', () => {
-
-  //       cy.contains('Profile').click()
-
-  //   })
-})
