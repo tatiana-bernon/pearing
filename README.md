@@ -267,4 +267,4 @@ However, we agreed that if we felt the need (due to productivity slowing down, t
 
 - *Tati* shared that she would really want to see a completed product to demo at Graduation, but also expects lots of fun and learning through this final group project.
 ```
-![alt text](https://miro.medium.com/max/2644/1*-mCWVWM_8rgv9EbwhlcFUA.jpeg)
+![alt text](https://miro.medium.com/max/2644/1*-mCWVWM_8rgv9EbwhlcFUA.jpeg).
