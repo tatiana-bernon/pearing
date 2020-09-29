@@ -17,7 +17,7 @@ import {
   getMyInterests
 } from '../api'
 
-function Pearings() {
+function Pearings () {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [, setInterestedList] = useState([])
@@ -30,54 +30,56 @@ function Pearings() {
   const [myInterests, setMyInterests] = useState([])
 
   useEffect(() => {
-    getMyList(user.id)
-      .then(res => {
-        setMyList(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyPearings(user.id)
-      .then(res => {
-        setAcceptedPears(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyPearingsByOthers(user.id)
-      .then(res => {
-        setAcceptedByOtherPears(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyCompleted(user.id)
-      .then(res => {
-        setCompletedPears(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyCompletedByOthers(user.id)
-      .then(res => {
-        setCompletedByOthersPears(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
-    getMyInterests(user.id)
-      .then(res => {
-        setMyInterests(res)
-        return null
-      })
-      .catch((error) => {
-        console.log('error: ', error.message)
-      })
+    if (user.id) {
+      getMyList(user.id)
+        .then(res => {
+          setMyList(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyPearings(user.id)
+        .then(res => {
+          setAcceptedPears(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyPearingsByOthers(user.id)
+        .then(res => {
+          setAcceptedByOtherPears(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyCompleted(user.id)
+        .then(res => {
+          setCompletedPears(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyCompletedByOthers(user.id)
+        .then(res => {
+          setCompletedByOthersPears(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+      getMyInterests(user.id)
+        .then(res => {
+          setMyInterests(res)
+          return null
+        })
+        .catch((error) => {
+          console.log('error: ', error.message)
+        })
+    }
   }, [])
 
   const handleDelete = (e) => {
@@ -174,7 +176,7 @@ function Pearings() {
   return (
     <>
       <div>
-        <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
+        <h2 className="has-text-primary is-size-3 has-text-centered pt-3 mx-6 mt-1 mb-3"> My Pearing Requests</h2>
         <div className="container box">
           <div className="container tile is-ancestor">
             <div className="tile is-vertical is-12">
@@ -185,13 +187,17 @@ function Pearings() {
                       {myList.map(listing => (
                         <li key={listing.id}>
                           ID: {listing.id} - {listing.title} - interested: {listing.interested}
-                          <button type="button"
-                            className="button is-primary is-small"
-                            data-testid="submit Button" value={listing.id} onClick={handleDelete}>Delete</button>
-                          <button type="button"
-                            className="button is-primary is-small
-                            "
-                            data-testid="submit Button" value={listing.id} onClick={handleInterested}>Show</button>
+                          <div className="field is-grouped has-text-right">
+                            <p className="control">
+                              <button type="button"
+                                className="button is-primary is-small"
+                                data-testid="submit Button" value={listing.id} onClick={handleDelete}>Delete</button></p>
+                            <p className="control">
+                              <button type="button"
+                                className="button is-primary is-small"
+                                data-testid="submit Button" value={listing.id} onClick={handleInterested}>Show</button>
+                            </p>
+                          </div>
                         </li>
                       ))}
                     </ul>
@@ -322,6 +328,7 @@ function Pearings() {
           </Link>
         </div>
       </div>
+      <br></br>
     </>
   )
 }

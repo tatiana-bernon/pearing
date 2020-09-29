@@ -85,6 +85,7 @@ body {
   padding-top: 2%
 } */
 
+/* code for scroll bar- Add className="ListContainer" to the main div of the box you are creating - reference see list Line 23-43*/
 .ListContainer {
   direction: rtl;
   overflow-y: auto;

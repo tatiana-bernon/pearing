@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { logOff } from 'authenticare/client'
 import { IfAuthenticated } from './Authenticated'
+import { UserContext, updateUserContext } from './UserContext'
 
 export default function NavAuth() {
   const navLanding = null
+  const [, setUser] = useContext(UserContext)
+
+  const handleLogOff = () => {
+    logOff()
+    // updateUserContext(setUser)
+  }
 
   return (
     <>
@@ -19,7 +26,7 @@ export default function NavAuth() {
             <div className="navbar-item">
               {navLanding}
               <div className="buttons">
-                <Link className="button is-warning is-outlined is-medium" to="/" onClick={logOff}>
+                <Link className="button is-warning is-outlined is-medium" to="/" onClick={handleLogOff}>
                   Log out
                 </Link>
               </div>
