@@ -19,7 +19,7 @@ const Slideshow = () => {
         <Slide easing="ease">
 
           <div className="each-slide">
-            <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
+            <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
               {/* <span>Slide 1</span> */}
             </div>
           </div>
@@ -37,7 +37,7 @@ const Slideshow = () => {
           </div>
 
           <div className="each-slide">
-            <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
+            <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
               {/* <span>Slide 3</span> */}
             </div>
           </div>
