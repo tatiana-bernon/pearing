@@ -108,6 +108,20 @@ export function getInterestedList (id) {
     })
 }
 
+export function changeStatusToZero (id) {
+  return request
+    .post(url + '/listings/statuszero/' + id)
+    .send()
+    .then(res => res.body)
+}
+
+export function changeStatusToOne (id) {
+  return request
+    .post(url + '/listings/statusone/' + id)
+    .send()
+    .then(res => res.body)
+}
+
 export function changeStatusToTwo (id) {
   return request
     .post(url + '/listings/statustwo/' + id)
@@ -130,6 +144,14 @@ export function getMyPearings (id) {
     })
 }
 
+export function getMyPearingsByOthers (id) {
+  return request
+    .get(url + '/listings/mypearingsbyothers/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
 export function addPear (pearing) {
   return request
     .post(url + '/listings/addpear/')
@@ -140,6 +162,22 @@ export function addPear (pearing) {
 export function getMyCompleted (id) {
   return request
     .get(url + '/listings/completedpearings/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
+export function getMyCompletedByOthers (id) {
+  return request
+    .get(url + '/listings/completedpearingsbyothers/' + id)
+    .then(res => {
+      return res.body
+    })
+}
+
+export function getMyInterests (id) {
+  return request
+    .get(url + '/listings/myinterests/' + id)
     .then(res => {
       return res.body
     })

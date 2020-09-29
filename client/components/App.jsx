@@ -21,7 +21,7 @@ import About from './About'
 // import PersonalInfo from './PersonalInfo'
 import Contact from './Contact'
 
-function App () {
+function App() {
   const [, setUser] = useContext(UserContext)
 
   useEffect(() => {
@@ -35,8 +35,8 @@ function App () {
       <div>
         <div>
           <div>
-            <div className="navbar is-primary" role="navigation" aria-label="main navigation">
-              <img src="" width="112" height="28" />
+            <div className="navbar is-primary has-text-white" role="navigation" aria-label="main navigation">
+              <img src="../images/pearinglogo.png" width="155" height="100" />
               <div className="navbar-brand navbar-end">
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" />
                 <span aria-hidden="true"></span>
@@ -48,7 +48,7 @@ function App () {
             </div>
           </div>
           <div>
-            <Route exact path='/' component={ Welcome } />
+            <Route exact path='/' component={Welcome} />
           </div>
           <div>
             <Route path="/register" component={Register} />
@@ -81,7 +81,7 @@ function App () {
             <Route path="/contact" component={Contact} />
           </div>
           <div className='container'>
-            <Footer/>
+            <Footer />
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-const { del } = require('superagent')
 const connection = require('./connection')
 
 module.exports = {
@@ -11,11 +10,16 @@ module.exports = {
   addNewListing,
   getMyList,
   deleteListing,
+  changeStatusToZero,
+  changeStatusToOne,
   changeStatusToTwo,
-  getMyPearings,
-  addPear,
   changeStatusToThree,
-  getMyCompleted
+  getMyPearings,
+  getMyPearingsByOthers,
+  addPear,
+  getMyCompleted,
+  getMyCompletedByOthers,
+  getMyInterests
 }
 
 function getList (db = connection) {
@@ -116,6 +120,31 @@ function deleteListing (id, db = connection) {
     })
 }
 
+function changeStatusToZero (id, db = connection) {
+  return db('listings')
+    .select()
+    .where('id', id)
+    .where('status', 1)
+    .where('interested', 1)
+    .update('status', 0)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function changeStatusToOne (id, db = connection) {
+  return db('listings')
+    .select()
+    .where('id', id)
+    .where('status', 0)
+    .update('status', 1)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
 function changeStatusToTwo (id, db = connection) {
   return db('listings')
     .select()
@@ -150,6 +179,18 @@ function getMyPearings (id, db = connection) {
     })
 }
 
+function getMyPearingsByOthers (id, db = connection) {
+  return db('listings')
+    .join('users', 'listings.user_id', 'users.id')
+    .select('listings.id', 'listings.title', 'listings.description', 'users.username')
+    .where('listings.pear_id', id)
+    .where('listings.status', 2)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
 function addPear (pearId, id, db = connection) {
   return db('listings')
     .select()
@@ -167,6 +208,30 @@ function getMyCompleted (id, db = connection) {
     .select('listings.id', 'listings.title', 'users.username')
     .where('listings.user_id', id)
     .where('listings.status', 3)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function getMyCompletedByOthers (id, db = connection) {
+  return db('listings')
+    .join('users', 'listings.user_id', 'users.id')
+    .select('listings.id', 'listings.title', 'users.username')
+    .where('listings.pear_id', id)
+    .where('listings.status', 3)
+    .catch(err => {
+      console.error(err)
+      throw err
+    })
+}
+
+function getMyInterests (id, db = connection) {
+  return db('interestedUsers')
+    .join('listings', 'interestedUsers.listing_id', 'listings.id')
+    .select('listings.id', 'listings.title', 'listings.user_id')
+    .where('interestedUsers.user_id', id)
+    .where('listings.status', 1)
     .catch(err => {
       console.error(err)
       throw err

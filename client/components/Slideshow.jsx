@@ -2,9 +2,10 @@ import React from 'react';
 import { Slide } from 'react-slideshow-image';
 
 const slideImages = [
-  '../images/Pair_programming_1.jpg',
-  '../images/Pair_programming_2.jpg',
-  '../images/Pair_programming_3.jpg'
+  '../images/slideshow/4.JPG',
+  '../images/slideshow/31.JPG',
+  '../images/slideshow/25.JPG',
+  '../images/slideshow/18..JPG',
 ];
 
 const Slideshow = () => {
@@ -28,6 +29,12 @@ const Slideshow = () => {
 
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
+              {/* <span>Slide 3</span> */}
+            </div>
+          </div>
+
+          <div className="each-slide">
+            <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
               {/* <span>Slide 3</span> */}
             </div>
           </div>

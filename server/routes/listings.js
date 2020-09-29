@@ -102,6 +102,28 @@ router.post('/delete/:id', (req, res) => {
     })
 })
 
+router.post('/statuszero/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.changeStatusToZero(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
+router.post('/statusone/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.changeStatusToOne(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.post('/statustwo/:id', (req, res) => {
   const id = Number(req.params.id)
   db.changeStatusToTwo(id)
@@ -135,6 +157,17 @@ router.get('/mypearings/:id', (req, res) => {
     })
 })
 
+router.get('/mypearingsbyothers/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db.getMyPearingsByOthers(id)
+    .then(listing => {
+      return res.json(listing)
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.get('/completedpearings/:id', (req, res) => {
   const id = Number(req.params.id)
   db.getMyCompleted(id)
@@ -146,16 +179,6 @@ router.get('/completedpearings/:id', (req, res) => {
     })
 })
 
-router.post('/addpear', (req, res) => {
-  const pearId = req.body.pearId
-  const id = req.body.id
-  db.addPear(pearId, id)
-    .then(listing => {
-      return res.json(listing)
-    })
-    .catch(err => {
-      res.status(500).json({ error: err.message })
-    })
-})
-
-module.exports = router
+router.get('/completedpearingsbyothers/:id', (req, res) => {
+  const id = Number(req.params.id)
+  db
