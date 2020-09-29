@@ -41,7 +41,7 @@ function getUserByName (username, db = connection) {
 }
 
 function getUserById (id, db = connection) {
-  return db('users').select('id', 'username', 'email', 'info').where('id', id).first()
+  return db('users').select('id', 'username', 'email', 'info', 'image').where('id', id).first()
 }
 
 function updatePersonalInfoById (update, db = connection) {
@@ -54,6 +54,7 @@ function updatePersonalInfoById (update, db = connection) {
     .update('linkedin', update.linkedin)
     .update('discord', update.discord)
     .update('info', update.info)
+    .update('image', update.image)
 }
 
 function getInterestedList (id, db = connection) {

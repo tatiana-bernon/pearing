@@ -1,9 +1,10 @@
-import React, { useState, useContext, useRef } from 'react'
+import React, { useState, useContext, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 // eslint-disable-next-line no-unused-vars
 import regeneratorRuntime from 'regenerator-runtime'
 
 import { UserContext } from './UserContext'
+import { updatePersonalInfo, getUserById } from '../api'
 
 function PersonalInfo () {
   const [user] = useContext(UserContext)
@@ -12,6 +13,17 @@ function PersonalInfo () {
   const [loading, setLoading] = useState(false)
 
   const ref = useRef(null)
+
+  useEffect(() => {
+    if (user.id) {
+      getUserById(user.id).then(res => {
+        setImage(res.user.image)
+        return res
+      }).catch((error) => {
+        console.log('error: ', error.message)
+      })
+    }
+  }, [user])
 
   const onClick = () => {
     ref.current.click()
@@ -32,6 +44,12 @@ function PersonalInfo () {
 
     setImage(file.secure_url)
     setLoading(false)
+    updatePersonalInfo(
+      {
+        username: user.username,
+        image: file.secure_url
+      }
+    )
   }
   return (
     <div className="box">
