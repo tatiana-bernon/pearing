@@ -9,8 +9,8 @@ To get started, clone this repo and then:
 ```
 cd pearing
 npm install
-npm run db:migrate
-npm run db:seed
+npm run knex migrate:latest
+npm run knex seed:run
 npm run dev
 ```
 
