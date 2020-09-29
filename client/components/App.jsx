@@ -34,24 +34,24 @@ function App () {
       <div>
         <div>
           <div>
-            <div className="navbar is-primary has-text-white" role="navigation" aria-label="main navigation">
-              <div className= " mx-2 mt-2 has-text-centered">
-                <img src="../images/pearinglogo.png" width="200" height="50" />
-              </div>
-              <div className="navbar-brand navbar-end">
-                <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <nav className="navbar is-expanded is-primary has-text-white" role="navigation" aria-label="main navigation">
+              <div className="navbar-brand ">
+                <div className="navbar-item">
+                  <img src="../images/pearinglogo.png"  className="ImgLogo" />
+                </div>
+                <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>
                 </a>
-                <IfAuthenticated>
-                  <Route path="/" component={NavAuth} />
-                </IfAuthenticated>
-                <IfNotAuthenticated>
-                  <Route path="/" component={NavUnauth} />
-                </IfNotAuthenticated>
-              </div>
-            </div>
+              </div>              
+              <IfAuthenticated>
+                <Route path="/" component={NavAuth} />
+              </IfAuthenticated>
+              <IfNotAuthenticated>
+                <Route path="/" component={NavUnauth} />
+              </IfNotAuthenticated>
+            </nav>
           </div>
           <div>
             <Route exact path='/' component={Welcome} />

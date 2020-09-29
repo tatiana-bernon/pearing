@@ -75,8 +75,11 @@ body {
   padding-top: 8%
 }
 
-#ScrollBar {
-  overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: blue orange;
+.ScrollBar {
+  overflow: scroll;  
+}
+
+.ImgLogo {
+  min-height: 70px !important;
+  padding: 5px 0px 5px 0px;
 }

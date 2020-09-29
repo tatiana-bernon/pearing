@@ -19,31 +19,31 @@ function List () {
 
   return (
     <>
-      {list.map(listing => {
-        if (listing.status < 2) {
-          return (
-            <div key={listing.id}>
-              <div className="container tile is-ancestor">
-                <div className="tile is-vertical is-12">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child notification has-text-primary is-primary is-light">
-                        <Link key={listing.id} to={`/listings/${listing.id}`} >
-                          <p className="title has-text-left">{listing.title} - {listing.subject}</p>
-                          <p className="subtitle has-text-right">Interested: {listing.interested}</p>
-                        </Link>
-
-                      </article>
+      <div className="ScrollBar">
+        {list.map(listing => {
+          if (listing.status < 2) {
+            return (
+              <div key={listing.id}>
+                <div className="tile is-ancestor">
+                  <div className="tile is-vertical is-12">
+                    <div className="tile">
+                      <div className="tile is-parent is-vertical">
+                        <article className="tile is-child notification has-text-primary is-primary is-light">
+                          <Link key={listing.id} to={`/listings/${listing.id}`} >
+                            <p className="title has-text-left">{listing.title} - {listing.subject}</p>
+                            <p className="subtitle has-text-right">Interested: {listing.interested}</p>
+                          </Link>
+                        </article>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-          )
-        }
-      })}
-
+            )
+          }
+        })}
+      </div>
+      
       {/* <Link to='/addform'>
         <button
           type="button"

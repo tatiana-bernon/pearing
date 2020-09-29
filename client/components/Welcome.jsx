@@ -8,9 +8,15 @@ function Landing() {
       <div>
         <Slideshow />
       </div>
-      <div className="container landingPage has-background-primary">
-        <h1 className="has-text-white is-size-1 has-text-centered "> Welcome to pearing! </h1>
-      </div>
+      <section className="hero is-primary is-bold">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title has-text-white has-text-centered">
+              Welcome to pearing!
+            </h1>
+          </div>
+        </div>
+      </section>
       <div>
         <div className="box is-size-4 pb-2 has-text-centered has-text-primary is-dark">
           <div className="my-6">
@@ -31,24 +37,6 @@ function Landing() {
             <p>
               If it sounds like the website, you have always been hopeful to find, go ahead, you know what to do! <br />Oh, I forgot! <br />May the joys of pearing be with you!
             </p>
-          </div>
-          <div className="container has-background-primary-light has-text-centered mx-0 my-2">
-            <Link to='/signin'>
-              <button
-                type="button"
-                className="button is-large is-primary mx-6 my-6 has-text-weight-medium is-centered"
-                data-testid="submitButton">
-                Sign In
-            </button>
-            </Link>
-            <Link to='/register'>
-              <button
-                type="button"
-                className="button is-large is-primary is-outlined is-light mx-6 my-6 has-text-weight-medium is-centered"
-                data-testid="submitButton">
-                Register
-            </button>
-            </Link>
           </div>
           {/* Links */}
         </div>
