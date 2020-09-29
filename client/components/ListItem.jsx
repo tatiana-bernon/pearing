@@ -73,36 +73,54 @@ function ListItem (props) {
 
   return (
     <>
-      <div className="container py-5">      
-          <h1 className="has-text-centered is-size-3 has-text-primary">Kindly read the invitation below!</h1>
-          <h3 className="has-text-centered is-size-4">If this is your Jam, do not forget to show interest.</h3>        
+      <div className="container py-5">
+        <h1 className="has-text-centered is-size-3 has-text-primary">Kindly read the invitation below!</h1>
+        <h3 className="has-text-centered is-size-4">If this is your Jam, do not forget to show interest.</h3>
       </div>
 
       <div className="container box">
         <div className="column container ls-4">
           <div className="is-primary is-light mb-4">
             <h3 className="mb-2 label"> Title </h3>
-            <input className="input is-static" 
-              type="text"
-              readonly="readonly"
-              name="title"
-              value={listItem.title}/>
+          </div>
+          <div className="tile is-ancestor">
+            <div className="tile is-vertical is-12">
+              <div className="tile">
+                <div className="tile is-parent is-vertical">
+                  <article className="tile is-child notification has-text-primary is-primary is-light">
+                    {listItem.title}
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="mb-5">
             <h3 className="mb-2 label"> Description </h3>
-            <textarea className="textarea is-static" 
-              rows="5"
-              readonly="readonly"
-              name="title"
-              value={listItem.description}></textarea>
+          </div>
+          <div className="tile is-ancestor">
+            <div className="tile is-vertical is-12">
+              <div className="tile">
+                <div className="tile is-parent is-vertical">
+                  <article className="tile is-child notification has-text-primary is-primary is-light">
+                    {listItem.description}
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="mb-5">
             <h3 className="mb-2 label"> Invitation created by </h3>
-            <input className="input is-static" type="text"
-              readonly="readonly"
-              placeholder="Enter your title"
-              name="title"
-              value={author}/>
+            <div className="tile is-ancestor">
+              <div className="tile is-vertical is-12">
+                <div className="tile">
+                  <div className="tile is-parent is-vertical">
+                    <article className="tile is-child notification has-text-primary is-primary is-light">
+                      {listItem.description}
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
