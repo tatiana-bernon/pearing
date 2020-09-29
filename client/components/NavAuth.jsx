@@ -31,7 +31,7 @@ export default function NavAuth() {
         <div className="navbar-item">
           {navLanding}
           <div className="buttons">
-            <a className="button is-primary is-light">
+            <a className="button is-primary is-light is-medium">
               <Link to="/" onClick={logOff}>
                 Log out
               </Link>

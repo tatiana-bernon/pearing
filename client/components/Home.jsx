@@ -7,13 +7,13 @@ function Home () {
     <>
 
       <div className="columns">
-        <div className="column mt-5 mx-1 is-half box has-text-centered">
+        <div id="ScrollBar" className="column mt-6 mx-1 is-half box has-text-centered">
           <List />
 
         </div>
 
-        <div className="column">
-          <img className="mt-6" src="../images/slideshow/23.JPG" alt="" />
+        <div className="column mt-6 container">
+          <img className="mt-6 mb-6" src="../images/slideshow/1..JPG" alt="" />
         </div>
       </div>
 

@@ -1,15 +1,18 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 
-function Contact() {
+function Contact () {
   return (
     <>
 
-      <div className="container mx-6">
-        <div className="box ">
-          <div className="columns is-centered is-5-tablet is-4-desktop is-3-widescreen">
+      <div className="columns container">
+        <div className= "ContactPageImage">
+          <img className="mt-6" src="../images/slideshow/23.JPG" alt="" />
+        </div>
+        <div className="column mt-6 pb-1 mx-3 is-half box">
+          <div className="is-5-tablet is-4-desktop is-3-widescreen">
             <div className="field mt-5 mb-5">
-              <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-6 mb-6"> Send us a message! </h1>
+              <h1 className="has-text-primary is-size-1 has-text-centered mx-6 mt-4 mb-4"> Send us a message! </h1>
 
               <div className="field">
                 <label className="label">Name</label>
