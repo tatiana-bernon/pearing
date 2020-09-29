@@ -1,14 +1,16 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 
-function Contact () {
+function Contact() {
   return (
     <>
 
       <div className="columns container">
-        <div className= "ContactPageImage">
-          <img className="mt-6" src="../images/slideshow/23.JPG" alt="" />
+
+        <div className="ContactPageImage box">        
+          <img className="mt-6 mb-6" src="../images/slideshow/23.JPG" alt="" />          
         </div>
+        
         <div className="column mt-6 pb-1 mx-3 is-half box">
           <div className="is-5-tablet is-4-desktop is-3-widescreen">
             <div className="field mt-5 mb-5">

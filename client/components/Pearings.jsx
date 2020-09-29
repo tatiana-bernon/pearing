@@ -17,7 +17,7 @@ import {
   getMyInterests
 } from '../api'
 
-function Pearings () {
+function Pearings() {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [, setInterestedList] = useState([])
@@ -175,28 +175,33 @@ function Pearings () {
     <>
       <div>
         <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> My Pearing Requests</h2>
-        <div>
-          <ul>
-            {myList.map(listing => (
-              <li key={listing.id}>
-            ID: {listing.id} - {listing.title} - interested: {listing.interested}
-                <button value={listing.id} onClick={handleDelete}>Delete</button>
-                <button value={listing.id} onClick={handleInterested}>Show</button>
-              </li>
-            ))}
-          </ul>
+        <div className="container box">
+          <div className="container tile is-ancestor">
+            <div className="tile is-vertical is-12">
+              <div className="tile">
+                <div className="tile is-parent is-vertical">
+                  <article className="tile is-child notification has-text-primary is-primary is-light">
+                    <ul>
+                      {myList.map(listing => (
+                        <li key={listing.id}>
+                          ID: {listing.id} - {listing.title} - interested: {listing.interested}
+                          <button type="button"
+                            className="button is-primary is-small"
+                            data-testid="submit Button" value={listing.id} onClick={handleDelete}>Delete</button>
+                          <button type="button"
+                            className="button is-primary is-small
+                            "
+                            data-testid="submit Button" value={listing.id} onClick={handleInterested}>Show</button>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
         </div><br></br>
-        <div>
-          <Link to='/addform'>
-            <button
-              type="button"
-              className="button is-primary"
-              data-testid="submitButton">
-              Create Pearing Invitation!
-            </button>
-          </Link>
-        </div>
-        <hr/>
+        <hr />
       </div>
       <div>
         <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> Pearing Options</h2>
@@ -279,6 +284,17 @@ function Pearings () {
             ))}
           </ul>
         </div>
+      </div>
+      <hr />
+      <div className="container has-text-centered">
+        <Link to='/addform'>
+          <button
+            type="button"
+            className="button is-primary is-large"
+            data-testid="submitButton">
+            Create Pearing Invitation!
+            </button>
+        </Link>
       </div>
     </>
   )
