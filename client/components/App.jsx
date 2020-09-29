@@ -4,12 +4,11 @@ import { isAuthenticated } from 'authenticare/client'
 
 import { UserContext, updateUserContext } from './UserContext'
 import NavAuth from './NavAuth'
-// eslint-disable-next-line import/no-named-as-default-member
 import NavUnauth from './NavUnauth'
 import Register from './Register'
 import SignIn from './SignIn'
 import Welcome from './Welcome'
-// import AddEvent from './AddEvent'
+import Pearings from './Pearings'
 import Subjects from './Subjects'
 import Profile from './Profile'
 import PersonalInfoEdit from './PersonalInfoEdit'
@@ -18,10 +17,10 @@ import ListItem from './ListItem'
 import AddForm from './AddForm'
 import Footer from './Footer'
 import About from './About'
-// import PersonalInfo from './PersonalInfo'
 import Contact from './Contact'
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
-function App() {
+function App () {
   const [, setUser] = useContext(UserContext)
 
   useEffect(() => {
@@ -36,14 +35,21 @@ function App() {
         <div>
           <div>
             <div className="navbar is-primary has-text-white" role="navigation" aria-label="main navigation">
-              <img src="../images/pearinglogo.png" width="155" height="100" />
+              <div className= " mx-2 mt-2 has-text-centered">
+                <img src="../images/pearinglogo.png" width="200" height="50" />
+              </div>
               <div className="navbar-brand navbar-end">
-                <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" />
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <Route path="/" component={NavAuth} />
-                <Route path="/" component={NavUnauth} />
+                <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+                <IfAuthenticated>
+                  <Route path="/" component={NavAuth} />
+                </IfAuthenticated>
+                <IfNotAuthenticated>
+                  <Route path="/" component={NavUnauth} />
+                </IfNotAuthenticated>
               </div>
             </div>
           </div>
@@ -64,6 +70,9 @@ function App() {
           </div>
           <div>
             <Route path="/profile/edit" component={PersonalInfoEdit} />
+          </div>
+          <div>
+            <Route path="/pearings" component={Pearings} />
           </div>
           <div>
             <Route path="/home" component={Home} />

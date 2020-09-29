@@ -43,7 +43,6 @@ function AddForm () {
       ) {
         addNewListing(newListing)
           .then(res => {
-            // setAuthor(res.user.username)
             return null
           })
           .catch((error) => {
@@ -59,48 +58,56 @@ function AddForm () {
       <div>
         <br></br>
         <div>
-          <div className="has-text-primary mt-5 has-text-centered is-size-2 mb-2">
-            <h1>Create a new pearing invitation!</h1>
-          </div>
-          <form onSubmit={handleSubmit}>
+          <div className="container mx-6">
+            <div className="box">
+              <div className="columns is-centered is-5-tablet is-4-desktop is-3-widescreen">
+                <div className="field mt-5 mb-5">
+                  <div className="has-text-primary mt-5 has-text-centered is-size-2 mb-2">
+                    <h1>Create a new pearing invitation!</h1>
+                  </div>
+                  <form onSubmit={handleSubmit}>
 
-            {/* <input className="input is-normal" type="text"
+                    {/* <input className="input is-normal" type="text"
               placeholder="Pear level 1-10"
               name="pearLevel"
               value={ pearLevel } onChange={event => setpearLevel(event.target.value)}/> */}
-            <div className="has-text-centered select is-primary mb-5">
-              <select
-                className="select"
-                name="subjects"
-                id="subject"
-                onChange={event => setSubject(event.target.value)}>
-                <option>Select your subject</option>
-                {subjects.map(subject => (
-                  <option key={subject.id} value={subject.id}>{subject.subject}</option>
-                ))}
-              </select>
-            </div>
-            <div className="is-centered mb-5">
-              <h3 className="mb-2 label"> Title </h3>
-              <input className="input is-normal is-primary" type="text"
-                placeholder="Enter your title"
-                name="title"
-                value={title} onChange={event => setTitle(event.target.value)} />
-            </div>
+                    <div className="has-text-centered select is-primary mb-5">
+                      <select
+                        className="select"
+                        name="subjects"
+                        id="subject"
+                        onChange={event => setSubject(event.target.value)}>
+                        <option>Select your subject</option>
+                        {subjects.map(subject => (
+                          <option key={subject.id} value={subject.id}>{subject.subject}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="is-centered mb-5">
+                      <h3 className="mb-2 label"> Title </h3>
+                      <input className="input is-normal is-primary" type="text"
+                        placeholder="Enter your title"
+                        name="title"
+                        value={title} onChange={event => setTitle(event.target.value)} />
+                    </div>
 
-            <h5 h3 className="mb-2 label">Description</h5>
-            <textarea className="textarea is-normal is-primary"
-              placeholder="Enter your description"
-              name="description"
-              value={description} onChange={event => setDescription(event.target.value)} />
-            <br></br>
-            <div className= "container has-text-centered">
-              <button className="button is-medium is-primary mx-4 mt-6 mb-6 has-text-weight-medium is-centered">Submit</button>
-              <Link to='/home'>
-                <button className="button is-medium is-primary is-outlined mx-4 mt-6 mb-6 has-text-weight-medium is-centered">Back</button>
-              </Link>
+                    <h5 className="mb-2 label">Description</h5>
+                    <textarea className="textarea is-normal is-primary"
+                      placeholder="Enter your description"
+                      name="description"
+                      value={description} onChange={event => setDescription(event.target.value)} />
+                    <br></br>
+                    <div className="container has-text-centered">
+                      <button className="button is-medium is-primary mx-4 mt-6 mb-6 has-text-weight-medium is-centered">Submit</button>
+                      <Link to='/home'>
+                        <button className="button is-medium is-primary is-outlined mx-4 mt-6 mb-6 has-text-weight-medium is-centered">Back</button>
+                      </Link>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </>
