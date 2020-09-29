@@ -7,12 +7,8 @@ export default function NavUnauth () {
       <div>
         <div id="navbarBasicExample" className="navbar-menu is-size-3">
           <div className="navbar-end">
-            <a className="navbar-item">
-              <Link to="/about">About</Link>
-            </a>
-            <a className="navbar-item">
-              <Link to="/contact">Contact</Link>
-            </a>
+            <Link className="navbar-item" to="/about">About</Link>
+            <Link className="navbar-item" to="/contact">Contact</Link>
           </div>
         </div>
       </div>
