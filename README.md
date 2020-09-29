@@ -29,10 +29,11 @@ verify we have installed everything needed:
 - [X] Jest/supertest/ anything else for tests? 
 - [X] Webpack 
 - [X] SQLite3
-- [ ] Bulma and wired up Bulma correctly (For later) 
+- [X] Bulma  
 - [X] React-Dom
 - [X] Authenticare
-- [ ] Anything else? 
+- [X] CSS
+- [X] react-slideshow
 
 
 ## Branching and Merging frequency (Team to discuss)
@@ -57,27 +58,29 @@ Docs for authenticare:
 B. Create components:
 
 1. [X] Landing page component with:
-    - [ ] Nav component
+    - [X] Nav components (UnauthNav)
     - [X] Register component 
     - [X] Login component.
     
 2. [X] Home page component with:
-    - [ ] Nav component (option to move between Home,Signout and Profile)
-    - [ ] List component with:
-          - [ ] List Item component
-    - [ ] Add component (outside of List component)*
+    - [X] Nav component (AuthNav)
+    - [X] List component with:
+          - [X] List Item component
+    - [X] Add component (outside of List component)*
 
-3. [ ] Profile page component with:
-   - [ ] Personal info component (has an update profile button)
-   - [ ] My list component with:
-      - [ ] Add component (when clicked, it generates a form to fill and submit)*
+3. [X] Profile page component with:
+   - [X] Personal info component (has an update profile button)
+   - [X] My list component with:
+      - [X] Add component (when clicked, it generates a form to fill and submit)*
 
-4. [ ] List Item component page
+4. [X] List Item component page
+
+5. [X] Pearings component
 
 C. Routes 
 
-- [ ] Create hash router 
-- [ ] Create routes to link components/pages with App component.
+- [X] Create hash router 
+- [X] Create routes to link components/pages with App component.
 
 ## Early deployment to Heroku!
 ![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
@@ -201,12 +204,9 @@ https://trailhead.salesforce.com/content/learn/projects/quickstart-heroku-connec
 https://namelix.com/app/?keywords=skill+sharing
 https://www.canva.com/design/DAEIm0XK3Tg/MhtOyotyp6Fq5thGZhSx9Q/edit?category=tACZCvjI6mE&utm_source=onboarding
 
+1. - [X] Add pearings stages - unpeared, peared, completed
+2. - [X] Edit/update profile info
 
-2. - [ ] Add skill levels
-3. - [ ] Filtering in the skill level
-4. - [ ] Recommendations
-5. - [ ] Edit/update profile info
-6. - [ ] Categories: languages, cooking.
 
 ## TEAM Wellbeing and Conflict Resolution Plan
 
