@@ -22,6 +22,9 @@ export default function NavAuth() {
           <a className="navbar-item">
             <Link to="/profile">Profile</Link>
           </a>
+          <a className="navbar-item">
+            <Link to="/pearings">Pearings</Link>
+          </a>
         </div>
       </div >
       <IfAuthenticated>

@@ -4,12 +4,11 @@ import { isAuthenticated } from 'authenticare/client'
 
 import { UserContext, updateUserContext } from './UserContext'
 import NavAuth from './NavAuth'
-// eslint-disable-next-line import/no-named-as-default-member
 import NavUnauth from './NavUnauth'
 import Register from './Register'
 import SignIn from './SignIn'
 import Welcome from './Welcome'
-// import AddEvent from './AddEvent'
+import Pearings from './Pearings'
 import Subjects from './Subjects'
 import Profile from './Profile'
 import PersonalInfoEdit from './PersonalInfoEdit'
@@ -18,7 +17,6 @@ import ListItem from './ListItem'
 import AddForm from './AddForm'
 import Footer from './Footer'
 import About from './About'
-// import PersonalInfo from './PersonalInfo'
 import Contact from './Contact'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
@@ -71,6 +69,9 @@ function App () {
           </div>
           <div>
             <Route path="/profile/edit" component={PersonalInfoEdit} />
+          </div>
+          <div>
+            <Route path="/pearings" component={Pearings} />
           </div>
           <div>
             <Route path="/home" component={Home} />

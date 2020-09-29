@@ -17,7 +17,7 @@ import {
   getMyInterests
 } from '../api'
 
-function PersonalListing () {
+function Pearings () {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [, setInterestedList] = useState([])
@@ -284,4 +284,4 @@ function PersonalListing () {
   )
 }
 
-export default PersonalListing
+export default Pearings
