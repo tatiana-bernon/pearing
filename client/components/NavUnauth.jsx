@@ -11,10 +11,10 @@ export default function NavUnauth() {
           <Link className="navbar-item" to="/contact">Contact</Link>
           <div className="navbar-item">
             <div className="buttons">
-              <Link to='/signin' className="button is-medium is-primary has-text-weight-medium is-centered" data-testid="submitButton">
+              <Link to='/signin' className="button is-warning is-outlined is-medium  has-text-weight-medium is-centered" data-testid="submitButton">
                 <strong>Sign In</strong>
               </Link>
-              <Link to='/register' className="button is-medium is-primary is-outlined is-light has-text-weight-medium is-centered" data-testid="submitButton">
+              <Link to='/register' className="button  is-primary is-inverted is-outlined is-medium  has-text-weight-medium is-centered" data-testid="submitButton">
                 Register
               </Link>
             </div>
