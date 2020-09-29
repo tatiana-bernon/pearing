@@ -132,7 +132,6 @@ describe('Checks sign in/Sign out and navbar', () => {
         .type('OMG this is so awesome!')
         .should('have.value', 'OMG this is so awesome!')
 
-
       cy.contains('Submit').click()
       // should take you back to profile
       cy.contains('Home').click()
@@ -178,4 +177,3 @@ describe('Checks sign in/Sign out and navbar', () => {
         cy.get('.button').contains('Log out').click()
     })
   })
-
