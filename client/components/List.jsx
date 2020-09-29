@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { getList } from '../api'
 
-function List() {
+function List () {
   const [list, setList] = useState([])
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function List() {
 
   return (
     <>
-        {/* <div className="tile is-ancestor">
+      {/* <div className="tile is-ancestor">
   <div className="tile is-vertical is-8">
     <div className="tile">
       <div className="tile is-parent is-vertical">
@@ -31,9 +31,9 @@ function List() {
       {list.map(listing => {
         if (listing.status < 2) {
           return (
-            <>    
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical is-10">
+            <>
+              <div className="container has-text-centered tile is-ancestor">
+                <div className="tile is-vertical is-12">
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
                       <article className="tile is-child notification is-info">
@@ -48,9 +48,8 @@ function List() {
                   </div>
                 </div>
               </div>
-              
             </>
-          
+
           )
         }
       })}
@@ -63,7 +62,7 @@ function List() {
           Create new pearing invitation!
         </button>
       </Link> */}
-      </>
+    </>
   )
 }
 

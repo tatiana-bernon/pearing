@@ -19,6 +19,11 @@ export default function NavAuth (props) {
               <a className="navbar-item">
                 <Link to="/contact">Contact</Link>
               </a>
+
+              <a className="navbar-item">
+                <Link to="/home">Home</Link>
+              </a>
+
               <a className="navbar-item">
                 <Link to="/profile">Profile</Link>
               </a>
@@ -41,6 +46,9 @@ export default function NavAuth (props) {
               <a className="navbar-item">
                 <Link to="/home">Home</Link>
               </a>
+              <a className="navbar-item">
+                <Link to="/profile">Profile</Link>
+              </a>
             </div>
           </div>
         </>
@@ -55,10 +63,13 @@ export default function NavAuth (props) {
                 <Link to="/about">About</Link>
               </a>
               <a className="navbar-item">
-                <Link to="/profile">Profile</Link>
+                <Link to="/contact">Contact</Link>
               </a>
               <a className="navbar-item">
                 <Link to="/home">Home</Link>
+              </a>
+              <a className="navbar-item">
+                <Link to="/profile">Profile</Link>
               </a>
             </div>
           </div>
@@ -71,13 +82,16 @@ export default function NavAuth (props) {
           <div id="navbarBasicExample " className="navbar-menu is-size-3">
             <div className="navbar-end">
               <a className="navbar-item">
+                <Link to="/about">About</Link>
+              </a>
+              <a className="navbar-item">
                 <Link to="/contact">Contact</Link>
               </a>
               <a className="navbar-item">
-                <Link to="/profile">Profile</Link>
+                <Link to="/home">Home</Link>
               </a>
               <a className="navbar-item">
-                <Link to="/home">Home</Link>
+                <Link to="/profile">Profile</Link>
               </a>
             </div>
           </div>
@@ -96,10 +110,10 @@ export default function NavAuth (props) {
                 <Link to="/contact">Contact</Link>
               </a>
               <a className="navbar-item">
-                <Link to="/profile">Profile</Link>
+                <Link to="/home">Home</Link>
               </a>
               <a className="navbar-item">
-                <Link to="/home">Home</Link>
+                <Link to="/profile">Profile</Link>
               </a>
             </div>
           </div>
@@ -118,10 +132,10 @@ export default function NavAuth (props) {
                 <Link to="/contact">Contact</Link>
               </a>
               <a className="navbar-item">
-                <Link to="/profile">Profile</Link>
+                <Link to="/home">Home</Link>
               </a>
               <a className="navbar-item">
-                <Link to="/home">Home</Link>
+                <Link to="/profile">Profile</Link>
               </a>
             </div>
           </div>
@@ -140,10 +154,10 @@ export default function NavAuth (props) {
                 <Link to="/contact">Contact</Link>
               </a>
               <a className="navbar-item">
-                <Link to="/profile">Profile</Link>
+                <Link to="/home">Home</Link>
               </a>
               <a className="navbar-item">
-                <Link to="/home">Home</Link>
+                <Link to="/profile">Profile</Link>
               </a>
             </div>
           </div>
@@ -154,8 +168,8 @@ export default function NavAuth (props) {
   return (
     <>
       <IfAuthenticated>
-        <Link to="/home">{navLanding}</Link>
         <div className="navbar-item">
+          {navLanding}
           <div className="buttons">
             <a className="button is-primary is-light">
               <Link to="/" onClick={logOff}>
