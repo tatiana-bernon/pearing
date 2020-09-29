@@ -39,10 +39,11 @@ function App () {
                 <img src="../images/pearinglogo.png" width="200" height="50" />
               </div>
               <div className="navbar-brand navbar-end">
-                <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" />
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+                <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
                 <IfAuthenticated>
                   <Route path="/" component={NavAuth} />
                 </IfAuthenticated>
