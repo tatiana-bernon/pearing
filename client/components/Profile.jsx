@@ -6,7 +6,7 @@ import regeneratorRuntime from 'regenerator-runtime'
 import { UserContext } from './UserContext'
 import { updatePersonalInfo, getUserById } from '../api'
 
-function PersonalInfo () {
+function PersonalInfo() {
   const [user] = useContext(UserContext)
 
   const [image, setImage] = useState('')
@@ -37,8 +37,8 @@ function PersonalInfo () {
     setLoading(true)
     const res = await fetch(
       'https://api.cloudinary.com/v1_1/dgyp9sqsh/image/upload', {
-        method: 'POST', body: data
-      }
+      method: 'POST', body: data
+    }
     )
     const file = await res.json()
 
@@ -53,19 +53,21 @@ function PersonalInfo () {
   }
   return (
     <div className="box">
+      <h2 className="label has-text-centered">My Profile</h2>
       <br></br>
       <br></br>
-      <h2 className="label">Personal Information</h2>
       <div className="columns is-mobile">
-        <div className="column">
+        <div className="column mx-6">
           <figure className="image is-128x128">
-            <img className="is-rounded" src= { image }/>
+            <img className="is-rounded" src={image} />
           </figure>
+          <br></br>
+          <br></br>
           <input type='file' id='file' ref={ref} style={{ display: 'none' }} onChange={e => onChange(e)} />
           <button
             onClick={onClick}
             type="button"
-            className="button is-primary"
+            className="button is-primary mt-6"
             data-testid="uploadPhoto"
           >
             Upload photo</button>
