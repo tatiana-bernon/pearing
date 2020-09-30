@@ -6,7 +6,7 @@ import regeneratorRuntime from 'regenerator-runtime'
 import { UserContext } from './UserContext'
 import { updatePersonalInfo, getUserById } from '../api'
 
-function PersonalInfo() {
+function PersonalInfo () {
   const [user] = useContext(UserContext)
 
   const [image, setImage] = useState('')
@@ -50,50 +50,61 @@ function PersonalInfo() {
     )
   }
   return (
-    <div className="box mx-6 my-6">
-      <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> My Profile</h2>
-      <br></br>
-      <br></br>
-      <div className="columns is-mobile">
-        <div className="column mx-6">
-          <figure className="image is-128x128">
-            <img className="is-rounded" src={image} />
-          </figure>
-          <br></br>
-          <br></br>
-          <input type='file' id='file' ref={ref} style={{ display: 'none' }} onChange={e => onChange(e)} />
-          <button
-            onClick={onClick}
-            type="button"
-            className="button is-primary mt-6"
-            data-testid="uploadPhoto"
-          >
+    <>
+      <div className="box mx-6 my-6 has-background-primary-light">
+        <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-2"> My Profile</h2>
+        <br></br>
+        <br></br>
+        <div className="columns is-mobile">
+          <div className="column is-one-fifth has-text-centered mx-6 pb-6 px-6">
+            <figure className="image container is-256x256">
+              <img className="imageProfile is-rounded" src={image} />
+            </figure>
+            <br></br>
+            <br></br>
+            <input type='file' id='file' ref={ref} style={{ display: 'none' }} onChange={e => onChange(e)} />
+            <button
+              onClick={onClick}
+              type="button"
+              className="button is-primary pt-3 pt-2 "
+              data-testid="uploadPhoto"
+            >
             Upload photo</button>
 
-        </div>
-        <div className="column">
-          <ul className="mb-6">
-            <li className="pb-2"><strong>Username:</strong> {user.username}</li>
-            <li className="pb-2"><strong>Email:</strong>{user.email}</li>
-            <li className="pb-2"><strong>Phone:</strong> {user.phone}</li>
-            <li className="pb-2"><strong>LinkedIn</strong> {user.linkedin}</li>
-            <li><strong>Discord:</strong> {user.discord}</li>
-          </ul>
-          <Link to='/profile/edit'>
-            <button
-              type="button"
-              className="button is-primary"
-              data-testid="submitButton">
+          </div>
+          <div className="column mx-6">
+            <ul className="mb-2">
+              <li className="pb-5 is-size-5"><strong>Username:</strong> {user.username}</li>
+              <li className="pb-5 is-size-5"><strong>Email:</strong> {user.email}</li>
+              <li className="pb-5 is-size-5"><strong>Phone:</strong> {user.phone}</li>
+              <li className="pb-5 is-size-5"><strong>LinkedIn</strong> {user.linkedin}</li>
+              <li className="pb-5 is-size-5"><strong>Discord:</strong> {user.discord}</li>
+              <li className="pb-5 is-size-5"> <strong> Details:</strong> {user.info}</li>
+            </ul>
+
+            <div className="container has-text-center">
+              <Link to='/profile/edit'>
+                <button
+                  type="button"
+                  className="button is-primary"
+                  data-testid="submit Button">
               Edit</button>
-          </Link>
-        </div>
-        <div className="column">
-          <p className="is-info">
-            <strong> Details:</strong> {user.info}
-          </p>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <div className="container has-text-centered pb-6 pt-4">
+        <Link to='/addform'>
+          <button
+            type="button"
+            className="button is-primary is-large"
+            data-testid="submitButton">
+     Create Pearing Invitation!
+          </button>
+        </Link>
+      </div>
+    </>
   )
 }
 
