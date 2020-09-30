@@ -55,10 +55,11 @@ describe('Check Contact Page', () => {
 describe('Checks sign in/Sign out and navbar', () => {
   // eslint-disable-next-line jest/expect-expect
   it('Signs in', () => {
+    cy.viewport(1200, 960)
     cy.visit('http://localhost:3000/#/')
     cy.get('.button').contains('Sign In').click()
-    cy.get('#username').type('dhah')
-    cy.get('#password').type('1g23')
+    cy.get('#username').type('Daz 1982')
+    cy.get('#password').type('password')
     cy.get('button').contains('Sign in').click()
 
   })
@@ -81,13 +82,13 @@ describe('Checks sign in/Sign out and navbar', () => {
     cy.visit('http://localhost:3000/#/')
     cy.viewport(1200, 960)
     cy.get('.button').contains('Sign In').click()
-    cy.get('#username').type('dhah')
-    cy.get('#password').type('1g23')
+    cy.get('#username').type('Daz 1982')
+    cy.get('#password').type('password')
     cy.get('button').contains('Sign in').click()
 
     cy.contains('Profile').click()
     // cy.get('h1').contains('pearing')
-    cy.get('h2').contains('Personal Information')
+    cy.get('h2').contains('My Profile')
     cy.get('.column').contains('Username')
     cy.get('.column').contains('Email')
     cy.get('.column').contains('Phone')
@@ -103,8 +104,8 @@ describe('Checks sign in/Sign out and navbar', () => {
       cy.visit('http://localhost:3000/#/')
       cy.viewport(1200, 960)
       cy.get('.button').contains('Sign In').click()
-      cy.get('#username').type('dhah')
-      cy.get('#password').type('1g23')
+      cy.get('#username').type('Daz 1982')
+      cy.get('#password').type('password')
       cy.get('button').contains('Sign in').click()
     })
 
@@ -113,8 +114,8 @@ describe('Checks sign in/Sign out and navbar', () => {
       cy.contains('Profile').click()
       cy.contains('Edit').click()
       cy.get('input[name="email"]')
-        .type('test@test.com')
-        .should('have.value', 'test@test.com')
+        .type('Darylchen.w.h@gmail.com')
+        .should('have.value', 'Darylchen.w.h@gmail.com')
 
       cy.get('input[name="phone"]')
         .type('0220885949')
@@ -132,7 +133,6 @@ describe('Checks sign in/Sign out and navbar', () => {
         .type('OMG this is so awesome!')
         .should('have.value', 'OMG this is so awesome!')
 
-
       cy.contains('Submit').click()
       // should take you back to profile
       cy.contains('Home').click()
@@ -144,10 +144,11 @@ describe('Checks sign in/Sign out and navbar', () => {
 
   describe('It can add a new invitation', () => {
     it('Signs in', () => {
+      cy.viewport(1200, 960)
       cy.visit('http://localhost:3000/#/')
       cy.get('.button').contains('Sign In').click()
-      cy.get('#username').type('dhah')
-      cy.get('#password').type('1g23')
+      cy.get('#username').type('Daz 1982')
+      cy.get('#password').type('password')
       cy.get('button').contains('Sign in').click()
 
     })
@@ -178,4 +179,3 @@ describe('Checks sign in/Sign out and navbar', () => {
         cy.get('.button').contains('Log out').click()
     })
   })
-

@@ -11,7 +11,8 @@ export const UserProvider = ({ reducer, initialState, children }) => {
     phone: '',
     linkedin: '',
     discord: '',
-    info: ''
+    info: '',
+    image: ''
   })
 
   return (
@@ -21,6 +22,6 @@ export const UserProvider = ({ reducer, initialState, children }) => {
   )
 }
 export const updateUserContext = (setUser) => {
-  const { id, username, email, phone, linkedin, discord, info } = getDecodedToken()
-  return isAuthenticated() ? setUser({ id, username, email, phone, linkedin, discord, info }) : null
+  const { id, username, email, phone, linkedin, discord, info, image } = getDecodedToken()
+  return isAuthenticated() ? setUser({ id, username, email, phone, linkedin, discord, info, image }) : null
 }

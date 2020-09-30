@@ -58,7 +58,7 @@ function AddForm () {
       <div>
         <br></br>
         <div>
-          <div className="container mx-6">
+          <div className="container">
             <div className="box">
               <div className="columns is-centered is-5-tablet is-4-desktop is-3-widescreen">
                 <div className="field mt-5 mb-5">
