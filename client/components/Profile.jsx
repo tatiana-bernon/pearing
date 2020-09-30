@@ -51,9 +51,9 @@ function PersonalInfo() {
   }
   return (
     <>
-      <h2 className="has-text-primary is-size-3 has-text-centered mx-6"> My Profile</h2>
+      <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-6"> My Profile</h2>
       <div className="box mx-6 my-6 py-6 has-background-primary-light">
-        <div class="container">
+        <div className="container">
           <div className="columns">
             <div className="column is-one-fifth has-text-centered">
               <figure className="image">
