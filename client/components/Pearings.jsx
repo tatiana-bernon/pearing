@@ -232,9 +232,9 @@ function Pearings () {
 
         {/* start of box */}
         <div className="box">
-          {/* accepted pearing box */}
-          <div>
-            <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Accepted Pearings</h2>
+          {/* current pearing box */}
+          <div className="box">
+            <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Current Pearings</h2>
             <div className="columns">
               <div className="ListContainer ItemDirection column is-half">
                 <article className="tile is-child notification has-text-primary is-primary is-light">
@@ -269,7 +269,7 @@ function Pearings () {
             </div>
           </div>
           {/* end of accepted pearings box */}
-
+          <hr></hr>
           {/* start of completed Pearings box */}
           <div>
             <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-6 mb-6">Completed Pearings</h2>
