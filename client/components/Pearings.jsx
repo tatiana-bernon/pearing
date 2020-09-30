@@ -397,7 +397,7 @@ function Pearings() {
       </div>
 
       {/* create paring invitation button */}
-      <div className="container has-text-centered pb-3">
+      <div className="container has-text-centered pt-5 pb-6">
         <Link to='/addform'>
           <button
             type="button"
