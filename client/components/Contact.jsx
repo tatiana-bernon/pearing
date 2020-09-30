@@ -57,10 +57,10 @@ function Contact () {
 
                   <div className="container has-text-centered">
                     <div className="control">
-                      <Link to='/home'>
+                      <Link to='/about'>
                         <button className="button is-medium is-primary mx-4 mt-3 mb-2 has-text-weight-medium is-centered">Submit</button>
                       </Link>
-                      <Link to='/home'>
+                      <Link to='/about'>
                         <button className="button is-medium is-primary is-outlined mx-4 mt-3 mb-2 has-text-weight-medium is-centered">Cancel</button>
                       </Link>
                     </div>
