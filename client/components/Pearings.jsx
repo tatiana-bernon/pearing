@@ -212,102 +212,106 @@ function Pearings () {
       </div>
 
       <div>
-        <div>
-          <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> Pearing Options</h2>
+        <div className="box has-background-primary">
           <div>
+            <h2 className="has-text-white is-size-3 has-text-centered mx-6 mt-1 mb-6"> Pearing Options</h2>
+            <div>
 
-            <ul>
-              {interestedUsers.map(user => (
-                <li key={user.user.id}>
-                  Name: {user.user.username}<br></br>
+              <ul>
+                {interestedUsers.map(user => (
+                  <li key={user.user.id}>
+                    Name: {user.user.username}<br></br>
                 Email: {user.user.email}<br></br>
                 Info: {user.user.info}<br></br>
-                  <button value={user.user.id} onClick={handleAccept}>Accept</button>
-                </li>
-              ))}
-            </ul>
+                    <button value={user.user.id} onClick={handleAccept}>Accept</button>
+                  </li>
+                ))}
+              </ul>
 
+            </div>
           </div>
-        </div>
 
-        {/* start of box */}
-        <div className="box">
-          {/* current pearing box */}
-          <div className="box">
-            <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Current Pearings</h2>
-            <div className="columns">
-              <div className="column is-half">
-                <article className="tile is-child notification has-text-primary is-primary is-light">
-                  <h3>Created By Me</h3>
-                  <ul className="ListContainer ItemDirection">
-                    {acceptedPears.map(pearing => (
-                      <li key={pearing.id}>
-                        Title: {pearing.title}<br></br>
+          {/* start of box */}
+          <div className="box has-background-link-light">
+            {/* current pearing box */}
+            <div className="box">
+              <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Current Pearings</h2>
+              <div className="columns">
+                <div className="column is-half">
+                  <article className="tile is-child notification has-text-primary is-primary is-light">
+                    <h3>Created By Me</h3>
+                    <ul className="ListContainer ItemDirection">
+                      {acceptedPears.map(pearing => (
+                        <li key={pearing.id}>
+                          Title: {pearing.title}<br></br>
                 Description: {pearing.description}<br></br>
                 Pear: {pearing.username}<br></br>
-                        <button value={pearing.id} onClick={handleCompleted}>Completed</button>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </div>
-              <hr></hr>
-              <div className="column is-half">
-                <article className="tile is-child notification has-text-primary is-primary is-light">
-                  <h3>Created By Other Pears</h3>
-                  <ul className="ListContainer ItemDirection">
-                    {acceptedByOtherPears.map(pearing => (
-                      <li key={pearing.id}>
-                        Title: {pearing.title}<br></br>
+                          <button value={pearing.id} onClick={handleCompleted}>Completed</button>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </div>
+                <hr></hr>
+                <div className="column is-half">
+                  <article className="tile is-child notification has-text-primary is-primary is-light">
+                    <h3>Created By Other Pears</h3>
+                    <ul className="ListContainer ItemDirection">
+                      {acceptedByOtherPears.map(pearing => (
+                        <li key={pearing.id}>
+                          Title: {pearing.title}<br></br>
                 Description: {pearing.description}<br></br>
                 Created by: {pearing.username}<br></br>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </div>
               </div>
             </div>
-          </div>
-          {/* end of accepted pearings box */}
-          <hr></hr>
-          {/* start of completed Pearings box */}
-          <div>
-            <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-6 mb-6">Completed Pearings</h2>
-            <div className="columns">
-              <div className="column is-half">
-                <article className="tile is-child notification has-text-primary is-primary is-light">
-                  <h3>Created By Me</h3>
-                  <ul className="ListContainer ItemDirection">
-                    {completedPears.map(pearing => (
-                      <li key={pearing.id}>
-                        Title: {pearing.title}<br></br>
+            {/* end of accepted pearings box */}
+            <hr></hr>
+            {/* start of completed Pearings box */}
+            <div className="box">
+              <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-6 mb-6">Completed Pearings</h2>
+              <div className="columns">
+                <div className="column is-half">
+                  <article className="tile is-child notification has-text-primary is-primary is-light">
+                    <h3>Created By Me</h3>
+                    <ul className="ListContainer ItemDirection">
+                      {completedPears.map(pearing => (
+                        <li key={pearing.id}>
+                          Title: {pearing.title}<br></br>
                 Pear: {pearing.username}<br></br>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </div>
-              <hr></hr>
-              <div className="column is-half">
-                <article className="tile is-child notification has-text-primary is-primary is-light">
-                  <h3>Created By Other Pears</h3>
-                  <ul className="ListContainer ItemDirection">
-                    {completedByOthersPears.map(pearing => (
-                      <li key={pearing.id}>
-                        Title: {pearing.title}<br></br>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </div>
+                <hr></hr>
+                <div className="column is-half">
+                  <article className="tile is-child notification has-text-primary is-primary is-light">
+                    <h3>Created By Other Pears</h3>
+                    <ul className="ListContainer ItemDirection">
+                      {completedByOthersPears.map(pearing => (
+                        <li key={pearing.id}>
+                          Title: {pearing.title}<br></br>
                 Created By: {pearing.username}<br></br>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </div>
               </div>
             </div>
+            {/* end of completed pearings box */}
           </div>
-          {/* end of completed pearings box */}
+          {/* end of box */}
+
         </div>
-        {/* end of box */}
 
         <div>
+          <hr></hr>
           <h2 className="has-text-primary is-size-3 has-text-centered pt-3 mx-6 mt-1 mb-3">Waiting to be peared...</h2>
           <div>
             <div className="container box">
