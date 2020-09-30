@@ -37,14 +37,14 @@ function App () {
             <nav className="navbar is-expanded is-primary has-text-white" role="navigation" aria-label="main navigation">
               <div className="navbar-brand ">
                 <div className="navbar-item">
-                  <img src="../images/pearinglogo.png"  className="ImgLogo" />
+                  <img src="../images/pearinglogo.png" className="ImgLogo" />
                 </div>
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>
                 </a>
-              </div>              
+              </div>
               <IfAuthenticated>
                 <Route path="/" component={NavAuth} />
               </IfAuthenticated>
@@ -88,9 +88,9 @@ function App () {
           </div>
           <div>
             <Route path="/contact" component={Contact} />
-          </div>          
+          </div>
         </div>
-      </main>      
+      </main>
       <><Footer /></>
     </>
   )
