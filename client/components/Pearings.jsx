@@ -310,9 +310,8 @@ function Pearings () {
 
         </div>
 
-        <div>
-          <hr></hr>
-          <h2 className="has-text-primary is-size-3 has-text-centered pt-3 mx-6 mt-1 mb-3">Waiting to be peared...</h2>
+        <div className="box has-background-primary"> 
+          <h2 className="has-text-white is-size-3 has-text-centered pt-3 mx-6 mt-1 mb-3">Waiting to be peared...</h2>
           <div>
             <div className="container box">
               <div className="container tile is-ancestor">
