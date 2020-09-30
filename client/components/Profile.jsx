@@ -56,9 +56,9 @@ function PersonalInfo () {
         <br></br>
         <br></br>
         <div className="columns is-mobile">
-          <div className="column box has-text-centered mx-6 pt-6 pb-6 px-6">
-            <figure className="image is-centered is-128x128 is-text-centered">
-              <img className="is-rounded" src={image} />
+          <div className="column is-one-fifth has-text-centered mx-6 pb-6 px-6">
+            <figure className="image container is-256x256">
+              <img className="imageProfile is-rounded" src={image} />
             </figure>
             <br></br>
             <br></br>
@@ -73,16 +73,16 @@ function PersonalInfo () {
 
           </div>
           <div className="column mx-6">
-            <ul className="mb-6">
-              <li className="pb-2"><strong>Username:</strong><br/>{user.username}</li>
-              <li className="pb-2"><strong>Email:</strong><br/>{user.email}</li>
-              <li className="pb-2"><strong>Phone:</strong> <br/>{user.phone}</li>
-              <li className="pb-2"><strong>LinkedIn</strong> <br/>{user.linkedin}</li>
-              <li className="pb-2"><strong>Discord:</strong> <br/>{user.discord}</li>
-              <li className="pb-2"> <strong> Details:</strong> {user.info}</li>
+            <ul className="mb-2">
+              <li className="pb-5 is-size-5"><strong>Username:</strong> {user.username}</li>
+              <li className="pb-5 is-size-5"><strong>Email:</strong> {user.email}</li>
+              <li className="pb-5 is-size-5"><strong>Phone:</strong> {user.phone}</li>
+              <li className="pb-5 is-size-5"><strong>LinkedIn</strong> {user.linkedin}</li>
+              <li className="pb-5 is-size-5"><strong>Discord:</strong> {user.discord}</li>
+              <li className="pb-5 is-size-5"> <strong> Details:</strong> {user.info}</li>
             </ul>
 
-            <div className="has-text-centered">
+            <div className="container has-text-center">
               <Link to='/profile/edit'>
                 <button
                   type="button"
