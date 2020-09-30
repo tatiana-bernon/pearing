@@ -236,10 +236,10 @@ function Pearings () {
           <div className="box">
             <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">Current Pearings</h2>
             <div className="columns">
-              <div className="ListContainer ItemDirection column is-half">
+              <div className="column is-half">
                 <article className="tile is-child notification has-text-primary is-primary is-light">
                   <h3>Created By Me</h3>
-                  <ul>
+                  <ul className="ListContainer ItemDirection">
                     {acceptedPears.map(pearing => (
                       <li key={pearing.id}>
                         Title: {pearing.title}<br></br>
@@ -252,10 +252,10 @@ function Pearings () {
                 </article>
               </div>
               <hr></hr>
-              <div className="ListContainer ItemDirection column is-half">
+              <div className="column is-half">
                 <article className="tile is-child notification has-text-primary is-primary is-light">
                   <h3>Created By Other Pears</h3>
-                  <ul>
+                  <ul className="ListContainer ItemDirection">
                     {acceptedByOtherPears.map(pearing => (
                       <li key={pearing.id}>
                         Title: {pearing.title}<br></br>
@@ -274,10 +274,10 @@ function Pearings () {
           <div>
             <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-6 mb-6">Completed Pearings</h2>
             <div className="columns">
-              <div className="ListContainer ItemDirection column is-half">
+              <div className="column is-half">
                 <article className="tile is-child notification has-text-primary is-primary is-light">
                   <h3>Created By Me</h3>
-                  <ul>
+                  <ul className="ListContainer ItemDirection">
                     {completedPears.map(pearing => (
                       <li key={pearing.id}>
                         Title: {pearing.title}<br></br>
@@ -288,10 +288,10 @@ function Pearings () {
                 </article>
               </div>
               <hr></hr>
-              <div className="ListContainer ItemDirection column is-half">
+              <div className="column is-half">
                 <article className="tile is-child notification has-text-primary is-primary is-light">
                   <h3>Created By Other Pears</h3>
-                  <ul>
+                  <ul className="ListContainer ItemDirection">
                     {completedByOthersPears.map(pearing => (
                       <li key={pearing.id}>
                         Title: {pearing.title}<br></br>
