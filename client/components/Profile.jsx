@@ -56,9 +56,9 @@ function PersonalInfo () {
         <br></br>
         <br></br>
         <div className="columns is-mobile">
-          <div className="column box has-text-centered mx-6 pt-6 pb-6 px-6 is-horizontal-center">
-            <figure className="image is-text-centered">
-              <img className="is-rounded is-128x128" src={image} />
+          <div className="column box has-text-centered mx-6 pt-6 pb-6 px-6">
+            <figure className="image is-centered is-128x128 is-text-centered">
+              <img className="is-rounded" src={image} />
             </figure>
             <br></br>
             <br></br>
@@ -66,13 +66,13 @@ function PersonalInfo () {
             <button
               onClick={onClick}
               type="button"
-              className="button is-primary mt-3 pt-2 "
+              className="button is-primary pt-3 pt-2 "
               data-testid="uploadPhoto"
             >
             Upload photo</button>
 
           </div>
-          <div className="column mx-6 pt-6">
+          <div className="column mx-6">
             <ul className="mb-6">
               <li className="pb-2"><strong>Username:</strong><br/>{user.username}</li>
               <li className="pb-2"><strong>Email:</strong><br/>{user.email}</li>
@@ -81,18 +81,20 @@ function PersonalInfo () {
               <li className="pb-2"><strong>Discord:</strong> <br/>{user.discord}</li>
               <li className="pb-2"> <strong> Details:</strong> {user.info}</li>
             </ul>
-            <Link to='/profile/edit'>
-              <button
-                type="button"
-                className="button is-primary"
-                data-testid="submitButton">
-              Edit</button>
-            </Link>
-          </div>
 
+            <div className="has-text-centered">
+              <Link to='/profile/edit'>
+                <button
+                  type="button"
+                  className="button is-primary"
+                  data-testid="submit Button">
+              Edit</button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="container has-text-centered pb-6 pt-6">
+      <div className="container has-text-centered pb-6 pt-4">
         <Link to='/addform'>
           <button
             type="button"
