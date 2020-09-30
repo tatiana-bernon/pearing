@@ -17,7 +17,7 @@ import {
   getMyInterests
 } from '../api'
 
-function Pearings() {
+function Pearings () {
   const [user] = useContext(UserContext)
   const [myList, setMyList] = useState([])
   const [, setInterestedList] = useState([])
@@ -106,6 +106,7 @@ function Pearings() {
       })
       .then((res) => {
         res.map(user => {
+          // eslint-disable-next-line promise/no-nesting
           return getUserById(user.user_id)
             .then(res => {
               setInterestedUsers(interestedUsers => [...interestedUsers, res])
@@ -271,7 +272,6 @@ function Pearings() {
 
           {/* start of completed Pearings box */}
           <div>
-            
             <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-6 mb-6">Completed Pearings</h2>
             <div className="columns">
               <div className="ListContainer ItemDirection column is-half">
