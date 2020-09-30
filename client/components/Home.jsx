@@ -24,7 +24,7 @@ function Home () {
       </div>
 
       <div className="container">
-        <div className="has-text-centered">
+        <div className="has-text-centered pt-5 pb-6 mx-6">
           <Link to='/addform'>
             <button
               type="button"

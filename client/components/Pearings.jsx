@@ -179,7 +179,7 @@ function Pearings () {
       <div>
         <h2 className="has-text-primary is-size-3 has-text-centered pt-3 mx-6 mt-1 mb-3"> My Pearing Requests</h2>
         <div className="container box">
-          <div className="container tile is-ancestor">
+          <div className="tile is-ancestor">
             <div className="tile is-vertical is-12">
               <div className="tile">
                 <div className="tile is-parent is-vertical">
