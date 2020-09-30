@@ -1,7 +1,6 @@
 const { generateHash } = require('authenticare/server')
 
 exports.seed = (knex) => {
-  // Deletes ALL existing entries
   return knex('users').del()
     .then(() => Promise.all([
       generateHash('daryl'),
