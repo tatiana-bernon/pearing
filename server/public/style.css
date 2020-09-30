@@ -109,3 +109,13 @@ body {
 .is-horizontal-center {
   justify-content: center;
 }
+
+.ImageProfile{
+  min-height: 250px !important;
+  min-width: 250px !important;
+}
+
+.ProfileSeparator{
+  height: 1px !important;
+  background-color: #999999;
+}

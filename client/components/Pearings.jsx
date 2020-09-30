@@ -175,115 +175,73 @@ function Pearings () {
   }
 
   return (
-    <>
-      {/* <div>
-        <h2 className="has-text-primary is-size-3 has-text-centered pt-3 mx-6 mt-1 mb-3"> My Pearing Requests</h2>
-        <div className="box has-background-link-light">
-          <div className="box">
-            <div className="tile is-ancestor">
-              <div className="tile is-vertical is-12">
-                <div className="tile">
-                  <div className="tile is-parent is-vertical">
-                    <div className="column is-half">
-                      <article className="tile is-child notification has-text-primary is-primary is-light">
-                        <ul>
-                          {myList.map(listing => (
-                            <li key={listing.id}>
-                              <div className="box is-size-5 my-5 column is-half">
-                              ID: {listing.id} - {listing.title} - interested: {listing.interested}
-                                <div className="field is-grouped has-text-right is-right">
-                                  <p className="control">
-                                    <button type="button"
-                                      className="button is-primary is-small"
-                                      data-testid="submit Button" value={listing.id} onClick={handleDelete}>Delete</button></p>
-                                  <p className="control">
-                                    <button type="button"
-                                      className="button is-primary is-small"
-                                      data-testid="submit Button" value={listing.id} onClick={handleInterested}>Show</button>
-                                  </p>
-                                </div>
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </article>
-                    </div>
-                    <div className="column is-half">
-                      <article className="tile is-child notification has-text-primary is-primary is-light">
-                        <div>
-                          <div>
-                            <ul>
-                              {interestedUsers.map(user => (
-                                <li key={user.user.id}>
-                                  <div className="box is-size-5 my-5 column is-half">
-                            Name: {user.user.username}<br></br>
-                            Email: {user.user.email}<br></br>
-                            Info: {user.user.info}<br></br>
-                                    <button type="button"
-                                      className="button is-primary is-medium" value={user.user.id} onClick={handleAccept}>Accept
-                                    </button>
-                                  </div>
-                                </li>
-                              ))}
-                            </ul>
+    <>      
+      <div className="box">        
+        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">My Pearing Requests</h2>
+        <div className="box has-background-primary">
+          <div className="columns">
+            <div className="column is-half">              
+                <p className="has-text-white is-size-3 has-text-centered mx-6 mt-1 mb-6">Created by me</p>
+                <div className="ListContainer">
+                  {myList.map(listing => (
+                    <div key={listing.id} className=" ItemDirection">
+                      <div className="tile is-ancestor">
+                        <div className="tile is-vertical is-12">
+                          <div className="tile">
+                            <div className="tile is-parent is-vertical">
+                              <article className="tile is-child notification has-text-primary is-primary is-light">                              
+                                  <p className="title has-text-left">ID: {listing.id} - {listing.title}</p>
+                                  <p className="subtitle has-text-left">interested: {listing.interested}</p>
+                                  <div className="field is-grouped">                                   
+                                    <p className="control">
+                                      <button type="button"
+                                        className="button is-warning is-small"
+                                        data-testid="submit Button" value={listing.id} onClick={handleInterested}>Show</button>
+                                    </p>
+                                    <p className="control">    
+                                      <button type="button"
+                                              className="button is-danger is-small"
+                                              data-testid="submit Button" value={listing.id} onClick={handleDelete}>Delete</button>
+                                    </p>
+                                  </div>                                
+                              </article>
+                            </div>
                           </div>
                         </div>
-                      </article>
-                    </div>
-                  </div>
+                      </div>
+                    </div>                    
+                  ))}
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <div className="box">
-        <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-1 mb-6">My Pearing Requests</h2>
-        <div className="columns">
-          <div className="column is-half">
-            <article className="tile is-child notification has-text-primary is-primary is-light">
-              <h3>Created By Me</h3>
-              <ul className="ListContainer ItemDirection">
-                {myList.map(listing => (
-                  <li key={listing.id}>
-                    <div className="box is-size-5 my-5 column is-half">
-                              ID: {listing.id} - {listing.title} - interested: {listing.interested}
-                      <div className="field is-grouped has-text-right is-right">
-                        <p className="control">
-                          <button type="button"
-                            className="button is-primary is-small"
-                            data-testid="submit Button" value={listing.id} onClick={handleDelete}>Delete</button></p>
-                        <p className="control">
-                          <button type="button"
-                            className="button is-primary is-small"
-                            data-testid="submit Button" value={listing.id} onClick={handleInterested}>Show</button>
-                        </p>
+              
+            </div>          
+            <div className="column is-half">
+                <p className="has-text-white is-size-3 has-text-centered mx-6 mt-1 mb-6">Created By Other Pears</p>
+                <div className="ListContainer">
+                  {interestedUsers.map(user => (                 
+                    <div key={user.user.id} className="ItemDirection">
+                      <div className="tile is-ancestor">
+                      <div className="tile is-vertical is-12">
+                        <div className="tile">
+                          <div className="tile is-parent is-vertical">
+                            <article className="tile is-child notification has-text-primary is-primary is-light">                            
+                                <p className="title has-text-left">Name: {user.user.username} - Email: {user.user.email}</p>
+                                <p className="subtitle has-text-left">Info: {user.user.info}</p>                                
+                                <p className="control">
+                                <button type="button"
+                                        className="button is-primary is-small" 
+                                        value={user.user.id} 
+                                        onClick={handleAccept}>Accept
+                                </button>
+                                </p>                            
+                            </article>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </div>
-          <hr></hr>
-          <div className="column is-half">
-            <article className="tile is-child notification has-text-primary is-primary is-light">
-              <h3>Created By Other Pears</h3>
-              <ul className="ListContainer ItemDirection">
-                {interestedUsers.map(user => (
-                  <li key={user.user.id}>
-                    <div className="box is-size-5 my-5 column is-half">
-                            Name: {user.user.username}<br></br>
-                            Email: {user.user.email}<br></br>
-                            Info: {user.user.info}<br></br>
-                      <button type="button"
-                        className="button is-primary is-medium" value={user.user.id} onClick={handleAccept}>Accept
-                      </button>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </article>
+                  </div>                  
+                  ))}
+                </div>
+            </div>
           </div>
         </div>
       </div>
@@ -336,8 +294,8 @@ function Pearings () {
               <h2 className="has-text-primary is-size-2 has-text-centered mx-6 mt-6 mb-6">Completed Pearings</h2>
               <div className="columns">
                 <div className="column is-half">
-                  <article className="tile is-child notification has-text-primary is-primary is-light">
-                    <h3>Created By Me</h3>
+                  <h1 className="has-text-white	is-size-2 has-text-centered mx-6 mt-6 mb-6">Created By Me</h1>
+                  <article className="tile is-child notification has-text-primary is-primary is-light">                    
                     <ul className="ListContainer ItemDirection">
                       {completedPears.map(pearing => (
                         <li key={pearing.id}>
@@ -348,10 +306,9 @@ function Pearings () {
                     </ul>
                   </article>
                 </div>
-                <hr></hr>
                 <div className="column is-half">
+                  <h1 className="has-text-white is-size-2 has-text-centered mx-6 mt-6 mb-6">Created By Other Pears</h1>
                   <article className="tile is-child notification has-text-primary is-primary is-light">
-                    <h3>Created By Other Pears</h3>
                     <ul className="ListContainer ItemDirection">
                       {completedByOthersPears.map(pearing => (
                         <li key={pearing.id}>
