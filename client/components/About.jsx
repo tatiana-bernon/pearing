@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <div className='container landingPage'>
-        <h1 className="has-text-primary pb-2 is-size-1 has-text-centered is-size-1"> The story behind Pearing! </h1>
+        <h1 className="has-text-primary mt-5 mb-4 pb-3 is-size-1 has-text-centered is-size-1"> The story behind Pearing! </h1>
       </div>
       <div className="container is-size-4 has-text-centered is-dark">
         <div className="box">          
