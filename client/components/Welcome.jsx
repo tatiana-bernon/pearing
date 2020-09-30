@@ -1,7 +1,7 @@
 import React from 'react'
 import Slideshow from './Slideshow'
 
-function Landing () {
+function Landing() {
   return (
     <>
       <div>

@@ -86,6 +86,26 @@ body {
 } */
 
 /* code for scroll bar- Add className="ListContainer" to the main div of the box you are creating - reference see list Line 23-43*/
+/* The emerging W3C standard
+that is currently Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #999999 white;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: white;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
 .ListContainer {
   direction: rtl;
   overflow-y: auto;
