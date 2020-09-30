@@ -6,7 +6,7 @@ import regeneratorRuntime from 'regenerator-runtime'
 import { UserContext } from './UserContext'
 import { updatePersonalInfo, getUserById } from '../api'
 
-function PersonalInfo() {
+function PersonalInfo () {
   const [user] = useContext(UserContext)
 
   const [image, setImage] = useState('')
@@ -50,50 +50,59 @@ function PersonalInfo() {
     )
   }
   return (
-    <div className="box mx-6 my-6">
-      <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-6"> My Profile</h2>
-      <br></br>
-      <br></br>
-      <div className="columns is-mobile">
-        <div className="column mx-6">
-          <figure className="image is-128x128">
-            <img className="is-rounded" src={image} />
-          </figure>
-          <br></br>
-          <br></br>
-          <input type='file' id='file' ref={ref} style={{ display: 'none' }} onChange={e => onChange(e)} />
-          <button
-            onClick={onClick}
-            type="button"
-            className="button is-primary mt-6"
-            data-testid="uploadPhoto"
-          >
+    <>
+      <div className="box mx-6 my-6 has-background-primary-light">
+        <h2 className="has-text-primary is-size-3 has-text-centered mx-6 mt-1 mb-2"> My Profile</h2>
+        <br></br>
+        <br></br>
+        <div className="columns is-mobile">
+          <div className="column box has-text-centered mx-6 pt-6 pb-6 px-6 is-horizontal-center">
+            <figure className="image is-text-centered">
+              <img className="is-rounded is-128x128" src={image} />
+            </figure>
+            <br></br>
+            <br></br>
+            <input type='file' id='file' ref={ref} style={{ display: 'none' }} onChange={e => onChange(e)} />
+            <button
+              onClick={onClick}
+              type="button"
+              className="button is-primary mt-3 pt-2 "
+              data-testid="uploadPhoto"
+            >
             Upload photo</button>
 
-        </div>
-        <div className="column">
-          <ul className="mb-6">
-            <li className="pb-2"><strong>Username:</strong> {user.username}</li>
-            <li className="pb-2"><strong>Email:</strong>{user.email}</li>
-            <li className="pb-2"><strong>Phone:</strong> {user.phone}</li>
-            <li className="pb-2"><strong>LinkedIn</strong> {user.linkedin}</li>
-            <li><strong>Discord:</strong> {user.discord}</li>
-          </ul>
-          <Link to='/profile/edit'>
-            <button
-              type="button"
-              className="button is-primary"
-              data-testid="submitButton">
+          </div>
+          <div className="column mx-6 pt-6">
+            <ul className="mb-6">
+              <li className="pb-2"><strong>Username:</strong><br/>{user.username}</li>
+              <li className="pb-2"><strong>Email:</strong><br/>{user.email}</li>
+              <li className="pb-2"><strong>Phone:</strong> <br/>{user.phone}</li>
+              <li className="pb-2"><strong>LinkedIn</strong> <br/>{user.linkedin}</li>
+              <li className="pb-2"><strong>Discord:</strong> <br/>{user.discord}</li>
+              <li className="pb-2"> <strong> Details:</strong> {user.info}</li>
+            </ul>
+            <Link to='/profile/edit'>
+              <button
+                type="button"
+                className="button is-primary"
+                data-testid="submitButton">
               Edit</button>
-          </Link>
-        </div>
-        <div className="column">
-          <p className="is-info">
-            <strong> Details:</strong> {user.info}
-          </p>
+            </Link>
+          </div>
+
         </div>
       </div>
-    </div>
+      <div className="container has-text-centered pb-6 pt-6">
+        <Link to='/addform'>
+          <button
+            type="button"
+            className="button is-primary is-large"
+            data-testid="submitButton">
+     Create Pearing Invitation!
+          </button>
+        </Link>
+      </div>
+    </>
   )
 }
 
