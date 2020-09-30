@@ -303,8 +303,9 @@ function Pearings () {
                       {acceptedPears.map(pearing => (
                         <li key={pearing.id}>
                           Title: {pearing.title}<br></br>
-                Description: {pearing.description}<br></br>
-                Pear: {pearing.username}<br></br>
+                          Description: {pearing.description}<br></br>
+                          Pear: {pearing.username}<br></br>
+                          Pear's email: {pearing.email}<br></br>
                           <button value={pearing.id} onClick={handleCompleted}>Completed</button>
                         </li>
                       ))}
