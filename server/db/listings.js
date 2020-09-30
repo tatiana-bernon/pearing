@@ -170,7 +170,7 @@ function changeStatusToThree (id, db = connection) {
 function getMyPearings (id, db = connection) {
   return db('listings')
     .join('users', 'listings.pear_id', 'users.id')
-    .select('listings.id', 'listings.title', 'listings.description', 'users.username')
+    .select('listings.id', 'listings.title', 'listings.description', 'users.username', 'users.email')
     .where('listings.user_id', id)
     .where('listings.status', 2)
     .catch(err => {

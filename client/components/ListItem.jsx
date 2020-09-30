@@ -15,7 +15,7 @@ import {
 function ListItem (props) {
   const [user] = useContext(UserContext)
   const [listItem, setListItem] = useState([])
-  const [author, setAuthor] = useState('')
+  const [, setAuthor] = useState('')
   const [interestButton, setInterestButton] = useState('Show Interest')
   const id = Number(props.match.params.id)
 
