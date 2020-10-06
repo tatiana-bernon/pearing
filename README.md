@@ -1,5 +1,5 @@
 # pearing
-![alt text](server/public/images/pearinglogo.png)
+
 
 > A platform bringing developers together to help each other or just jam!
 
@@ -83,9 +83,6 @@ C. Routes
 - [X] Create hash router 
 - [X] Create routes to link components/pages with App component.
 
-## Early deployment to Heroku!
-![alt text](https://memegenerator.net/img/instances/73670524/if-you-think-you-can-just-deploy-to-heroku-youre-gonna-have-a-bad-time.jpg)
-
 ### (ii) Back-End
 
 A. Database schema 
@@ -124,73 +121,13 @@ Response (200):
 }
 ```
 
-
-(ii) For the List item component - getListing `GET /api/v1/home/:id`
-
-Response (200):
-
-```
-{
-  "id_listings": 1,
-  }]
-}
-```
-
-(iii) For the add item component - postListing `POST /api/v1/..to confirm...` (insert in table)
-
-Request:
-
-```
-{
- To specify
-}
-```
-
-Response (201):
-
-```
-{
-  To specify
-}
-```
-
-(iv) For the info component - getUserInfo `GET /api/v1/events/:id/users` (user_id) to confirm
-
-Response (200):
-
-```
-{
- To specify
-}
-```
-
-(v) For the myList component - getMyList `POST /api/v1/events/:id/users` (user_id) to confirm
-
-Request:
-
-```
-{
-  to specify
-}
-```
-
-Response (201):
-
-```
-{
-  to specify
-}
-```
 ### CSS 
 Bulma will be used in this project. Please refer to the documentation https://bulma.io/documentation/
 
 ### Testing
 The team will split and dedicate time on testing and styling.
 
-## DEPLOYMENT TO HEROKU!!!!!!!!!!!
-
-![alt text](https://www.cryan.com/qa/graphics/ReleaseDeployment.jpg)
-
+## DEPLOYMENT TO HEROKU
 Docs to ensure all the steps are done:
 https://github.com/pohutukawa-2020/heroku-checklist
 
