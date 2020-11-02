@@ -3,9 +3,9 @@
 
 > A platform bringing developers together to help each other or just jam while pair-pogramming!
 
-![View the slideshow of the presentation of this final project here](https://docs.google.com/presentation/d/1zcKF7XEQj_4sSsKjVfnRMjHe8iAxmsVYq8MCG9VFuBY/edit?usp=sharing)
+[View the slideshow of the presentation of this final project here](https://docs.google.com/presentation/d/1zcKF7XEQj_4sSsKjVfnRMjHe8iAxmsVYq8MCG9VFuBY/edit?usp=sharing)
 
-[alt text](server/public/images/pearing.jpg)
+![alt text](server/public/images/pearing.jpg)
 
 
 
