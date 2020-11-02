@@ -3,6 +3,8 @@
 
 > A platform bringing developers together to help each other or just jam!
 
+![alt text](server/public/images/pearing.jpeg)
+
 ## Setup
 
 To get started, clone this repo and then:
