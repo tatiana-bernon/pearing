@@ -3,7 +3,7 @@
 
 > A platform bringing developers together to help each other or just jam!
 
-![alt text](/Users/tatiana/Documents/Enspiral Dev Academy/3. Boot Camp/Phase 3/week 8/repos/pearing/server/public/images/pearing.jpeg)
+![alt text](server/public/images/pearing.jpeg)
 
 ## Setup
 
