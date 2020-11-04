@@ -143,7 +143,7 @@ https://trailhead.salesforce.com/content/learn/projects/quickstart-heroku-connec
 ## Stretches
 
 1. - [X] Change of name for the app
-  - [ ] Logo for it - find a cool pear
+  - [X] Logo for it - find a cool pear
 
 https://namelix.com/app/?keywords=skill+sharing
 https://www.canva.com/design/DAEIm0XK3Tg/MhtOyotyp6Fq5thGZhSx9Q/edit?category=tACZCvjI6mE&utm_source=onboarding
